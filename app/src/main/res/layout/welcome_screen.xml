@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/welcome_scr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToOutline="true"
+    android:background="#FFFFFF"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <View
+            android:id="@+id/sprout"
+            android:layout_width="163dp"
+            android:layout_height="179dp"
+            android:background="@drawable/sprout"
+            />
+
+        <TextView
+            android:id="@+id/recycle_sma"
+            android:layout_width="150dp"
+            android:layout_height="15dp"
+            android:text="@string/recycle_sma"
+            android:textAppearance="@style/recycle_sma"
+            android:gravity="center_horizontal|top"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

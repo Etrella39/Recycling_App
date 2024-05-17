@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="recycle_sma">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#BBBBBB</item>
+    </style>
+
+</resources>

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Recycling App</string>
+
+    <string name="recycle_sma">
+        Recycle Smart, Live Green
+    </string>
 </resources>
