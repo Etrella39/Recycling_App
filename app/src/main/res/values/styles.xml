@@ -2,7 +2,7 @@
 <resources>
 
     <style name="recycle_sma">
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:textColor">#BBBBBB</item>
     </style>
 
