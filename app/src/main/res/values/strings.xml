@@ -4,4 +4,36 @@
     <string name="recycle_sma">
         Recycle Smart, Live Green
     </string>
+
+    <string name="login">
+        Login
+</string>
+
+    <string name="id">
+ID
+</string>
+
+    <string name="password">
+Password
+</string>
+
+    <string name="find_passwo">
+Find Password
+</string>
+
+    <string name="sign_up">
+Sign up
+</string>
+
+    <string name="some_id">
+Easy Login
+</string>
+
+
+
+        <string name="google_button">Google Sign In</string>
+        <string name="naver_button">Naver Sign In</string>
+        <string name="kakaotalk_button">KakaoTalk Sign In</string>
+
+
 </resources>
