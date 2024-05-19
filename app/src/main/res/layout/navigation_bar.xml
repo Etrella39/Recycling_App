@@ -1,0 +1,93 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navigation_bar"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:layout_alignParentBottom="true"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:background="#EBEBEB"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:id="@+id/profile_button"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="84dp"
+            android:background="#EBEBEB"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            >
+            <ImageView
+                android:id="@+id/web_design"
+                android:layout_width="51dp"
+                android:layout_height="51dp"
+                android:background="@drawable/main_icon_web"
+                />
+            <TextView
+                android:id="@+id/blogs"
+                android:layout_width="28dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/interregular"
+                android:gravity="center_horizontal|top"
+                android:lineHeight="22sp"
+                android:lineSpacingExtra="10sp"
+                android:text="@string/blogs"
+                android:textAppearance="@style/Main_Disable"
+                android:translationY="-4.95sp" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="98dp"
+            android:layout_height="84dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/blogs_button"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="84dp"
+            android:background="#EBEBEB"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingRight="10dp"
+
+            >
+            <ImageView
+                android:id="@+id/customer"
+                android:layout_width="51dp"
+                android:layout_height="51dp"
+                android:background="@drawable/main_icon_customer"
+                />
+            <TextView
+                android:id="@+id/profile"
+                android:layout_width="28dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/interregular"
+                android:gravity="center_horizontal|top"
+                android:lineHeight="22sp"
+                android:lineSpacingExtra="10sp"
+                android:text="@string/profile"
+                android:textAppearance="@style/Main_Disable"
+                android:translationY="-4.95sp" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <include layout="@layout/main_button"/>
+
+
+</RelativeLayout>
