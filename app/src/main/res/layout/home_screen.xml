@@ -11,7 +11,6 @@
 
     <include layout="@layout/top_bar_setting"/>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,6 +18,63 @@
         android:orientation="vertical"
         android:gravity="center"
         >
+
+        <TextView
+            android:id="@+id/take_a_pict"
+            android:layout_width="206dp"
+            android:layout_height="49dp"
+            android:text="@string/take_a_picture"
+            android:textAppearance="@style/take_a_picture"
+            android:lineSpacingExtra="3sp"
+            android:translationY="-1.32sp"
+            android:gravity="center_horizontal|top"
+            android:fontFamily="@font/interblack"
+            android:lineHeight="22sp"
+            />
+        
+        <FrameLayout
+            android:layout_width="282dp"
+            android:layout_height="282dp"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/main_camera_vector"
+            >
+            <View
+                android:id="@+id/disposal"
+                android:layout_width="209dp"
+                android:layout_height="174dp"
+                android:background="@drawable/main_icon_disposal"
+                android:layout_gravity="center"
+                />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/start_button"
+            android:layout_width="167dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/main_start_button"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            >
+
+            <!-- Auto layout, variables, and unit scale are not yet supported -->
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/label"
+                android:textAppearance="@style/label"
+                android:lineSpacingExtra="-2sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:fontFamily="@font/interbold"
+                android:lineHeight="22sp"
+                />
+
+
+        </LinearLayout>
+
+
 
     </LinearLayout>
 

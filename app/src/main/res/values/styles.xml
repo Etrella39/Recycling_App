@@ -13,20 +13,8 @@
         <item name="android:textColor">#A3A3A3</item>
     </style>
 
-    <style name="password">
-        <item name="android:textSize">15sp</item>
-        <item name="android:letterSpacing">-0.03</item>
-        <item name="android:textColor">#A3A3A3</item>
-    </style>
-
-    <style name="find_passwo">
-        <item name="android:textSize">10sp</item>
-        <item name="android:letterSpacing">-0.04</item>
-        <item name="android:textColor">#A3A3A3</item>
-    </style>
-
-    <style name="sign_up">
-        <item name="android:textSize">10sp</item>
+    <style name="find_password">
+        <item name="android:textSize">12sp</item>
         <item name="android:letterSpacing">-0.04</item>
         <item name="android:textColor">#A3A3A3</item>
     </style>
@@ -39,7 +27,7 @@
 
     <!-- Login Screen Styles -->
     <style name="login">
-        <item name="android:textSize">32sp</item>
+        <item name="android:textSize">35sp</item>
         <item name="android:letterSpacing">-0.01</item>
         <item name="android:textColor">#78A55A</item>
     </style>
@@ -51,29 +39,31 @@
     </style>
 
     <!-- Signup Screen Styles -->
-    <style name="sign_up1">
-        <item name="android:textSize">32sp</item>
-        <item name="android:letterSpacing">-0.01</item>
-        <item name="android:textColor">#78A55A</item>
-    </style>
-
     <style name="confirm_password">
         <item name="android:textSize">15sp</item>
         <item name="android:letterSpacing">-0.03</item>
         <item name="android:textColor">#A3A3A3</item>
     </style>
 
-    <style name="sign_up_sc2">
-        <item name="android:textSize">18sp</item>
-        <item name="android:letterSpacing">-0.02</item>
-        <item name="android:textColor">#FFFFFF</item>
-    </style>
 
     <!-- Main Navigation bar Screen Styles -->
     <style name="Main_Disable">
         <item name="android:textSize">10sp</item>
         <item name="android:letterSpacing">-0.04</item>
         <item name="android:textColor">#8F000000</item>
+    </style>
+
+    <!-- Main Frame Styles -->
+    <style name="take_a_picture">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">#C9C08B5C</item>
+    </style>
+
+    <style name="label">
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">#FFFFFF</item>
     </style>
 
 </resources>

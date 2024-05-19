@@ -6,7 +6,7 @@
     <string name="id">ID</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
-    <string name="find_passwo">Find Password</string>
+    <string name="find_password">Find Password</string>
     <string name="sign_up">Sign up</string>
     <string name="some_id">Easy Login</string>
 
@@ -26,4 +26,8 @@
     <!-- Main Navigation bar Buttons Strings -->
     <string name="profile">Profile</string>
     <string name="blogs">Blogs</string>
+
+    <!-- Main Frame Strings -->
+    <string name="take_a_picture">Take a Picture \nScan the waste</string>
+    <string name="label">Get Started</string>
 </resources>

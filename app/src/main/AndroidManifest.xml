@@ -6,7 +6,7 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/start_sprout"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:roundIcon="@drawable/start_sprout"
         android:supportsRtl="true"
@@ -22,6 +22,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".LoginActivity"></activity>
+
     </application>
 
 </manifest>

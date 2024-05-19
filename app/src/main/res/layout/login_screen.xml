@@ -16,8 +16,8 @@
 
         <TextView
             android:id="@+id/login"
-            android:layout_width="86dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/interbold"
             android:gravity="center_horizontal|top"
             android:lineSpacingExtra="15sp"
@@ -27,34 +27,36 @@
 
         <include layout="@layout/id_and_password_box"/>
 
-        <RelativeLayout
-            android:id="@+id/log_in"
+        <LinearLayout
+            android:id="@+id/sign_up_but"
             android:layout_width="266dp"
             android:layout_height="42dp"
             android:layout_marginTop="15dp"
-            android:background="@drawable/login_button">
+            android:gravity="center"
+            android:background="@drawable/login_button"
+            android:clickable="true" >
 
-            <!-- ID TextView -->
             <TextView
                 android:id="@+id/log_in_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="100dp"
-                android:gravity="center_vertical"
                 android:lineSpacingExtra="36sp"
+                android:gravity="center"
+                android:layout_gravity="center"
                 android:text="@string/log_in"
                 android:textAppearance="@style/log_in"
                 android:fontFamily="@font/interbold"/>
-        </RelativeLayout>
+        </LinearLayout>
+
+
 
         <!-- New LinearLayout to group find password and sign up TextViews -->
         <LinearLayout
             android:layout_width="185dp"
             android:layout_height="22dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal" >
 
             <TextView
                 android:id="@+id/find_passwo"
@@ -62,8 +64,10 @@
                 android:layout_height="22dp"
                 android:gravity="center"
                 android:lineSpacingExtra="10sp"
-                android:text="@string/find_passwo"
-                android:textAppearance="@style/find_passwo" />
+                android:text="@string/find_password"
+                android:textAppearance="@style/find_password"
+                android:clickable="true"
+                android:fontFamily="@font/interbold" />
 
             <TextView
                 android:id="@+id/sign_up"
@@ -72,14 +76,16 @@
                 android:gravity="center"
                 android:lineSpacingExtra="10sp"
                 android:text="@string/sign_up"
-                android:textAppearance="@style/sign_up" />
+                android:textAppearance="@style/find_password"
+                android:clickable="true"
+                android:fontFamily="@font/interbold" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/some_id"
             android:layout_width="126dp"
             android:layout_height="54dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="60dp"
             android:gravity="center_horizontal|center_vertical"
             android:lineSpacingExtra="30sp"
             android:text="@string/some_id"

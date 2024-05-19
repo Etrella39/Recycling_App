@@ -19,12 +19,12 @@
 
         <TextView
             android:id="@+id/sign_up1"
-            android:layout_width="115dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:gravity="center_horizontal|top"
             android:lineSpacingExtra="15sp"
             android:text="@string/sign_up1"
-            android:textAppearance="@style/sign_up1"
+            android:textAppearance="@style/login"
             android:translationY="-7.64sp"
             android:fontFamily="@font/interbold"
             />
@@ -66,19 +66,18 @@
             android:layout_width="266dp"
             android:layout_height="42dp"
             android:layout_marginTop="15dp"
-            android:gravity="center_vertical"
-            android:background="@drawable/login_button">
+            android:gravity="center"
+            android:background="@drawable/login_button"
+            android:clickable="true" >
 
             <!-- ID TextView -->
             <TextView
                 android:id="@+id/sign_up"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
-                android:gravity="center_vertical"
                 android:lineSpacingExtra="36sp"
                 android:text="@string/sign_up_sc2"
-                android:textAppearance="@style/sign_up_sc2"
+                android:textAppearance="@style/log_in"
                 android:fontFamily="@font/interbold"/>
         </LinearLayout>
 

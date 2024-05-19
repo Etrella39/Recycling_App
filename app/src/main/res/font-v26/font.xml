@@ -3,7 +3,12 @@
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
+        android:font="@font/interblack"/>
+
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
         android:font="@font/interbold"/>
+
     <font android:fontStyle="normal"
         android:fontWeight="400"
         android:font="@font/intermedium"/>
