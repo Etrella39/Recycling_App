@@ -37,4 +37,6 @@
             />
     </LinearLayout>
 
+    <include layout="@layout/navigation_bar"/>
+
 </RelativeLayout>

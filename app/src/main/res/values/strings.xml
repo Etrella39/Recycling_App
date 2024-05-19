@@ -4,4 +4,12 @@
     <string name="recycle_sma">
         Recycle Smart, Live Green
     </string>
+
+    <string name="profile">
+        Profile
+    </string>
+
+    <string name="blogs">
+        Blogs
+    </string>
 </resources>
