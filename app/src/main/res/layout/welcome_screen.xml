@@ -22,7 +22,7 @@
             android:id="@+id/sprout"
             android:layout_width="130dp"
             android:layout_height="140dp"
-            android:background="@drawable/sprout"
+            android:background="@drawable/start_sprout"
             />
 
         <TextView
@@ -36,7 +36,5 @@
             android:lineHeight="15dp"
             />
     </LinearLayout>
-
-    <include layout="@layout/navigation_bar"/>
 
 </RelativeLayout>

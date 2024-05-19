@@ -6,9 +6,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/sprout"
+        android:icon="@drawable/start_sprout"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/sprout"
+        android:roundIcon="@drawable/start_sprout"
         android:supportsRtl="true"
         android:theme="@style/Theme.RecyclingApp"
         tools:targetApi="34" >

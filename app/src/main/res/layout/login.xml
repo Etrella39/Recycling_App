@@ -17,7 +17,7 @@
         <TextView
             android:id="@+id/login"
             android:layout_width="86dp"
-            android:layout_height="54dp"
+            android:layout_height="50dp"
             android:fontFamily="@font/interbold"
             android:gravity="center_horizontal|top"
             android:lineSpacingExtra="15sp"
@@ -25,64 +25,14 @@
             android:textAppearance="@style/login"
             android:translationY="-7.64sp" />
 
-        <RelativeLayout
-            android:id="@+id/id_box"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="69dp"
-            android:background="@drawable/id_box">
-
-            <!-- ID TextView -->
-            <TextView
-                android:id="@+id/id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:gravity="center_vertical"
-                android:lineSpacingExtra="36sp"
-                android:text="@string/id"
-                android:textAppearance="@style/id" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/password_bo"
-            android:layout_width="266dp"
-            android:layout_height="42dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/password_bo">
-
-            <!-- Password TextView -->
-            <TextView
-                android:id="@+id/password"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:gravity="center_vertical"
-                android:lineSpacingExtra="36sp"
-                android:text="@string/password"
-                android:textAppearance="@style/password" />
-
-            <!-- Password icon View -->
-            <View
-                android:id="@+id/password_icon"
-                android:layout_width="12.5dp"
-                android:layout_height="7.5dp"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="156dp"
-                android:layout_toEndOf="@id/password"
-                android:background="@drawable/password_icon" />
-        </RelativeLayout>
+        <include layout="@layout/id_and_password_box"/>
 
         <RelativeLayout
             android:id="@+id/log_in"
             android:layout_width="266dp"
             android:layout_height="42dp"
             android:layout_marginTop="15dp"
-            android:background="@drawable/login_butto">
+            android:background="@drawable/login_button">
 
             <!-- ID TextView -->
             <TextView
@@ -94,22 +44,22 @@
                 android:gravity="center_vertical"
                 android:lineSpacingExtra="36sp"
                 android:text="@string/log_in"
-
-                android:textAppearance="@style/log_in" />
+                android:textAppearance="@style/log_in"
+                android:fontFamily="@font/interbold"/>
         </RelativeLayout>
 
         <!-- New LinearLayout to group find password and sign up TextViews -->
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_width="185dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="4dp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/find_passwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="81dp"
+                android:layout_height="22dp"
                 android:gravity="center"
                 android:lineSpacingExtra="10sp"
                 android:text="@string/find_passwo"
@@ -117,9 +67,8 @@
 
             <TextView
                 android:id="@+id/sign_up"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_width="54dp"
+                android:layout_height="22dp"
                 android:gravity="center"
                 android:lineSpacingExtra="10sp"
                 android:text="@string/sign_up"
@@ -134,13 +83,13 @@
             android:gravity="center_horizontal|center_vertical"
             android:lineSpacingExtra="30sp"
             android:text="@string/some_id"
-            android:textAppearance="@style/some_id" />
+            android:textAppearance="@style/some_id"
+            android:fontFamily="@font/interbold"/>
 
         <!-- New LinearLayout for social media icon buttons -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -148,7 +97,7 @@
                 android:id="@+id/google_button"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:background="@drawable/google_icon"
+                android:background="@drawable/login_google_icon"
                 android:contentDescription="@string/google_button" />
 
             <ImageButton
@@ -156,7 +105,7 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="16dp"
-                android:background="@drawable/naver_icon"
+                android:background="@drawable/login_naver_icon"
                 android:contentDescription="@string/naver_button" />
 
             <ImageButton
@@ -164,7 +113,7 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="16dp"
-                android:background="@drawable/kakaotalk_icon"
+                android:background="@drawable/login_kakaotalk_icon"
                 android:contentDescription="@string/kakaotalk_button" />
 
         </LinearLayout>

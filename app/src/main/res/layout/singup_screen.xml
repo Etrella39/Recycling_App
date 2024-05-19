@@ -7,20 +7,7 @@
     android:clipToOutline="true"
     android:background="#FFFFFF">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:padding="16dp">
-
-        <ImageButton
-            android:id="@+id/prev_button"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:background="@drawable/button_icon"
-            android:contentDescription="PrveButton" />
-    </RelativeLayout>
+    <include layout="@layout/top_bar_back"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,117 +20,67 @@
         <TextView
             android:id="@+id/sign_up1"
             android:layout_width="115dp"
-            android:layout_height="54dp"
+            android:layout_height="50dp"
             android:gravity="center_horizontal|top"
             android:lineSpacingExtra="15sp"
             android:text="@string/sign_up1"
             android:textAppearance="@style/sign_up1"
-            android:translationY="-7.64sp" />
+            android:translationY="-7.64sp"
+            android:fontFamily="@font/interbold"
+            />
 
+        <include layout="@layout/id_and_password_box"/>
 
-        <RelativeLayout
-            android:id="@+id/id_box"
-            android:layout_width="266dp"
-            android:layout_height="42dp"
-            android:layout_marginTop="69dp"
-            android:background="@drawable/id_box">
-
-            <!-- ID TextView -->
-            <TextView
-                android:id="@+id/id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:gravity="center_vertical"
-                android:lineSpacingExtra="36sp"
-                android:text="@string/id"
-                android:textAppearance="@style/id" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/password_bo"
-            android:layout_width="266dp"
-            android:layout_height="42dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/password_bo">
-
-            <!-- Password TextView -->
-            <TextView
-                android:id="@+id/password"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:gravity="center_vertical"
-                android:lineSpacingExtra="36sp"
-                android:text="@string/password"
-                android:textAppearance="@style/password" />
-
-            <!-- Password icon View -->
-            <View
-                android:id="@+id/password_icon"
-                android:layout_width="12.5dp"
-                android:layout_height="7.5dp"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="156dp"
-                android:layout_toEndOf="@id/password"
-                android:background="@drawable/password_icon" />
-        </RelativeLayout>
-
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/confirm_pass"
             android:layout_width="266dp"
             android:layout_height="42dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/confirm_pas">
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="@drawable/login_id_box">
 
             <!-- Confirm Password TextView -->
             <TextView
                 android:id="@+id/confirm_pas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
+                android:layout_width="205dp"
+                android:layout_height="30dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:gravity="center_vertical"
                 android:lineSpacingExtra="36sp"
                 android:text="@string/confirm_password"
-                android:textAppearance="@style/confirm_password" />
+                android:textAppearance="@style/confirm_password"
+                android:fontFamily="@font/interbold"/>
 
             <!-- Password icon View -->
             <View
-                android:id="@+id/password_icon2"
                 android:layout_width="12.5dp"
                 android:layout_height="7.5dp"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="100dp"
-                android:layout_toEndOf="@id/confirm_pas"
-                android:background="@drawable/password_icon" />
-        </RelativeLayout>
+                android:background="@drawable/password_icon_eye" />
+        </LinearLayout>
 
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/sign_up_but"
             android:layout_width="266dp"
             android:layout_height="42dp"
             android:layout_marginTop="15dp"
-            android:background="@drawable/sign_up_but">
+            android:gravity="center_vertical"
+            android:background="@drawable/login_button">
 
             <!-- ID TextView -->
             <TextView
                 android:id="@+id/sign_up"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
                 android:layout_marginStart="100dp"
                 android:gravity="center_vertical"
                 android:lineSpacingExtra="36sp"
                 android:text="@string/sign_up_sc2"
-
-                android:textAppearance="@style/sign_up_sc2" />
-        </RelativeLayout>
+                android:textAppearance="@style/sign_up_sc2"
+                android:fontFamily="@font/interbold"/>
+        </LinearLayout>
 
     </LinearLayout>
 </RelativeLayout>
