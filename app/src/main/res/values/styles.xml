@@ -1,11 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Common Styles -->
     <style name="recycle_sma">
         <item name="android:textSize">15sp</item>
         <item name="android:textColor">#BBBBBB</item>
     </style>
 
+    <style name="id">
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">#A3A3A3</item>
+    </style>
+
+    <style name="password">
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">#A3A3A3</item>
+    </style>
+
+    <style name="find_passwo">
+        <item name="android:textSize">10sp</item>
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="android:textColor">#A3A3A3</item>
+    </style>
+
+    <style name="sign_up">
+        <item name="android:textSize">10sp</item>
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="android:textColor">#A3A3A3</item>
+    </style>
+
+    <style name="some_id">
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">#78A55A</item>
+    </style>
+
+    <!-- Login Screen Styles -->
+    <style name="login">
+        <item name="android:textSize">32sp</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:textColor">#78A55A</item>
+    </style>
+
+    <style name="log_in">
+        <item name="android:textSize">18sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <!-- Signup Screen Styles -->
+    <style name="sign_up1">
+        <item name="android:textSize">32sp</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:textColor">#78A55A</item>
+    </style>
+
+    <style name="confirm_password">
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">#A3A3A3</item>
+    </style>
+
+    <style name="sign_up_sc2">
+        <item name="android:textSize">18sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <!-- Main Navigation bar Screen Styles -->
     <style name="Main_Disable">
         <item name="android:textSize">10sp</item>
         <item name="android:letterSpacing">-0.04</item>

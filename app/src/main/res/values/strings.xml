@@ -1,15 +1,29 @@
 <resources>
     <string name="app_name">Recycling App</string>
 
-    <string name="recycle_sma">
-        Recycle Smart, Live Green
-    </string>
+    <!-- Common Strings -->
+    <string name="recycle_sma">Recycle Smart, Live Green</string>
+    <string name="id">ID</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="find_passwo">Find Password</string>
+    <string name="sign_up">Sign up</string>
+    <string name="some_id">Easy Login</string>
 
-    <string name="profile">
-        Profile
-    </string>
+    <!-- Login Screen Strings -->
+    <string name="login">Login</string>
+    <string name="log_in">LOG IN</string>
 
-    <string name="blogs">
-        Blogs
-    </string>
+    <!-- Signup Screen Strings -->
+    <string name="sign_up1">Sign up</string>
+    <string name="sign_up_sc2">SIGN UP</string>
+
+    <!-- Social Media Buttons Strings -->
+    <string name="google_button">Google Sign In</string>
+    <string name="naver_button">Naver Sign In</string>
+    <string name="kakaotalk_button">KakaoTalk Sign In</string>
+
+    <!-- Main Navigation bar Buttons Strings -->
+    <string name="profile">Profile</string>
+    <string name="blogs">Blogs</string>
 </resources>
