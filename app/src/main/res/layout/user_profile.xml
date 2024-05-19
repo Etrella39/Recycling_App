@@ -9,8 +9,6 @@
     android:background="#FFFFFF"
     >
 
-    <include layout="@layout/top_bar_setting"/>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -29,24 +27,95 @@
             android:layout_width="match_parent"
             android:layout_height="304dp"
             android:gravity="center_horizontal"
+            android:orientation="vertical"
             android:layout_marginTop="143dp"
             >
-            <View
-                android:id="@+id/ellipse_15"
+            <FrameLayout
                 android:layout_width="154dp"
                 android:layout_height="154dp"
-                android:layout_alignParentTop="true"
-                android:clipToOutline="true"
-                android:background="@drawable/user_profile_main"
+                >
+                <View
+                    android:id="@+id/ellipse_15"
+                    android:layout_width="154dp"
+                    android:layout_height="154dp"
+                    android:clipToOutline="true"
+                    android:background="@drawable/user_profile_main"
+                    />
+                <View
+                    android:id="@+id/customer"
+                    android:layout_width="83.49dp"
+                    android:layout_height="83.49dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="35.25dp"
+                    android:background="@drawable/user_profile_customer"
+                    />
+            </FrameLayout>
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="180dp"
+                android:layout_height="36dp"
+                android:text="@string/user_name"
+                android:textAppearance="@style/user_name"
+                android:lineSpacingExtra="-12sp"
+                android:gravity="center_horizontal|top"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/interbold"
+                android:lineHeight="22sp"
                 />
 
-
-
+            <!-- Auto layout, variables, and unit scale are not yet supported -->
+            <LinearLayout
+                android:id="@+id/property_de"
+                android:layout_width="237dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:background="@drawable/user_record_button"
+                >
+                <View
+                    android:id="@+id/data_backup"
+                    android:layout_width="43dp"
+                    android:layout_height="31dp"
+                    android:layout_marginLeft="13dp"
+                    android:background="@drawable/user_data_backup"
+                    />
+                <LinearLayout
+                    android:id="@+id/text"
+                    android:layout_width="91dp"
+                    android:layout_height="30.62dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="91dp"
+                        android:layout_height="14dp"
+                        android:text="Waste Record"
+                        android:textAppearance="@style/waste_recor"
+                        android:lineSpacingExtra="6sp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:fontFamily="@font/interbold"
+                        android:lineHeight="22sp"
+                        />
+                    <!-- Auto layout, variables, and unit scale are not yet supported -->
+                    <TextView
+                        android:id="@+id/january_202"
+                        android:layout_width="80dp"
+                        android:layout_height="15dp"
+                        android:text="@string/january_202"
+                        android:textAppearance="@style/january_202"
+                        android:lineSpacingExtra="9sp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:fontFamily="@font/intermedium"
+                        android:lineHeight="22sp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
 
 
 
-
+        <include layout="@layout/top_bar_setting"/>
     </RelativeLayout>
 
 

@@ -30,4 +30,8 @@
     <!-- Main Frame Strings -->
     <string name="take_a_picture">Take a Picture \nScan the waste</string>
     <string name="label">Get Started</string>
+
+    <!-- User Frame Strings -->
+    <string name="user_name">User Name</string>
+    <string name="january_202">1 January 2024</string>
 </resources>

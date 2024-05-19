@@ -66,4 +66,21 @@
         <item name="android:textColor">#FFFFFF</item>
     </style>
 
+    <!-- User Frame Styles -->
+    <style name="user_name">
+        <item name="android:textSize">28sp</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+    <style name="waste_recor">
+        <item name="android:textSize">13sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <style name="january_202">
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
 </resources>
