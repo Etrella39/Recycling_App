@@ -77,6 +77,27 @@
                 android:background="@drawable/password_icon" />
         </RelativeLayout>
 
+        <RelativeLayout
+            android:id="@+id/log_in"
+            android:layout_width="266dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/login_butto" >
+
+            <!-- ID TextView -->
+            <TextView
+                android:id="@+id/log_in_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/log_in"
+                android:textAppearance="@style/log_in"
+                android:lineSpacingExtra="36sp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="100dp"
+
+                android:gravity="center_vertical" />
+        </RelativeLayout>
+
         <!-- New LinearLayout to group find password and sign up TextViews -->
         <LinearLayout
             android:layout_width="wrap_content"

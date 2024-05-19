@@ -42,5 +42,29 @@
         <item name="android:textColor">#78A55A</item>
     </style>
 
+    <style name="sign_up1">
+        <item name="android:textSize">32sp</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:textColor">#78A55A</item>
+    </style>
+
+    <style name="confirm_password">
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">#A3A3A3</item>
+    </style>
+
+    <style name="sign_up_sc2">
+        <item name="android:textSize">18sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="log_in">
+        <item name="android:textSize">18sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
 
 </resources>

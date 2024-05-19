@@ -35,5 +35,19 @@ Easy Login
         <string name="naver_button">Naver Sign In</string>
         <string name="kakaotalk_button">KakaoTalk Sign In</string>
 
+    <string name="sign_up1">
+Sign up
+</string>
+
+    <string name="confirm_password">
+Confirm Password
+</string>
+
+    <string name="sign_up_sc2">
+SIGN UP
+</string>
+    <string name="log_in">
+LOG IN
+</string>
 
 </resources>
