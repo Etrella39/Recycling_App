@@ -82,11 +82,39 @@
         <item name="android:letterSpacing">-0.04</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
+    <style name="find_passwo">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">-0.07</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+
+
     <!-- Settings Screen Styles -->
     <style name="setting">
         <item name="android:textSize">32sp</item>
         <item name="android:letterSpacing">-0.01</item>
         <item name="android:textColor">#78A55A</item>
     </style>
+
+
+    <!-- Find Password Screen Styles -->
+    <style name="find_your_p">
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">-0.08</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+    <!-- Find Password Screen Styles -->
+    <style name="forgotten_y">
+        <item name="android:textSize">17sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <style name="your_id">
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">#A3A3A3</item>
+    </style>
+
 
 </resources>

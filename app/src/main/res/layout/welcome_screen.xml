@@ -27,8 +27,8 @@
 
         <TextView
             android:id="@+id/recycle_sma"
-            android:layout_width="150dp"
-            android:layout_height="15dp"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
             android:text="@string/recycle_sma"
             android:textAppearance="@style/recycle_sma"
             android:gravity="center_horizontal|top"

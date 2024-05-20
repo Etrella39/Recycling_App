@@ -38,6 +38,12 @@
     <!-- Settings Screen Settings -->
     <string name="setting">Setting</string>
 
+    <!-- Find Password Screen FindPass -->
+    <string name="find_your_p">Find Your Password</string>
 
+    <!-- Find Password Screen Forgotten -->
+    <string name="forgotten_y">Forgotten your Password?\nEnter your ID below</string>
+    <string name="find_passwo">Find Password</string>
+    <string name="your_id">Your ID</string>
 
 </resources>
