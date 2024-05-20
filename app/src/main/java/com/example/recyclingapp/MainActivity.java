@@ -27,9 +27,8 @@ public class MainActivity extends AppCompatActivity {
         hand.postDelayed(new Runnable() {
             @Override
             public void run() {
-                // TODO Auto-generated method stub
-                Intent i = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(i);
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
                 finish();
             }
         }, 2000);

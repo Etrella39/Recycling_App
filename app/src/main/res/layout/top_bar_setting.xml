@@ -6,10 +6,11 @@
     android:layout_alignParentTop="true"
     >
     <Button
-        android:id="@+id/button"
+        android:id="@+id/setting_button"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_alignParentEnd="true"
+        android:contentDescription="setting_button"
         android:background= "@drawable/top_button_setting"
         />
 </RelativeLayout>
