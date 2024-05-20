@@ -28,7 +28,7 @@
         <include layout="@layout/id_and_password_box"/>
 
         <LinearLayout
-            android:id="@+id/sign_up_but"
+            android:id="@+id/login_button"
             android:layout_width="266dp"
             android:layout_height="42dp"
             android:layout_marginTop="15dp"
@@ -70,7 +70,7 @@
                 android:fontFamily="@font/interbold" />
 
             <TextView
-                android:id="@+id/sign_up"
+                android:id="@+id/signup_button"
                 android:layout_width="54dp"
                 android:layout_height="22dp"
                 android:gravity="center"
