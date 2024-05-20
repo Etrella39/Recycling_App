@@ -46,4 +46,9 @@
     <string name="logout">Log out</string>
     <string name="delete">Delete</string>
 
+    <string name="january_202">1 January 2024</string>
+
+    <!-- Settings Screen Settings -->
+    <string name="setting">Setting</string>
+
 </resources>

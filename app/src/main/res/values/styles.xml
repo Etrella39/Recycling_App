@@ -102,5 +102,11 @@
         <item name="android:letterSpacing">-0.04</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
+    <!-- Settings Screen Styles -->
+    <style name="setting">
+        <item name="android:textSize">32sp</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:textColor">#78A55A</item>
+    </style>
 
 </resources>
