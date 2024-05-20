@@ -1,6 +1,6 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/top_bar_setting"
+    android:id="@+id/top_bar_back"
     android:layout_width="match_parent"
     android:layout_height="55dp"
     android:layout_alignParentTop="true"

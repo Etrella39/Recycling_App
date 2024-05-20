@@ -5,8 +5,6 @@
     android:layout_height="130dp"
     android:layout_alignParentBottom="true"
     >
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="94dp"

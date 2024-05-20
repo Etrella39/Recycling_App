@@ -2,7 +2,7 @@
 
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/welcome_scr"
+    android:id="@+id/user_profile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToOutline="true"
@@ -14,7 +14,6 @@
         android:layout_height="match_parent"
         >
         <View
-            android:id="@+id/rectangle_7"
             android:layout_width="match_parent"
             android:layout_height="230dp"
             android:layout_centerHorizontal="true"
@@ -23,7 +22,7 @@
             />
 
         <LinearLayout
-            android:id="@+id/user_profil"
+            android:id="@+id/user_profile1"
             android:layout_width="match_parent"
             android:layout_height="304dp"
             android:gravity="center_horizontal"
@@ -35,15 +34,14 @@
                 android:layout_height="154dp"
                 >
                 <View
-                    android:id="@+id/ellipse_15"
+                    android:id="@+id/profile_photo"
                     android:layout_width="154dp"
                     android:layout_height="154dp"
                     android:clipToOutline="true"
                     android:background="@drawable/user_profile_main"
                     />
                 <View
-                    android:id="@+id/customer"
-                    android:layout_width="83.49dp"
+                     android:layout_width="83.49dp"
                     android:layout_height="83.49dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="35.25dp"
@@ -53,7 +51,7 @@
             <TextView
                 android:id="@+id/user_name"
                 android:layout_width="180dp"
-                android:layout_height="36dp"
+                android:layout_height="38dp"
                 android:text="@string/user_name"
                 android:textAppearance="@style/user_name"
                 android:lineSpacingExtra="-12sp"
@@ -68,7 +66,7 @@
                 android:id="@+id/property_de"
                 android:layout_width="237dp"
                 android:layout_height="61dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:background="@drawable/user_record_button"
@@ -88,22 +86,22 @@
                     android:orientation="vertical"
                     >
                     <TextView
-                        android:layout_width="91dp"
-                        android:layout_height="14dp"
-                        android:text="Waste Record"
-                        android:textAppearance="@style/waste_recor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/waste_record_string"
+                        android:textAppearance="@style/waste_record"
                         android:lineSpacingExtra="6sp"
-                        android:gravity="center_horizontal|center_vertical"
+                        android:gravity="center_vertical"
                         android:fontFamily="@font/interbold"
                         android:lineHeight="22sp"
                         />
                     <!-- Auto layout, variables, and unit scale are not yet supported -->
                     <TextView
                         android:id="@+id/january_202"
-                        android:layout_width="80dp"
-                        android:layout_height="15dp"
-                        android:text="@string/january_202"
-                        android:textAppearance="@style/january_202"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/waste_record"
+                        android:textAppearance="@style/waste_record1"
                         android:lineSpacingExtra="9sp"
                         android:gravity="center_horizontal|center_vertical"
                         android:fontFamily="@font/intermedium"
@@ -113,14 +111,138 @@
             </LinearLayout>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="122dp"
+            android:layout_below="@id/user_profile1"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+                <View
+                    android:layout_width="49.74dp"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="24.87dp"
+                    android:background="@drawable/user_calendar"
+                    />
+                <LinearLayout
+                    android:layout_width="85.22dp"
+                    android:layout_height="30.62dp"
+                    android:layout_marginLeft="20.62dp"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/joined_date_string"
+                        android:textAppearance="@style/joined_date"
+                        android:lineSpacingExtra="6sp"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/interbold"
+                        android:lineHeight="22sp"
+                        />
+                    <!-- Auto layout, variables, and unit scale are not yet supported -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/joined_date"
+                        android:textAppearance="@style/joined_date1"
+                        android:lineSpacingExtra="9sp"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/intermedium"
+                        android:lineHeight="22sp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+                <View
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="28dp"
+                    android:background="@drawable/user_id"
+                    />
+                <LinearLayout
+                    android:layout_width="85.22dp"
+                    android:layout_height="30.62dp"
+                    android:layout_marginLeft="20.62dp"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_id_string"
+                        android:textAppearance="@style/joined_date"
+                        android:lineSpacingExtra="6sp"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/interbold"
+                        android:lineHeight="22sp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_id"
+                        android:textAppearance="@style/joined_date1"
+                        android:lineSpacingExtra="9sp"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/intermedium"
+                        android:lineHeight="22sp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="167dp"
+            android:layout_alignParentBottom="true"
+            >
+            <TextView
+                android:id="@+id/log_out"
+                android:layout_width="57dp"
+                android:layout_height="22dp"
+                android:text="@string/logout"
+                android:textAppearance="@style/log_out"
+                android:lineSpacingExtra="6sp"
+                android:translationY="-3.13sp"
+                android:gravity="center_horizontal|top"
+                android:fontFamily="@font/interbold"
+                android:lineHeight="22sp"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:id="@+id/delete"
+                android:layout_width="57dp"
+                android:layout_height="22dp"
+                android:text="@string/delete"
+                android:textAppearance="@style/delete"
+                android:lineSpacingExtra="9sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:fontFamily="@font/interbold"
+                android:lineHeight="22sp"
+                android:background="@drawable/user_delete_id"
+                />
+        </LinearLayout>
 
         <include layout="@layout/top_bar_setting"/>
     </RelativeLayout>
 
-
     <include layout="@layout/navigation_bar"/>
-
 
 
 </RelativeLayout>
