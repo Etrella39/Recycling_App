@@ -64,7 +64,7 @@
         <LinearLayout
             android:id="@+id/sign_up_but"
             android:layout_width="266dp"
-            android:layout_height="42dp"
+            android:layout_height="48dp"
             android:layout_marginTop="15dp"
             android:gravity="center"
             android:background="@drawable/login_button"
