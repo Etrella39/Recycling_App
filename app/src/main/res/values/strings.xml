@@ -34,4 +34,10 @@
     <!-- User Frame Strings -->
     <string name="user_name">User Name</string>
     <string name="january_202">1 January 2024</string>
+
+    <!-- Settings Screen Settings -->
+    <string name="setting">Setting</string>
+
+
+
 </resources>
