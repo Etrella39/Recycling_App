@@ -33,6 +33,19 @@
 
     <!-- User Frame Strings -->
     <string name="user_name">User Name</string>
+
+    <string name="waste_record_string">Waste Record</string>
+    <string name="waste_record">1 January 2024</string>
+
+    <string name="joined_date_string">Joined Date</string>
+    <string name="joined_date">1 January 2024</string>
+
+    <string name="user_id_string">ID</string>
+    <string name="user_id">user_id</string>
+
+    <string name="logout">Log out</string>
+    <string name="delete">Delete</string>
+
     <string name="january_202">1 January 2024</string>
 
     <!-- Settings Screen Settings -->
@@ -45,5 +58,6 @@
     <string name="forgotten_y">Forgotten your Password?\nEnter your ID below</string>
     <string name="find_passwo">Find Password</string>
     <string name="your_id">Your ID</string>
+
 
 </resources>
