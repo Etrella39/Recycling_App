@@ -136,13 +136,21 @@
         <item name="android:textColor">#A3A3A3</item>
     </style>
 
-
-
-    <!-- Find Password Screen Styles -->
-
-
-    <!-- 안녕하세요 -->
-    <!-- 안녕하세요 -->
-    <!-- 바이 -->
+    <!-- Show Password Screen Styles -->
+    <style name="your_passwo">
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+    <style name="password_for_showing">
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">#A3A3A3</item>
+    </style>
+    <style name="ok">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">-0.07</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
 
 </resources>

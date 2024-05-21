@@ -59,5 +59,9 @@
     <string name="find_passwo">Find Password</string>
     <string name="your_id">Your ID</string>
 
+    <!-- Show Password Screen Your Password -->
+    <string name="your_passwo">Your Password</string>
+    <string name="password_for_showing">************</string>
+    <string name="ok">OK</string>
 
 </resources>
