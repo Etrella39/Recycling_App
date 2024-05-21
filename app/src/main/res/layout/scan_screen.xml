@@ -13,7 +13,6 @@
         android:id="@+id/camera_simulation"
         android:layout_width="match_parent"
         android:layout_height="555dp"
-        android:layout_weight="1"
         android:layout_below="@id/top_bar_back"
         android:layout_above="@id/bottom_controls"
         android:src="@drawable/scan_screen_camera_simulation"
