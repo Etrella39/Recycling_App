@@ -30,16 +30,10 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this@LoginActivity, SignUpActivity::class.java)
             startActivity(intent)
         }
-    }
-
-    fun onClick(v: View) {
-        if (v.id == R.id.signup_button) {
-            val intent = Intent(this@LoginActivity, SignUpActivity::class.java)
+        login_btn!!.setOnClickListener {
+            val intent = Intent(this@LoginActivity, HomeActivity::class.java)
             startActivity(intent)
-            finish()
-        } else if (v.id == R.id.login_button) {
-            val intent2 = Intent(this@LoginActivity, HomeActivity::class.java)
-            startActivity(intent2)
         }
     }
+
 }
