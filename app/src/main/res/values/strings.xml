@@ -66,7 +66,7 @@
 
 
     <!-- User Profile Characters Screen -->
-    <string name="character1">character1</string>
-    <string name="character2">character2</string>
+    <string name="character1">characters_for_profile</string>
+
 
 </resources>
