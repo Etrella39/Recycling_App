@@ -1,51 +1,45 @@
-package com.example.recyclingapp;
+package com.example.recyclingapp
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.os.Handler;
-import android.widget.Button;
-import android.content.Intent;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.content.Intent
+import android.os.Bundle
+import android.view.View
+import android.widget.EditText
+import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
-public class LoginActivity extends Activity implements View.OnClickListener {
+class LoginActivity : AppCompatActivity() {
+    var signup_btn: TextView? = null // 회원가입 버튼
+    var login_btn: LinearLayout? = null // 로그인 버튼
 
-    TextView signup_btn;                 // 회원가입 버튼
-    LinearLayout login_btn;                // 로그인 버튼
-
-    EditText id_edit;                // id 에디트
-    EditText pw_edit;
+    var id_edit: EditText? = null // id 에디트
+    var pw_edit: EditText? = null
 
 
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_screen);
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.login_screen)
 
-        signup_btn = (TextView)findViewById(R.id.signup_button);    // 회원가입 버튼을 찾고
-        login_btn = (LinearLayout)findViewById(R.id.login_button);
+        signup_btn = findViewById<View>(R.id.signup_button) as TextView // 회원가입 버튼을 찾고
+        login_btn = findViewById<View>(R.id.login_button) as LinearLayout
 
-        signup_btn.setOnClickListener(this);                 // 리스너를 달아줌.
-        login_btn.setOnClickListener(this);                // 리스너를 달아줌.
+        id_edit = findViewById<View>(R.id.id_edit) as EditText // id 에디트를 찾음.
+        pw_edit = findViewById<View>(R.id.password_edit) as EditText
 
-        id_edit = (EditText)findViewById(R.id.id_edit);    // id 에디트를 찾음.
-        pw_edit = (EditText)findViewById(R.id.password_edit);
+        signup_btn!!.setOnClickListener {
+            val intent = Intent(this@LoginActivity, SignUpActivity::class.java)
+            startActivity(intent)
+        }
     }
-    public void onClick(View v) {
-        if (v.getId() == R.id.signup_button) {
-            Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
-            startActivity(intent);
-            finish();
-        } else if (v.getId() == R.id.login_button) {
-            Intent intent2 = new Intent(LoginActivity.this, HomeActivity.class);
-            startActivity(intent2);
-            finish();
+
+    fun onClick(v: View) {
+        if (v.id == R.id.signup_button) {
+            val intent = Intent(this@LoginActivity, SignUpActivity::class.java)
+            startActivity(intent)
+            finish()
+        } else if (v.id == R.id.login_button) {
+            val intent2 = Intent(this@LoginActivity, HomeActivity::class.java)
+            startActivity(intent2)
         }
     }
 }

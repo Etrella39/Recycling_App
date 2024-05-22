@@ -1,11 +1,11 @@
-package com.example.recyclingapp;
+package com.example.recyclingapp
 
-import android.app.Activity;
-import android.os.Bundle;
+import android.app.Activity
+import android.os.Bundle
 
-public class HomeActivity extends Activity {
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.home_screen);
+class HomeActivity : Activity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.home_screen)
     }
 }
