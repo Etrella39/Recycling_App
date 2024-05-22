@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Top Bar -->
+    <include layout="@layout/top_bar_back" />
+
+    <!-- User Profile Photo and Lines -->
+    <RelativeLayout
+        android:id="@+id/user_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="102dp">
+
+        <!-- Left Line -->
+        <View
+            android:id="@+id/line_2"
+            android:layout_width="150dp"
+            android:layout_height="8dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/ellipse_15"
+            android:background="@drawable/user_profile_left_line" />
+
+        <!-- User Profile Photo -->
+        <View
+            android:id="@+id/ellipse_15"
+            android:layout_width="106dp"
+            android:layout_height="112dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/user_profile_photo" />
+
+        <!-- Right Line -->
+        <View
+            android:id="@+id/line_3"
+            android:layout_width="150dp"
+            android:layout_height="8dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/ellipse_15"
+            android:background="@drawable/user_profile_right_line" />
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@id/ellipse_15"
+            android:layout_alignEnd="@id/ellipse_15"
+            android:background="@drawable/user_profile_camera_icon"></View>
+
+    </RelativeLayout>
+
+    <!-- Character Buttons Grid -->
+    <GridLayout
+        android:id="@+id/character_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_container"
+        android:layout_marginTop="30dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="5"
+        android:rowCount="6"
+        android:padding="16dp"
+        android:orientation="horizontal">
+
+        <!-- Example Character Buttons -->
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/character1"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/character1" />
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/character2"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/character2" />
+
+        <!-- Add more ImageButtons here for other characters -->
+
+    </GridLayout>
+
+</RelativeLayout>
