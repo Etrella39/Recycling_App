@@ -25,7 +25,7 @@
             android:textAppearance="@style/login"
             android:translationY="-7.64sp" />
 
-        <include layout="@layout/id_and_password_box"/>
+        <include layout="@layout/box_id_and_password"/>
 
         <LinearLayout
             android:id="@+id/login_button"

@@ -24,7 +24,7 @@
         <!-- User Profile Photo -->
         <View
             android:id="@+id/ellipse_15"
-            android:layout_width="106dp"
+            android:layout_width="112dp"
             android:layout_height="112dp"
             android:layout_centerInParent="true"
             android:background="@drawable/user_profile_photo" />
@@ -41,7 +41,7 @@
             android:layout_height="30dp"
             android:layout_alignBottom="@id/ellipse_15"
             android:layout_alignEnd="@id/ellipse_15"
-            android:background="@drawable/user_profile_camera_icon"></View>
+            android:background="@drawable/user_profile_camera_icon" />
     </RelativeLayout>
     <!-- Character Buttons Grid -->
     <GridLayout

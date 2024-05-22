@@ -40,6 +40,9 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".SignUpActivity" />
 
+        <activity android:name=".IDBox" />
+
+
     </application>
 
 </manifest>

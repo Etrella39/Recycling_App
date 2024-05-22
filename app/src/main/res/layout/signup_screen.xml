@@ -29,7 +29,7 @@
             android:fontFamily="@font/interbold"
             />
 
-        <include layout="@layout/id_and_password_box"/>
+        <include layout="@layout/box_id_and_password"/>
 
         <LinearLayout
             android:id="@+id/confirm_pass"
@@ -54,6 +54,7 @@
                 android:textAppearance="@style/confirm_password"
                 android:fontFamily="@font/interbold"
                 android:background="@null"
+                android:inputType="textPassword"
                 />
             <!-- Password icon View -->
             <View

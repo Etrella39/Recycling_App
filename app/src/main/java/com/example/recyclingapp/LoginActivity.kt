@@ -15,7 +15,6 @@ class LoginActivity : AppCompatActivity() {
     var id_edit: EditText? = null // id 에디트
     var pw_edit: EditText? = null
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_screen)
