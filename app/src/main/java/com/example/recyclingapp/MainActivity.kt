@@ -19,8 +19,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-
+        
         val hand = Handler()
         hand.postDelayed(Runnable {
             val intent = Intent(this@MainActivity, LoginActivity::class.java)
