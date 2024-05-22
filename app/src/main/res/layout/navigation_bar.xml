@@ -31,7 +31,7 @@
                 />
             <TextView
                 android:id="@+id/blogs"
-                android:layout_width="28dp"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/interregular"
                 android:gravity="center_horizontal|top"
