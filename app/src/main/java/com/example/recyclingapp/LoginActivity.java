@@ -23,10 +23,10 @@ public class LoginActivity extends Activity {
     EditText id_edit;                // id 에디트
     EditText pw_edit;
 
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_screen);
-
 
         signup_btn = (TextView)findViewById(R.id.signup_button);    // 회원가입 버튼을 찾고
         login_btn = (LinearLayout)findViewById(R.id.login_button);
