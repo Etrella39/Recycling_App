@@ -64,4 +64,9 @@
     <string name="password_for_showing">************</string>
     <string name="ok">OK</string>
 
+
+    <!-- User Profile Characters Screen -->
+    <string name="character1">character1</string>
+    <string name="character2">character2</string>
+
 </resources>
