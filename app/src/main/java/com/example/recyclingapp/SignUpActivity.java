@@ -9,3 +9,5 @@ public class SignUpActivity extends Activity {
         setContentView(R.layout.signup_screen);
     }
 }
+
+
