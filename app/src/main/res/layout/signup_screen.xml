@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:paddingBottom="60dp"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center" >
 
 
         <TextView
@@ -29,7 +29,7 @@
             android:fontFamily="@font/interbold"
             />
 
-        <include layout="@layout/id_and_password_box"/>
+        <include layout="@layout/box_id_and_password"/>
 
         <LinearLayout
             android:id="@+id/confirm_pass"
@@ -39,11 +39,12 @@
             android:gravity="center"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:background="@drawable/login_id_box">
+            android:background="@drawable/login_id_box"
+             >
 
             <!-- Confirm Password TextView -->
             <EditText
-                android:id="@+id/confirm_pas"
+                android:id="@+id/confirm_password"
                 android:layout_width="205dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="8dp"
@@ -51,9 +52,13 @@
                 android:gravity="center_vertical"
                 android:lineSpacingExtra="36sp"
                 android:hint="@string/confirm_password"
+                android:maxLength = "15"
                 android:textAppearance="@style/confirm_password"
                 android:fontFamily="@font/interbold"
                 android:background="@null"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:digits="0123456789_qwertzuiopasdfghjklyxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
                 />
             <!-- Password icon View -->
             <View
@@ -63,7 +68,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/sign_up_but"
+            android:id="@+id/sign_up_button"
             android:layout_width="266dp"
             android:layout_height="48dp"
             android:layout_marginTop="15dp"
@@ -79,7 +84,8 @@
                 android:lineSpacingExtra="36sp"
                 android:text="@string/sign_up_sc2"
                 android:textAppearance="@style/log_in"
-                android:fontFamily="@font/interbold"/>
+                android:fontFamily="@font/interbold"
+                />
         </LinearLayout>
 
     </LinearLayout>
