@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:paddingBottom="60dp"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center" >
 
 
         <TextView
@@ -39,7 +39,8 @@
             android:gravity="center"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:background="@drawable/login_id_box">
+            android:background="@drawable/login_id_box"
+             >
 
             <!-- Confirm Password TextView -->
             <EditText
