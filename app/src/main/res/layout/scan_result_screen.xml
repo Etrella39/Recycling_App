@@ -6,10 +6,162 @@
     android:background="#FFFFFF">
 
 
-    <include layout="@layout/top_bar_back" />
+    <!-- Top Bar Setting -->
+    <include layout="@layout/top_bar_setting" />
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp">
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/title_frame"
+            android:layout_width="390dp"
+            android:layout_height="184dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clipToOutline="true"
+            android:background="#FFFFFF">
+
+            <!-- Container to hold all items in one line -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical">
+
+                <!-- User Profile Photo -->
+                <ImageView
+                    android:id="@+id/camera"
+                    android:layout_width="120dp"
+                    android:layout_height="180dp"
+
+                    android:layout_gravity="left"
+                    android:src="@drawable/scan_result_screen_photo" />
+
+                <!-- Profile Info Container -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center_vertical">
+
+                    <!-- Plastic Bottle Icon -->
+                    <ImageView
+                        android:id="@+id/plastic_bot"
+                        android:layout_width="61dp"
+                        android:layout_height="61dp"
+                        android:src="@drawable/scan_screen_result_icon" />
+
+                    <!-- PET Text -->
+                    <TextView
+                        android:id="@+id/pet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/pet"
+                        android:textAppearance="@style/pet"
+                        android:gravity="center_vertical" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
 
 
+        <!-- Scan Result Info -->
+        <RelativeLayout
+            android:layout_width="306dp"
+            android:layout_height="232dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/scan_screen_result_main">
 
-    <include layout="@layout/top_bar_setting"/>
+            <!-- Classification Container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_centerHorizontal="true"
+                android:background="#D8E3D0">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="29dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/scan_result_screen_icon_2" />
+
+                <TextView
+                    android:id="@+id/classification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/classification"
+                    android:textAppearance="@style/classification_waste"
+                    android:lineSpacingExtra="6sp"
+                    android:translationY="-3.13sp"
+                    android:gravity="center_horizontal|center"
+                    android:fontFamily="@font/interbold" />
+
+                <TextView
+                    android:id="@+id/classification_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/classification_next"
+                    android:textAppearance="@style/classification_waste"
+                    android:lineSpacingExtra="6sp"
+                    android:translationY="-3.13sp"
+                    android:gravity="center"
+                    android:fontFamily="@font/intermedium" />
+            </LinearLayout>
+
+            <!-- Scan Result Text -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/result"
+                android:textAppearance="@style/result"
+                android:layout_marginTop="55dp"
+                android:gravity="center_vertical" />
+
+            <!-- Advice Text -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="150dp"
+                android:text="@string/advice"
+                android:textAppearance="@style/advice"
+                android:gravity="center_vertical" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- Retake Button -->
+    <LinearLayout
+        android:id="@+id/start_button"
+        android:layout_width="127dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_above="@id/navigation_bar"
+        android:layout_marginBottom="167dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/scan_result_screen_retake_button"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/retake"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/retake"
+            android:textAppearance="@style/retake"
+            android:gravity="center" />
+    </LinearLayout>
+
+
+    <include layout="@layout/navigation_bar"/>
 
 </RelativeLayout>

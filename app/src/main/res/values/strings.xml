@@ -69,4 +69,21 @@
     <string name="character1">characters_for_profile</string>
 
 
+    <!-- Scan Result Screen -->
+    <string name="retake">Re-Take</string>
+    <string name="pet">Pet</string>
+    <string name="result">
+        After thoroughly washing the inside of the plastic bottle, remove the label and separate it for recycling!
+Closing the lid after compression reduces the volume, making it more economical to collect and transport.
+The PET bottles separated in this way are
+    </string>
+
+    <string name="advice">
+        Plastic raw materials, synthetic fibers, non-woven fabrics, etc.
+Recycled in many ways!
+    </string>
+
+    <string name="classification" >1 plastic bottle</string>
+    <string name="classification_next">was detected</string>
+
 </resources>
