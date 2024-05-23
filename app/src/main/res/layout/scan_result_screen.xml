@@ -75,19 +75,23 @@
 
 
         <!-- Scan Result Info -->
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="306dp"
             android:layout_height="232dp"
             android:layout_marginTop="10dp"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/scan_screen_result_main">
+            android:orientation="vertical"
+            android:background="@drawable/scan_screen_result_main" >
 
             <!-- Classification Container -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_centerHorizontal="true"
-                android:background="#D8E3D0">
+                android:background="#D8E3D0"
+                android:gravity="center_vertical"
+                >
+
 
                 <ImageView
                     android:layout_width="20dp"
@@ -95,47 +99,67 @@
                     android:layout_marginLeft="20dp"
                     android:src="@drawable/scan_result_screen_icon_2" />
 
-                <TextView
-                    android:id="@+id/classification"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/classification"
-                    android:textAppearance="@style/classification_waste"
-                    android:lineSpacingExtra="6sp"
-                    android:translationY="-3.13sp"
-                    android:gravity="center_horizontal|center"
-                    android:fontFamily="@font/interbold" />
+                    android:layout_marginLeft="16dp"
+                    >
+                    <TextView
+                        android:id="@+id/classification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/classification"
+                        android:textAppearance="@style/classification_waste"
+                        android:lineSpacingExtra="6sp"
+                        android:translationY="-3.13sp"
+                        android:gravity="center_horizontal|center"
+                        android:fontFamily="@font/interbold" />
 
-                <TextView
-                    android:id="@+id/classification_next"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/classification_next"
-                    android:textAppearance="@style/classification_waste"
-                    android:lineSpacingExtra="6sp"
-                    android:translationY="-3.13sp"
-                    android:gravity="center"
-                    android:fontFamily="@font/intermedium" />
+                    <TextView
+                        android:id="@+id/classification_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/classification_next"
+                        android:textAppearance="@style/classification_waste"
+                        android:lineSpacingExtra="6sp"
+                        android:translationY="-3.13sp"
+                        android:gravity="center"
+                        android:fontFamily="@font/intermedium" />
+
+                </LinearLayout>
             </LinearLayout>
 
-            <!-- Scan Result Text -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/result"
-                android:textAppearance="@style/result"
-                android:layout_marginTop="55dp"
-                android:gravity="center_vertical" />
 
-            <!-- Advice Text -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="150dp"
-                android:text="@string/advice"
-                android:textAppearance="@style/advice"
-                android:gravity="center_vertical" />
-        </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/scan_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                >
+                <!-- Scan Result Text -->
+                <TextView
+                    android:layout_width="248dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/result"
+                    android:textAppearance="@style/result"
+                    android:fontFamily="@font/intermedium"
+                    android:gravity="center_vertical" />
+
+                <!-- Advice Text -->
+                <TextView
+                    android:layout_width="248dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/advice"
+                    android:textAppearance="@style/advice"
+                    android:fontFamily="@font/intermedium"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
 
     <!-- Retake Button -->
