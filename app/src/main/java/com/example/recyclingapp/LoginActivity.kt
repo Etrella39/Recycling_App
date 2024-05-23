@@ -2,27 +2,25 @@ package com.example.recyclingapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.InputFilter
+import android.text.InputType
 import android.view.View
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import android.graphics.Typeface;
-import android.text.Editable;
-import android.text.InputType;
-import android.view.MotionEvent;
-import android.widget.ImageButton;
-import androidx.annotation.Nullable;
+import androidx.core.content.res.ResourcesCompat
 
 class LoginActivity : AppCompatActivity() {
-    lateinit var SignUp_btn: TextView // 회원가입 버튼
-    lateinit var LogIn_btn: LinearLayout // 로그인 버튼
+    private lateinit var signUpBTN: TextView // 회원가입 버튼
+    private lateinit var loginBTN: LinearLayout // 로그인 버튼
 
-    lateinit var ID_edit: EditText // id 에디트
-    lateinit var PW_edit: EditText
+    private lateinit var idEdit: EditText // id 에디트
+    private lateinit var pwEdit: EditText
 
-    lateinit var PW_Showbutton: View // 비밀번호 확인 버튼
+    private lateinit var pwShowbutton: LinearLayout // 비밀번호 확인 버튼
+    var isPasswordVisible = false
 
     var DB:DBHelper? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,17 +29,29 @@ class LoginActivity : AppCompatActivity() {
 
         DB = DBHelper(this)
 
-        SignUp_btn = findViewById(R.id.signup_button)
-        LogIn_btn = findViewById(R.id.login_button)
+        signUpBTN = findViewById(R.id.signup_button)
+        loginBTN = findViewById(R.id.login_button)
 
-        ID_edit = findViewById(R.id.id_edit)
-        PW_edit = findViewById(R.id.password_edit)
+        idEdit = findViewById(R.id.id_edit)
+        pwEdit = findViewById(R.id.password_edit)
 
-        PW_Showbutton = findViewById(R.id.password_icon)
+        pwShowbutton = findViewById(R.id.password_icon)
 
-        LogIn_btn.setOnClickListener {
-            val user = ID_edit.text.toString()
-            val pass = PW_edit.text.toString()
+        val filter = InputFilter { source, start, end, dest, dstart, dend ->
+            val pattern = Regex("[^a-zA-Z0-9!@#$%^&*()_+\\-=\\[\\]{};:\"\\\\|,.<>/?]")
+            if (pattern.containsMatchIn(source)) {
+                "" // 영어, 숫자, 특수문자 이외의 입력 차단
+            } else {
+                null // 영어, 숫자, 특수문자 입력 허용
+            }
+        }
+
+        pwEdit.filters = arrayOf(filter)
+
+
+        loginBTN.setOnClickListener {
+            val user = idEdit.text.toString()
+            val pass = pwEdit.text.toString()
 
             // 빈칸 제출시 Toast
             if (user == "" || pass == "") {
@@ -62,14 +72,26 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        SignUp_btn.setOnClickListener {
+        signUpBTN.setOnClickListener {
             val intent = Intent(this@LoginActivity, SignUpActivity::class.java)
             startActivity(intent)
         }
 
-        PW_Showbutton.setOnClickListener {
+        pwShowbutton.setOnClickListener {
             ShowPassword()
         }
+
+    }
+
+    fun ShowPassword () {
+        isPasswordVisible = !isPasswordVisible
+        pwEdit.inputType = if (isPasswordVisible) {
+            InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+        } else {
+            InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+        }
+        pwEdit.typeface = ResourcesCompat.getFont(this, R.font.interbold)
+        pwEdit.setSelection(pwEdit.length()); // 커서를 끝에 위치시키기
 
     }
 

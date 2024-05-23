@@ -3,6 +3,9 @@ package com.example.recyclingapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.InputFilter
+import android.text.InputType
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
@@ -19,6 +22,8 @@ class SignUpActivity : AppCompatActivity() {
     lateinit var ConfirmPassword: EditText
 
     lateinit var SignUpBotton: LinearLayout
+    private lateinit var pwShowbutton: LinearLayout // 비밀번호 확인 버튼
+    var isPasswordVisible = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +36,16 @@ class SignUpActivity : AppCompatActivity() {
 
         SignUpBotton = findViewById(R.id.sign_up_button)
 
+        pwShowbutton = findViewById(R.id.password_icon)
+
+        val filter = InputFilter { source, start, end, dest, dstart, dend ->
+            val pattern = Regex("[^a-zA-Z0-9!@#$%^&*()_+\\-=\\[\\]{};:\"\\\\|,.<>/?]")
+            if (pattern.containsMatchIn(source)) {
+                "" // 영어, 숫자, 특수문자 이외의 입력 차단
+            } else {
+                null // 영어, 숫자, 특수문자 입력 허용
+            }
+        }
 
         SignUpBotton.setOnClickListener {
             val user = ID_edit.text.toString()
@@ -77,5 +92,11 @@ class SignUpActivity : AppCompatActivity() {
             }
         }
 
+        pwShowbutton.setOnClickListener {
+        }
+
     }
+
+
+
 }
