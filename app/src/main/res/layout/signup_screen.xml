@@ -47,24 +47,31 @@
                 android:id="@+id/confirm_password"
                 android:layout_width="205dp"
                 android:layout_height="48dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginStart="13dp"
                 android:gravity="center_vertical"
                 android:lineSpacingExtra="36sp"
                 android:hint="@string/confirm_password"
-                android:maxLength = "15"
+                android:maxLength="15"
                 android:textAppearance="@style/confirm_password"
                 android:fontFamily="@font/interbold"
                 android:background="@null"
                 android:inputType="textPassword"
                 android:maxLines="1"
-                android:digits="0123456789_qwertzuiopasdfghjklyxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
                 />
             <!-- Password icon View -->
-            <View
-                android:layout_width="12.5dp"
-                android:layout_height="7.5dp"
-                android:background="@drawable/password_icon_eye" />
+            <LinearLayout
+                android:id="@+id/password_icon2"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                >
+                <!-- Password icon View -->
+                <View
+                    android:layout_width="12.5dp"
+                    android:layout_height="7.5dp"
+                    android:background="@drawable/password_icon_eye" />
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout

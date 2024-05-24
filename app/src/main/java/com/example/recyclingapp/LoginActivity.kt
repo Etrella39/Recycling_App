@@ -1,5 +1,6 @@
 package com.example.recyclingapp
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputFilter
@@ -39,15 +40,18 @@ class LoginActivity : AppCompatActivity() {
 
         val filter = InputFilter { source, start, end, dest, dstart, dend ->
             val pattern = Regex("[^a-zA-Z0-9!@#$%^&*()_+\\-=\\[\\]{};:\"\\\\|,.<>/?]")
+            val lengthFilter = InputFilter.LengthFilter(15)
+
             if (pattern.containsMatchIn(source)) {
                 "" // 영어, 숫자, 특수문자 이외의 입력 차단
+            } else if (lengthFilter.filter(source, start, end, dest, dstart, dend) != null) {
+                "" // 길이 제한 초과 시 차단
             } else {
                 null // 영어, 숫자, 특수문자 입력 허용
             }
         }
 
         pwEdit.filters = arrayOf(filter)
-
 
         loginBTN.setOnClickListener {
             val user = idEdit.text.toString()
@@ -78,20 +82,20 @@ class LoginActivity : AppCompatActivity() {
         }
 
         pwShowbutton.setOnClickListener {
-            ShowPassword()
+            isPasswordVisible = !isPasswordVisible
+            ShowPassword(pwEdit, isPasswordVisible, this)
         }
 
     }
 
-    fun ShowPassword () {
-        isPasswordVisible = !isPasswordVisible
-        pwEdit.inputType = if (isPasswordVisible) {
+    fun ShowPassword(_pwEdit: EditText, PasswordVisible: Boolean, _context: Context) {
+        _pwEdit.inputType = if (PasswordVisible) {
             InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
         } else {
             InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
         }
-        pwEdit.typeface = ResourcesCompat.getFont(this, R.font.interbold)
-        pwEdit.setSelection(pwEdit.length()); // 커서를 끝에 위치시키기
+        _pwEdit.typeface = ResourcesCompat.getFont(_context, R.font.interbold)
+        _pwEdit.setSelection(_pwEdit.length()); // 커서를 끝에 위치시키기
 
     }
 
