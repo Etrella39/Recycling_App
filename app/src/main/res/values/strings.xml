@@ -93,14 +93,14 @@ Recycled in many ways!
         <string name="screen_mode">Appearance</string>
         <string name="language">Language</string>
         <string name="about_us">About us</string>
-        <string name="about_us_details">At Green Cycle, we\'re passionate about making a positive impact on our planet...</string>
+        <string name="about_us_details">
+            At Green Cycle, we\'re passionate about making a positive impact on our planet.
+            Our mission is to revolutionize the way people think about recycling and
+            contribute to a more sustainable future for generations to come..</string>
         <string name="back">Back</string>
 
-    <string-array name="spinner_items">
-        <item>Text 1</item>
-        <item>Text 2</item>
-        <item>Text 3</item>
-        <item>Text 4</item>
-    </string-array>
+    <string name="sustainabil">
+Sustainability \n Convenience\n Community\n Impact
+</string>
 
 </resources>
