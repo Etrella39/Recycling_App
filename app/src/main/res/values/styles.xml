@@ -184,4 +184,12 @@
     </style>
 
 
+
+    <!-- Settings Screen Styles -->
+    <style name="settings_app">
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+
 </resources>

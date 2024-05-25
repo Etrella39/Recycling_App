@@ -1,36 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/signup_screen"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clipToOutline="true"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    tools:context="SettingsActivity">
+
 
     <include layout="@layout/top_bar_back"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="60dp"
-        android:orientation="vertical"
-        android:gravity="center">
-
-
-        <TextView
-            android:id="@+id/setting"
+        android:layout_marginTop="90dp"
+        android:layout_centerVertical="true"
+        >
+        <Spinner
+            android:id="@+id/my_spinner_screen_mode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/setting"
-            android:textAppearance="@style/setting"
-            android:translationY="-7.64sp"
-            android:gravity="top"
-            android:fontFamily="@font/interbold"
-            android:lineHeight="54sp"
-            />
+            android:entries="@array/screen_mode_options"
+
+            android:spinnerMode="dropdown"/>
 
 
 
 
     </LinearLayout>
+
+
+
+
+
+
+
+<!--    &lt;!&ndash; Setting Title &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/settings_title"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:text="@string/settings_title"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+<!--        android:textColor="#4CAF50" />-->
+
+<!--    &lt;!&ndash; Screen Mode Spinner &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/settings_title"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:text="@string/screen_mode"-->
+<!--        android:textAppearance="@style/settings_app" />-->
+
+<!--    <Spinner-->
+<!--        android:id="@+id/screen_mode_spinner"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/settings_title"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginTop="8dp"-->
+
+<!--        android:entries="@array/screen_mode_options"-->
+<!--        android:spinnerMode="dropdown" />-->
+
+<!--    &lt;!&ndash; Language Spinner &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/screen_mode_spinner"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:text="@string/language"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />-->
+
+<!--    <Spinner-->
+<!--        android:id="@+id/language_spinner"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/screen_mode_spinner"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_toEndOf="@id/language_label"-->
+<!--        android:entries="@array/language_options"-->
+<!--        android:spinnerMode="dropdown" />-->
+
+<!--    &lt;!&ndash; About Us Section &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/about_us"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/language_spinner"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:text="@string/about_us"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+<!--        android:textColor="#B0B0B0" />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/about_us"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:text="@string/about_us_details"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Small"-->
+<!--        android:textColor="#B0B0B0" />-->
+
 </RelativeLayout>

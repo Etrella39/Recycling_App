@@ -86,4 +86,16 @@ Recycled in many ways!
     <string name="classification" >1 plastic bottle</string>
     <string name="classification_next">was detected</string>
 
+
+    <!-- Settings Screen -->
+        <string name="app_name1">YourApp</string>
+        <string name="settings_title">Setting</string>
+        <string name="screen_mode">Appearance</string>
+        <string name="language">Language</string>
+        <string name="about_us">About us</string>
+        <string name="about_us_details">At Green Cycle, we\'re passionate about making a positive impact on our planet...</string>
+        <string name="back">Back</string>
+
+
+
 </resources>
