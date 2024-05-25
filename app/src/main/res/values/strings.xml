@@ -103,4 +103,8 @@ Recycled in many ways!
 Sustainability \n Convenience\n Community\n Impact
 </string>
 
+
+    <!-- Database Screen String-->
+    <string name="title">Recent Actions</string>
+
 </resources>

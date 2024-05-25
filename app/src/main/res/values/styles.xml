@@ -203,4 +203,10 @@
         <item name="android:textColor">#BBBBBB</item>
     </style>
 
+    <!-- Database Screen -->
+    <style name="title_db">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#547E38</item>
+    </style>
+
 </resources>

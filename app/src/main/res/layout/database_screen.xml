@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToOutline="true"
+    android:background="#FFFFFF"
+    >
+
+    <include layout="@layout/top_bar_back"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="60dp"
+        android:orientation="vertical"
+        android:layout_marginTop="90dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textAppearance="@style/title_db"
+            android:lineSpacingExtra="-4sp"
+            android:gravity="top"
+            />
+
+        <ListView
+            android:id="@+id/list_itmes_database"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <include layout="@layout/navigation_bar"/>
+
+
+
+</RelativeLayout>
