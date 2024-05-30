@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatDelegate
 
 class SettingsActivity : AppCompatActivity() {
 
+    private val back = BackButtonClick()
+
     private lateinit var screenModeSpinner: Spinner
     private lateinit var languageSpinner: Spinner
     private lateinit var backButton: Button
@@ -23,16 +25,14 @@ class SettingsActivity : AppCompatActivity() {
 
         // Initialize views
         backButton = findViewById(R.id.back_button)
-        screenModeSpinner = findViewById(R.id.my_spinner_screen_mode)
-        languageSpinner = findViewById(R.id.my_spinner_language)
+
 
         // Initialize SharedPreferences
         sharedPreferences = getSharedPreferences("user_preferences", Context.MODE_PRIVATE)
 
         // Set click listener for back button
-        backButton.setOnClickListener {
-            finish()
-        }
+
+        back.back()
 
 //        // Set up listener for screen mode spinner
 //        screenModeSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {

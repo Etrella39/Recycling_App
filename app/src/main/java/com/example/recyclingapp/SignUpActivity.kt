@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.InputFilter
 import android.text.InputFilter.AllCaps
 import android.text.InputFilter.LengthFilter
+import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Toast
@@ -24,8 +25,10 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var SignUpBotton: LinearLayout
     private lateinit var pwShowbutton: LinearLayout
     private lateinit var pwShowbutton2: LinearLayout// 비밀번호 확인 버튼
-    var isPasswordVisible = false
-    var isPasswordVisible2 = false
+    private var isPasswordVisible = false
+    private var isPasswordVisible2 = false
+
+    private val back = BackButtonClick()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -101,6 +104,8 @@ class SignUpActivity : AppCompatActivity() {
                 }
             }
         }
+
+        back.back()
 
         pwShowbutton.setOnClickListener {
             isPasswordVisible = !isPasswordVisible
