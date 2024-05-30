@@ -106,5 +106,6 @@ Recycled in many ways!
 
     <!-- Database Screen String-->
     <string name="title">Recent Actions</string>
+    <string name="settings_screen_title">settings_screen_title</string>
 
 </resources>
