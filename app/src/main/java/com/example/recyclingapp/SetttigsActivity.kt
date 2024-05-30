@@ -34,6 +34,11 @@ class SettingsActivity : AppCompatActivity() {
 
         back.back()
 
+
+
+
+
+
 //        // Set up listener for screen mode spinner
 //        screenModeSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 //            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
@@ -66,4 +71,5 @@ class SettingsActivity : AppCompatActivity() {
 //        sharedPreferences.edit().putString("theme", theme).apply()
 //        recreate() // Recreate activity to apply the new theme
     }
+
 }
