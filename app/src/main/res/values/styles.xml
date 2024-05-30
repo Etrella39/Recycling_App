@@ -203,7 +203,7 @@
         <item name="android:textColor">#BBBBBB</item>
     </style>
 
-    <style name="about_us">
+    <style name="about_us_text">
         <item name="android:textSize">17sp</item>
         <item name="android:letterSpacing">-0.02</item>
         <item name="android:textColor">#BBBBBB</item>

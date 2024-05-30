@@ -11,35 +11,33 @@
 
     <include layout="@layout/top_bar_back"/>
 
+    <TextView
+        android:id="@+id/settings_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:textAppearance="@style/setting_title_style"
+        android:fontFamily="@font/interbold"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="30dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/settings_title"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp"
         android:paddingBottom="75dp"
         android:orientation="vertical"
-        android:layout_marginTop="60dp">
+        >
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_marginLeft="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/title"
-            android:textAppearance="@style/title_db"
-            android:lineSpacingExtra="-4sp"
-            android:gravity="top"
-            />
 
         <ListView
             android:id="@+id/list_itmes_database"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
+            android:layout_height="wrap_content" >
         </ListView>
-
-
-
-
-
 
 
     </LinearLayout>
