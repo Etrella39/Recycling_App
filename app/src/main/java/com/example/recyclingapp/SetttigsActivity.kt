@@ -1,13 +1,15 @@
 package com.example.recyclingapp
 
-import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
+
 
 class SettingsActivity : AppCompatActivity() {
 
@@ -21,9 +23,19 @@ class SettingsActivity : AppCompatActivity() {
 
     private lateinit var sharedPreferences: SharedPreferences
 
+    private val spinnerAni: Animation = AnimationUtils.loadAnimation(this, R.anim.spinner_animation)
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.settings_screen)
+
+        val settingLayout = findViewById<RelativeLayout>(R.id.settings_screen)
+        setContentView(settingLayout)
+
+        val slideIn: Animation = AnimationUtils.loadAnimation(this, R.anim.slide_in)
+        settingLayout.startAnimation(slideIn)
+
 
         backButton = findViewById(R.id.back_button)
 
@@ -38,12 +50,6 @@ class SettingsActivity : AppCompatActivity() {
 
         val spinnerModeImage: ImageView = findViewById(R.id.spinner_mode_image)
         val spinnerLanguageImage: ImageView = findViewById(R.id.spinner_language_image)
-
-
-
-
-
-
 
 
         screenModeButton.setOnClickListener {
@@ -66,9 +72,11 @@ class SettingsActivity : AppCompatActivity() {
 
 
 
+
         backButton.setOnClickListener {
             finish()
         }
+
 
 
         
@@ -104,16 +112,18 @@ class SettingsActivity : AppCompatActivity() {
 //        sharedPreferences.edit().putString("theme", theme).apply()
 //        recreate() // Recreate activity to apply the new theme
     }
-    
+
     private fun setToggleButton(list: RelativeLayout, image: ImageView, isclick: Boolean) {
         if (!isclick) {
             list.visibility = View.VISIBLE
-            image.setBackgroundResource(R.drawable.setting_toggle_button_open)
+            image.startAnimation(spinnerAni)
         } else {
             list.visibility = View.GONE
-            image.setBackgroundResource(R.drawable.setting_toggle_button)
+            image.startAnimation(spinnerAni)
         }
     }
-    
+
+
 
 }
+

@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".SettingsActivity">
+    android:id="@+id/settings_screen"
+    tools:context=".SettingsActivity"
+    >
 
     <!-- Top Bar Back -->
     <include layout="@layout/top_bar_back" />

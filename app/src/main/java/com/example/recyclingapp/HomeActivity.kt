@@ -3,7 +3,10 @@ package com.example.recyclingapp
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.Button
+import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
 
 class HomeActivity : AppCompatActivity() {
@@ -16,9 +19,15 @@ class HomeActivity : AppCompatActivity() {
 
         settingButton = findViewById(R.id.setting_button)
 
+
         settingButton.setOnClickListener {
             Log.d("HomeActivity", "Setting button clicked")
             val intent = Intent(this@HomeActivity, SettingsActivity::class.java)
+
+            val homeLayout = findViewById<RelativeLayout>(R.id.home_screen)
+            val fadeOut: Animation = AnimationUtils.loadAnimation(this, R.anim.fade_out)
+            homeLayout.startAnimation(fadeOut)
+
             startActivity(intent)
         }
     }
