@@ -20,11 +20,13 @@ class SignUpActivity : AppCompatActivity() {
     var DB:DBHelper?=null
     private lateinit var idEdit: EditText
     lateinit var pwEdit: EditText
-    private lateinit var confirmPassword: EditText
+    private lateinit var confirmPassword: LinearLayout
+    private lateinit var confirmPasswordView: EditText
 
     private lateinit var SignUpBotton: LinearLayout
-    private lateinit var pwShowbutton: LinearLayout
-    private lateinit var pwShowbutton2: LinearLayout // 비밀번호 확인 버튼
+
+    private lateinit var pwShowButton: LinearLayout
+    private lateinit var pwShowButton2: LinearLayout
     private var isPasswordVisible = false
     private var isPasswordVisible2 = false
 
@@ -37,12 +39,15 @@ class SignUpActivity : AppCompatActivity() {
         DB = DBHelper(this)
         idEdit = findViewById(R.id.id_edit)
         pwEdit = findViewById(R.id.password_edit)
+
         confirmPassword = findViewById(R.id.confirm_password)
+        confirmPasswordView = confirmPassword.findViewById<EditText>(R.id.password_edit)
+        confirmPasswordView.hint = "Confirm Password"
 
         SignUpBotton = findViewById(R.id.sign_up_button)
 
-        pwShowbutton = findViewById(R.id.password_icon)
-        pwShowbutton2 = findViewById(R.id.password_icon2)
+        pwShowButton = findViewById(R.id.password_icon)
+        pwShowButton2 = confirmPassword.findViewById<LinearLayout>(R.id.password_icon)
 
         backButton = findViewById(R.id.back_button)
 
@@ -60,12 +65,12 @@ class SignUpActivity : AppCompatActivity() {
         }
 
         pwEdit.filters = arrayOf(filter)
-        confirmPassword.filters = arrayOf(filter)
+        confirmPasswordView.filters = arrayOf(filter)
 
         SignUpBotton.setOnClickListener {
             val user = idEdit.text.toString()
             val pass = pwEdit.text.toString()
-            val repass = confirmPassword.text.toString()
+            val repass = confirmPasswordView.text.toString()
 
             val idPattern = "^(?=.*[a-z])(?=.*[0-9])[A-Za-z[0-9]]{6,15}$"
             val pwPattern = "^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z[0-9]]{8,15}$"
@@ -107,14 +112,16 @@ class SignUpActivity : AppCompatActivity() {
             }
         }
 
-        pwShowbutton.setOnClickListener {
+        pwShowButton.setOnClickListener {
             isPasswordVisible = !isPasswordVisible
             loginActivity.ShowPassword(pwEdit, isPasswordVisible, this)
         }
-        pwShowbutton2.setOnClickListener {
+
+        pwShowButton2.setOnClickListener {
             isPasswordVisible2 = !isPasswordVisible2
-            loginActivity.ShowPassword(confirmPassword, isPasswordVisible2, this)
+            loginActivity.ShowPassword(confirmPasswordView, isPasswordVisible2, this)
         }
+
         backButton.setOnClickListener {
             finish()
         }

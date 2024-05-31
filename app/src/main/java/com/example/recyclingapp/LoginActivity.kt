@@ -81,6 +81,7 @@ class LoginActivity : AppCompatActivity() {
         signUpBTN.setOnClickListener {
             val intent = Intent(this@LoginActivity, SignUpActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         //find your password
