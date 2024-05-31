@@ -75,9 +75,9 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:padding="2dp"
                 android:layout_alignParentEnd="true"
-                android:background="@drawable/setting_toggle_background"
+                android:paddingHorizontal="2dp"
+                android:background="@drawable/setting_toggle_backgroud3"
                 >
                 <TextView
                     android:id="@+id/toggle_mode_light"
@@ -89,35 +89,33 @@
                     android:gravity="center_vertical"
                     android:fontFamily="@font/interbold"
                     android:paddingStart="16dp"
-                    android:layout_margin="1dp"
                     android:background="@drawable/setting_toggle_one"
                     />
                 <TextView
                     android:id="@+id/toggle_mode_dark"
                     android:layout_width="match_parent"
-                    android:layout_height="42dp"
+                    android:layout_height="40dp"
                     android:text="Dark"
                     android:textAppearance="@style/toggle_text"
                     android:lineSpacingExtra="32sp"
                     android:gravity="center_vertical"
                     android:fontFamily="@font/interbold"
                     android:paddingStart="16dp"
-                    android:layout_margin="1dp"
                     android:background="@drawable/setting_toggle_one"
                     />
                 <TextView
                     android:id="@+id/toggle_mode_system"
                     android:layout_width="match_parent"
-                    android:layout_height="42dp"
+                    android:layout_height="40dp"
                     android:text="System"
                     android:textAppearance="@style/toggle_text"
                     android:lineSpacingExtra="32sp"
                     android:gravity="center_vertical"
                     android:fontFamily="@font/interbold"
                     android:paddingStart="16dp"
-                    android:layout_margin="1dp"
                     android:background="@drawable/setting_toggle_one"
                     />
+
 
 
 
