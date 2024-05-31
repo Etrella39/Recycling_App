@@ -51,6 +51,24 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "Login.db", null, 1
         return res
     }
 
+
+    //db for finding password
+    @SuppressLint("Range")
+    fun findPasswordByUserId(userId: String): String? {
+        val db = this.readableDatabase
+        val cursor = db.rawQuery("SELECT password FROM users WHERE id = ?", arrayOf(userId))
+        var password: String? = null
+
+        if (cursor.moveToFirst()) {
+            // Password found, retrieve it from the cursor
+            password = cursor.getString(cursor.getColumnIndex("password"))
+        }
+
+        cursor.close()
+        return password
+    }
+
+
     // DB name을 Login.db로 설정
     companion object {
         const val DBNAME = "Login.db"
