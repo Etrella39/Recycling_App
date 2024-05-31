@@ -6,29 +6,39 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.Button
+import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatDelegate
 
 class SettingsActivity : AppCompatActivity() {
 
-    private lateinit var screenModeSpinner: Spinner
-    private lateinit var languageSpinner: Spinner
+    private lateinit var screenModeButton: RelativeLayout
+    private lateinit var languageButton: RelativeLayout
     private lateinit var backButton: Button
+
     private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings_screen)
 
-        // Initialize views
         backButton = findViewById(R.id.back_button)
-
+        screenModeButton = findViewById(R.id.spinner_mode)
+        languageButton = findViewById(R.id.spinner_language)
 
         // Initialize SharedPreferences
         sharedPreferences = getSharedPreferences("user_preferences", Context.MODE_PRIVATE)
 
         // Set click listener for back button
+
+
+
+
+
+        screenModeButton.setOnClickListener {
+
+        }
 
         backButton.setOnClickListener {
             finish()
