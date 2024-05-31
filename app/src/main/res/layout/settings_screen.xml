@@ -54,7 +54,7 @@
                 android:layout_width="18dp"
                 android:layout_height="15dp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/setting_toggle_button"
                 />
@@ -65,54 +65,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="8dp"
-            >
-            <LinearLayout
-                android:layout_width="143dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_alignParentEnd="true"
-                android:paddingHorizontal="2dp"
-                android:background="@drawable/setting_toggle_background3"
-                >
-                <TextView
-                    android:id="@+id/toggle_mode_light"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:text="Light"
-                    android:textAppearance="@style/toggle_text"
-                    android:lineSpacingExtra="32sp"
-                    android:gravity="center_vertical"
-                    android:fontFamily="@font/interbold"
-                    android:paddingStart="16dp"
-                    android:background="@drawable/setting_toggle_one"
-                    />
-                <TextView
-                    android:id="@+id/toggle_mode_dark"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:text="Dark"
-                    android:textAppearance="@style/toggle_text"
-                    android:lineSpacingExtra="32sp"
-                    android:gravity="center_vertical"
-                    android:fontFamily="@font/interbold"
-                    android:paddingStart="16dp"
-                    android:background="@drawable/setting_toggle_one"
-                    />
-                <TextView
-                    android:id="@+id/toggle_mode_system"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:text="System"
-                    android:textAppearance="@style/toggle_text"
-                    android:lineSpacingExtra="32sp"
-                    android:gravity="center_vertical"
-                    android:fontFamily="@font/interbold"
-                    android:paddingStart="16dp"
-                    android:background="@drawable/setting_toggle_one"
-                    />
-            </LinearLayout>
-        </RelativeLayout>
+            />
+
 
         <!-- Language Option -->
         <RelativeLayout
@@ -134,7 +88,7 @@
                 android:layout_width="18dp"
                 android:layout_height="15dp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/setting_toggle_button"
                 />
@@ -145,43 +99,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="8dp"
-            >
-            <LinearLayout
-                android:layout_width="143dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_alignParentEnd="true"
-                android:paddingHorizontal="2dp"
-                android:background="@drawable/setting_toggle_background"
-                >
-                <TextView
-                    android:id="@+id/toggle_language_english"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:text="Light"
-                    android:textAppearance="@style/toggle_text"
-                    android:lineSpacingExtra="32sp"
-                    android:gravity="center_vertical"
-                    android:fontFamily="@font/interbold"
-                    android:paddingStart="16dp"
-                    android:background="@drawable/setting_toggle_one"
-                    />
-                <TextView
-                    android:id="@+id/toggle_language_korean"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:text="Dark"
-                    android:textAppearance="@style/toggle_text"
-                    android:lineSpacingExtra="32sp"
-                    android:gravity="center_vertical"
-                    android:fontFamily="@font/interbold"
-                    android:paddingStart="16dp"
-                    android:background="@drawable/setting_toggle_one"
-                    />
+            />
 
-            </LinearLayout>
-        </RelativeLayout>
     </LinearLayout>
 
     <!-- About Us Section -->
