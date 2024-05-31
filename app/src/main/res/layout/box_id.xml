@@ -1,31 +1,29 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_box"
+    android:layout_width="266dp"
+    android:layout_height="42dp"
+    android:gravity="center"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:background="@drawable/login_id_box" >
 
+    <!-- ID TextView -->
+    <EditText
+        android:id="@+id/id_edit"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="36sp"
+        android:hint="@string/id"
+        android:maxLength="15"
+        android:textAppearance="@style/id"
+        android:fontFamily="@font/interbold"
+        android:background="@null"
+        android:maxLines="1"
+        android:digits="0123456789_qwertzuiopasdfghjklyxcvbnm"
+        />
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/id_box"
-            android:layout_width="266dp"
-            android:layout_height="42dp"
-            android:gravity="center"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:background="@drawable/login_id_box" >
-
-            <!-- ID TextView -->
-            <EditText
-                android:id="@+id/id_edit"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:gravity="center_vertical"
-                android:lineSpacingExtra="36sp"
-                android:hint="@string/id"
-                android:maxLength="15"
-                android:textAppearance="@style/id"
-                android:fontFamily="@font/interbold"
-                android:background="@null"
-                android:maxLines="1"
-                android:digits="0123456789_qwertzuiopasdfghjklyxcvbnm"
-                />
-
-        </LinearLayout>
+    </LinearLayout>
