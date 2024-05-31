@@ -16,6 +16,7 @@ import androidx.core.content.res.ResourcesCompat
 class LoginActivity : AppCompatActivity() {
     private lateinit var signUpBTN: TextView // 회원가입 버튼
     private lateinit var loginBTN: LinearLayout // 로그인 버튼
+    private lateinit var find_password : TextView   //findPassword
 
     private lateinit var idEdit: EditText // id 에디트
     private lateinit var pwEdit: EditText
@@ -32,6 +33,7 @@ class LoginActivity : AppCompatActivity() {
 
         signUpBTN = findViewById(R.id.signup_button)
         loginBTN = findViewById(R.id.login_button)
+        find_password = findViewById(R.id.find_passwo)
 
         idEdit = findViewById(R.id.id_edit)
         pwEdit = findViewById(R.id.password_edit)
@@ -78,6 +80,12 @@ class LoginActivity : AppCompatActivity() {
 
         signUpBTN.setOnClickListener {
             val intent = Intent(this@LoginActivity, SignUpActivity::class.java)
+            startActivity(intent)
+        }
+
+        //find your password
+        find_password.setOnClickListener {
+            val intent = Intent(this@LoginActivity, FindPasswordActivity::class.java)
             startActivity(intent)
         }
 
