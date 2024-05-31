@@ -24,11 +24,11 @@ class SignUpActivity : AppCompatActivity() {
 
     private lateinit var SignUpBotton: LinearLayout
     private lateinit var pwShowbutton: LinearLayout
-    private lateinit var pwShowbutton2: LinearLayout// 비밀번호 확인 버튼
+    private lateinit var pwShowbutton2: LinearLayout // 비밀번호 확인 버튼
     private var isPasswordVisible = false
     private var isPasswordVisible2 = false
 
-    private val back = BackButtonClick()
+    private lateinit var backButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +43,8 @@ class SignUpActivity : AppCompatActivity() {
 
         pwShowbutton = findViewById(R.id.password_icon)
         pwShowbutton2 = findViewById(R.id.password_icon2)
+
+        backButton = findViewById(R.id.back_button)
 
         val filter = InputFilter { source, start, end, dest, dstart, dend ->
             val pattern = Regex("[^a-zA-Z0-9!@#$%^&*()_+\\-=\\[\\]{};:\"\\\\|,.<>/?]")
@@ -105,8 +107,6 @@ class SignUpActivity : AppCompatActivity() {
             }
         }
 
-        back.back()
-
         pwShowbutton.setOnClickListener {
             isPasswordVisible = !isPasswordVisible
             loginActivity.ShowPassword(pwEdit, isPasswordVisible, this)
@@ -115,7 +115,9 @@ class SignUpActivity : AppCompatActivity() {
             isPasswordVisible2 = !isPasswordVisible2
             loginActivity.ShowPassword(confirmPassword, isPasswordVisible2, this)
         }
-
+        backButton.setOnClickListener {
+            finish()
+        }
 
     }
 

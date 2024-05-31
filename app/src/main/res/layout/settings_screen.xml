@@ -65,7 +65,7 @@
 
         <RelativeLayout
             android:id="@+id/frame_5"
-            android:layout_width="269dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
 
@@ -76,6 +76,7 @@
                 android:orientation="vertical"
                 android:gravity="center"
                 android:padding="2dp"
+                android:layout_alignParentEnd="true"
                 android:background="@drawable/setting_toggle_background"
                 >
                 <TextView

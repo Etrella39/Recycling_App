@@ -1,5 +1,6 @@
 package com.example.recyclingapp
 
+import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
@@ -29,6 +30,7 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "Login.db", null, 1
     }
 
     // 사용자 아이디가 없으면 false, 이미 존재하면 true
+    @SuppressLint("Recycle")
     fun checkUser(id: String?): Boolean {
         val MyDB = this.readableDatabase
         var res = true

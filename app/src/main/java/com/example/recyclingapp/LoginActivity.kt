@@ -20,8 +20,8 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var idEdit: EditText // id 에디트
     private lateinit var pwEdit: EditText
 
-    private lateinit var pwShowbutton: LinearLayout // 비밀번호 확인 버튼
-    var isPasswordVisible = false
+    private lateinit var pwShowButton: LinearLayout // 비밀번호 확인 버튼
+    private var isPasswordVisible = false
 
     var DB:DBHelper? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,7 +36,7 @@ class LoginActivity : AppCompatActivity() {
         idEdit = findViewById(R.id.id_edit)
         pwEdit = findViewById(R.id.password_edit)
 
-        pwShowbutton = findViewById(R.id.password_icon)
+        pwShowButton = findViewById(R.id.password_icon)
 
         val filter = InputFilter { source, start, end, dest, dstart, dend ->
             val pattern = Regex("[^a-zA-Z0-9!@#$%^&*()_+\\-=\\[\\]{};:\"\\\\|,.<>/?]")
@@ -81,7 +81,7 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        pwShowbutton.setOnClickListener {
+        pwShowButton.setOnClickListener {
             isPasswordVisible = !isPasswordVisible
             ShowPassword(pwEdit, isPasswordVisible, this)
         }

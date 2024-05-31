@@ -12,8 +12,6 @@ import androidx.appcompat.app.AppCompatDelegate
 
 class SettingsActivity : AppCompatActivity() {
 
-    private val back = BackButtonClick()
-
     private lateinit var screenModeSpinner: Spinner
     private lateinit var languageSpinner: Spinner
     private lateinit var backButton: Button
@@ -32,8 +30,9 @@ class SettingsActivity : AppCompatActivity() {
 
         // Set click listener for back button
 
-        back.back()
-
+        backButton.setOnClickListener {
+            finish()
+        }
 
 
 
