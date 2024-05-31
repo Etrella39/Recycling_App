@@ -34,7 +34,6 @@
         >
 
         <!-- Screen Mode Option -->
-
         <RelativeLayout
             android:id="@+id/spinner_mode"
             android:layout_width="match_parent"
@@ -43,7 +42,6 @@
             android:gravity="center_vertical"
             android:layout_marginTop="19dp"
             >
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -52,7 +50,6 @@
                 android:textAppearance="@style/toggle_title"
                 android:layout_alignParentStart="true"
                 />
-
             <ImageView
                 android:layout_width="18dp"
                 android:layout_height="15dp"
@@ -64,20 +61,18 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/frame_5"
+            android:id="@+id/toggle_mode"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
-
             <LinearLayout
-                android:id="@+id/toggle_mode"
                 android:layout_width="143dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:layout_alignParentEnd="true"
                 android:paddingHorizontal="2dp"
-                android:background="@drawable/setting_toggle_backgroud3"
+                android:background="@drawable/setting_toggle_background3"
                 >
                 <TextView
                     android:id="@+id/toggle_mode_light"
@@ -115,11 +110,6 @@
                     android:paddingStart="16dp"
                     android:background="@drawable/setting_toggle_one"
                     />
-
-
-
-
-
             </LinearLayout>
         </RelativeLayout>
 
@@ -130,9 +120,7 @@
             android:layout_height="40dp"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:layout_marginBottom="19dp"
             >
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -141,7 +129,6 @@
                 android:textAppearance="@style/toggle_title"
                 android:layout_alignParentStart="true"
                 />
-
             <ImageView
                 android:layout_width="18dp"
                 android:layout_height="15dp"
@@ -150,6 +137,48 @@
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/setting_toggle_button"
                 />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/toggle_language"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="143dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_alignParentEnd="true"
+                android:paddingHorizontal="2dp"
+                android:background="@drawable/setting_toggle_background"
+                >
+                <TextView
+                    android:id="@+id/toggle_language_english"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Light"
+                    android:textAppearance="@style/toggle_text"
+                    android:lineSpacingExtra="32sp"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/interbold"
+                    android:paddingStart="16dp"
+                    android:background="@drawable/setting_toggle_one"
+                    />
+                <TextView
+                    android:id="@+id/toggle_language_korean"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Dark"
+                    android:textAppearance="@style/toggle_text"
+                    android:lineSpacingExtra="32sp"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/interbold"
+                    android:paddingStart="16dp"
+                    android:background="@drawable/setting_toggle_one"
+                    />
+
+            </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
 
@@ -160,9 +189,8 @@
         android:orientation="vertical"
         android:gravity="center_horizontal"
         android:layout_alignParentBottom="true"
-        android:paddingBottom="48dp"
+        android:paddingBottom="30dp"
         >
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -173,7 +201,6 @@
             android:gravity="center_horizontal|top"
             android:fontFamily="@font/interbold"
             />
-
         <TextView
             android:layout_width="307dp"
             android:layout_height="wrap_content"
@@ -185,7 +212,6 @@
             android:gravity="center_horizontal|top"
             android:fontFamily="@font/interregular"
             />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -197,6 +223,5 @@
             android:layout_marginTop="14dp"
             android:fontFamily="@font/interregular"
             />
-
     </LinearLayout>
 </RelativeLayout>
