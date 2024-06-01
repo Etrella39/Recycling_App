@@ -4,38 +4,38 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.FrameLayout
-import android.widget.ImageButton
 import android.widget.ImageView
-import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class UserProfileActivity : AppCompatActivity() {
 
-    private lateinit var user_main_photo: ImageView
-    private lateinit var person : View
-
-
-
+    private lateinit var userMainPhoto: ImageView
+    private lateinit var personPhoto: View
     private lateinit var settingButton: Button
     private lateinit var logout: TextView
+    private lateinit var backButton : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.user_profile)
 
-        user_main_photo = findViewById(R.id.profile_photo)
+        userMainPhoto = findViewById(R.id.profile_photo)
+        personPhoto = findViewById(R.id.person_photo)
         settingButton = findViewById(R.id.setting_button)
-        person = findViewById(R.id.person_photo)
         logout = findViewById(R.id.log_out)
-//        userMainPhoto = findViewById(R.id.profile_photo)
+        backButton = findViewById(R.id.back_button)
 
-        user_main_photo.setOnClickListener {
+        backButton.setOnClickListener() {
+            finish()
+        }
+
+        personPhoto.visibility = View.VISIBLE
+
+        userMainPhoto.setOnClickListener {
             val intent = Intent(this@UserProfileActivity, PhotoActivity::class.java)
             startActivityForResult(intent, REQUEST_CODE_SELECT_PHOTO)
         }
-
 
         settingButton.setOnClickListener {
             val intent = Intent(this@UserProfileActivity, SettingsActivity::class.java)
@@ -46,8 +46,6 @@ class UserProfileActivity : AppCompatActivity() {
             val intent = Intent(this@UserProfileActivity, LoginActivity::class.java)
             startActivity(intent)
         }
-
-        person.visibility = View.INVISIBLE
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -55,7 +53,9 @@ class UserProfileActivity : AppCompatActivity() {
         if (requestCode == REQUEST_CODE_SELECT_PHOTO && resultCode == RESULT_OK) {
             val selectedImageResourceId = data?.getIntExtra("selectedImageResourceId", -1)
             if (selectedImageResourceId != null && selectedImageResourceId != -1) {
-                user_main_photo.setImageResource(selectedImageResourceId)
+                userMainPhoto.setImageResource(selectedImageResourceId)
+                // Hide personPhoto once a user selects a profile photo
+                personPhoto.visibility = View.INVISIBLE
             }
         }
     }
