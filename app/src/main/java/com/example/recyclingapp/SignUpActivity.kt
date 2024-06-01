@@ -1,5 +1,6 @@
 package com.example.recyclingapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputFilter
@@ -31,6 +32,7 @@ class SignUpActivity : AppCompatActivity() {
 
     private lateinit var backButton: Button
 
+    @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signup_screen)
@@ -41,7 +43,7 @@ class SignUpActivity : AppCompatActivity() {
 
         confirmPassword = findViewById(R.id.confirm_password)
         confirmPasswordView = confirmPassword.findViewById(R.id.password_edit)
-        confirmPasswordView.hint = "Confirm Password"
+        confirmPasswordView.hint = getString(R.string.confirm_password)
 
         SignUpButton = findViewById(R.id.sign_up_button)
 
@@ -71,8 +73,8 @@ class SignUpActivity : AppCompatActivity() {
             val pass = pwEdit.text.toString()
             val repass = confirmPasswordView.text.toString()
 
-            val idPattern = "^(?=.*[a-z])(?=.*[0-9])[A-Za-z[0-9]]{6,15}$"
-            val pwPattern = "^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z[0-9]]{8,15}$"
+            val idPattern = "^(?=.*[a-z])(?=.*[0-9])[A-Za-z0-9]{6,15}$"
+            val pwPattern = "^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z0-9!@#\$%^&*()_+\\-=\\[\\]{};:\"\\\\|,.<>/?]{8,15}$"
 
             // 사용자 입력이 비었을 때
             if (user == "" || pass == "" || repass == "")

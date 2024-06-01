@@ -55,7 +55,7 @@
     <string name="find_your_p">Find Your Password</string>
 
     <!-- Find Password Screen Forgotten -->
-    <string name="forgotten_y">Forgotten your Password? Enter your ID below</string>
+    <string name="forgotten_y">Forgotten your Password?\nEnter your ID below</string>
     <string name="find_passwo" translatable="false">Find Password</string>
     <string name="your_id">Your ID</string>
 
