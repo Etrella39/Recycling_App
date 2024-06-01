@@ -41,6 +41,7 @@
         <activity android:name=".SignUpActivity" />
         <activity android:name=".FindPasswordActivity" />
         <activity android:name=".UserProfileActivity"/>
+        <activity android:name=".PhotoActivity"/>
         <activity
             android:name=".ShowPasswordActivity"
             android:theme="@android:style/Theme.Dialog"/>

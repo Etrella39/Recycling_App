@@ -30,6 +30,7 @@
             android:layout_marginTop="143dp"
             >
             <FrameLayout
+                android:id="@+id/user_photo_button"
                 android:layout_width="154dp"
                 android:layout_height="154dp"
                 >
@@ -130,8 +131,8 @@
                     android:background="@drawable/user_calendar"
                     />
                 <LinearLayout
-                    android:layout_width="85.22dp"
-                    android:layout_height="30.62dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="20.62dp"
                     android:orientation="vertical"
                     >
@@ -140,10 +141,10 @@
                         android:layout_height="wrap_content"
                         android:text="@string/joined_date_string"
                         android:textAppearance="@style/joined_date"
-                        android:lineSpacingExtra="6sp"
+
                         android:gravity="center_vertical"
                         android:fontFamily="@font/interbold"
-                        android:lineHeight="22sp"
+
                         />
                     <!-- Auto layout, variables, and unit scale are not yet supported -->
                     <TextView
@@ -151,16 +152,15 @@
                         android:layout_height="wrap_content"
                         android:text="@string/joined_date"
                         android:textAppearance="@style/joined_date1"
-                        android:lineSpacingExtra="9sp"
                         android:gravity="center_vertical"
                         android:fontFamily="@font/intermedium"
-                        android:lineHeight="22sp"
+
                         />
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="61dp"
+                android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 >
@@ -171,8 +171,8 @@
                     android:background="@drawable/user_id"
                     />
                 <LinearLayout
-                    android:layout_width="85.22dp"
-                    android:layout_height="30.62dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="20.62dp"
                     android:orientation="vertical"
                     >
@@ -181,20 +181,16 @@
                         android:layout_height="wrap_content"
                         android:text="@string/user_id_string"
                         android:textAppearance="@style/joined_date"
-                        android:lineSpacingExtra="6sp"
                         android:gravity="center_vertical"
                         android:fontFamily="@font/interbold"
-                        android:lineHeight="22sp"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/user_id"
                         android:textAppearance="@style/joined_date1"
-                        android:lineSpacingExtra="9sp"
                         android:gravity="center_vertical"
                         android:fontFamily="@font/intermedium"
-                        android:lineHeight="22sp"
                         />
                 </LinearLayout>
             </LinearLayout>
@@ -210,8 +206,8 @@
             >
             <TextView
                 android:id="@+id/log_out"
-                android:layout_width="57dp"
-                android:layout_height="22dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/logout"
                 android:textAppearance="@style/log_out"
                 android:lineSpacingExtra="6sp"
@@ -227,14 +223,12 @@
                 />
             <TextView
                 android:id="@+id/delete"
-                android:layout_width="57dp"
-                android:layout_height="22dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/delete"
                 android:textAppearance="@style/delete"
-                android:lineSpacingExtra="9sp"
                 android:gravity="center_horizontal|center_vertical"
                 android:fontFamily="@font/interbold"
-                android:lineHeight="22sp"
                 android:background="@drawable/user_delete_id"
                 />
         </LinearLayout>
