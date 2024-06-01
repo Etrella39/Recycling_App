@@ -23,21 +23,21 @@ class FindPasswordActivity : AppCompatActivity() {
         findPasswordButton = findViewById(R.id.find_button)
         dbHelper = DBHelper(this)
 
-        // Set click listener for findPasswordButton
-        findPasswordButton.setOnClickListener {
-            val userId = userIdEditText.text.toString()
-            val password = dbHelper.findPasswordByUserId(userId)
-
-            if (password != null) {
-                // Password found, navigate to ShowPasswordActivity
-                val intent = Intent(this@FindPasswordActivity, ShowPasswordActivity::class.java)
-                intent.putExtra("password", password)
-                startActivity(intent)
-            } else {
-                // No password found for the given user ID
-                Toast.makeText(this, "Password not found for the given user ID", Toast.LENGTH_SHORT).show()
-            }
-        }
+//        // Set click listener for findPasswordButton
+//        findPasswordButton.setOnClickListener {
+//            val userId = userIdEditText.text.toString()
+//            val password = dbHelper.findPasswordByUserId(userId)
+//
+//            if (password != null) {
+//                // Password found, navigate to ShowPasswordActivity
+//                val intent = Intent(this@FindPasswordActivity, ShowPasswordActivity::class.java)
+//                intent.putExtra("password", password)
+//                startActivity(intent)
+//            } else {
+//                // No password found for the given user ID
+//                Toast.makeText(this, "Password not found for the given user ID", Toast.LENGTH_SHORT).show()
+//            }
+//        }
 
         // Set click listener for back button
         backButton.setOnClickListener {
