@@ -15,7 +15,7 @@
         android:id="@+id/settings_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title"
+        android:text="@string/title_recent"
         android:textAppearance="@style/setting_title_style"
         android:fontFamily="@font/interbold"
         android:layout_marginTop="80dp"

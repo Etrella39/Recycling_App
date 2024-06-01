@@ -2,7 +2,7 @@
     <string name="app_name">Recycling App</string>
 
     <!-- Common Strings -->
-    <string name="recycle_sma">Recycle Smart, Live Green</string>
+    <string name="recycle_sma" translatable="false">Recycle Smart, Live Green</string>
     <string name="id">ID</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
@@ -19,34 +19,34 @@
     <string name="sign_up_sc2">SIGN UP</string>
 
     <!-- Social Media Buttons Strings -->
-    <string name="google_button">Google Sign In</string>
-    <string name="naver_button">Naver Sign In</string>
-    <string name="kakaotalk_button">KakaoTalk Sign In</string>
+    <string name="google_button" translatable="false">Google Sign In</string>
+    <string name="naver_button" translatable="false">Naver Sign In</string>
+    <string name="kakaotalk_button" translatable="false">KakaoTalk Sign In</string>
 
     <!-- Main Navigation bar Buttons Strings -->
     <string name="profile">Profile</string>
     <string name="blogs">Blogs</string>
 
     <!-- Main Frame Strings -->
-    <string name="take_a_picture">Take a Picture \nScan the waste</string>
+    <string name="take_a_picture" translatable="false">Take a Picture  Scan the waste</string>
     <string name="label">Get Started</string>
 
     <!-- User Frame Strings -->
-    <string name="user_name">User Name</string>
+    <string name="user_name" translatable="false">User Name</string>
 
     <string name="waste_record_string">Waste Record</string>
-    <string name="waste_record">1 January 2024</string>
+    <string name="waste_record" translatable="false">1 January 2024</string>
 
     <string name="joined_date_string">Joined Date</string>
-    <string name="joined_date">1 January 2024</string>
+    <string name="joined_date" translatable="false">1 January 2024</string>
 
     <string name="user_id_string">ID</string>
-    <string name="user_id">user_id</string>
+    <string name="user_id" translatable="false">user_id</string>
 
     <string name="logout">Log out</string>
     <string name="delete">Delete</string>
 
-    <string name="january_202">1 January 2024</string>
+    <string name="january_202" translatable="false">1 January 2024</string>
 
     <!-- Settings Screen Settings -->
     <string name="setting">Setting</string>
@@ -55,55 +55,56 @@
     <string name="find_your_p">Find Your Password</string>
 
     <!-- Find Password Screen Forgotten -->
-    <string name="forgotten_y">Forgotten your Password?\nEnter your ID below</string>
-    <string name="find_passwo">Find Password</string>
+    <string name="forgotten_y">Forgotten your Password? Enter your ID below</string>
+    <string name="find_passwo" translatable="false">Find Password</string>
     <string name="your_id">Your ID</string>
 
     <!-- Show Password Screen Your Password -->
     <string name="your_passwo">Your Password</string>
-    <string name="password_for_showing">************</string>
     <string name="ok">OK</string>
 
 
     <!-- User Profile Characters Screen -->
-    <string name="character1">characters_for_profile</string>
+    <string name="character1" translatable="false">characters_for_profile</string>
 
 
     <!-- Scan Result Screen -->
-    <string name="retake">Re-Take</string>
-    <string name="pet">Pet</string>
-    <string name="result">
-        After thoroughly washing the inside of the plastic bottle, remove the label and separate it for recycling!
-Closing the lid after compression reduces the volume, making it more economical to collect and transport.
-The PET bottles separated in this way are
-    </string>
+    <string name="retake" translatable="false">Re-Take</string>
+    <string name="pet" translatable="false">Pet</string>
+    <string name="result" translatable="false">"         After thoroughly washing the inside of the plastic bottle, remove the label and separate it for recycling! Closing the lid after compression reduces the volume, making it more economical to collect and transport. The PET bottles separated in this way are     "</string>
 
-    <string name="advice">
+    <string name="advice" translatable="false">
         Plastic raw materials, synthetic fibers, non-woven fabrics, etc.
 Recycled in many ways!
     </string>
 
-    <string name="classification" >1 plastic bottle</string>
-    <string name="classification_next">was detected</string>
+    <string name="classification" translatable="false">1 plastic bottle</string>
+    <string name="classification_next" translatable="false">was detected</string>
 
 
     <!-- Settings Screen -->
-        <string name="app_name1">YourApp</string>
+        <string name="app_name1" translatable="false">YourApp</string>
         <string name="settings_title">Setting</string>
         <string name="screen_mode">Appearance</string>
         <string name="language">Language</string>
-        <string name="about_us">About us</string>
-        <string name="about_us_details">
+        <string name="about_us" translatable="false">About us</string>
+        <string name="about_us_details" translatable="false">
             At Green Cycle, we\'re passionate about making a positive impact on our planet. Our mission is to revolutionize the way people think about recycling and contribute to a more sustainable future for generations to come.</string>
-        <string name="back">Back</string>
+        <string name="back" translatable="false">Back</string>
 
-    <string name="sustainabil">
+    <string name="sustainabil" translatable="false">
 - Sustainability \n - Convenience\n - Community\n - Impact
 </string>
 
 
     <!-- Database Screen String-->
-    <string name="title">Recent Actions</string>
-    <string name="settings_screen_title">settings_screen_title</string>
+    <string name="title_recent" translatable="false">Recent Actions</string>
+    <string name="settings_screen_title" translatable="false">settings_screen_title</string>
+    <string name="waste_record_string">Waste Record</string>
+    <string name="mode_light">Light</string>
+    <string name="mode_dark">Dark</string>
+    <string name="mode_system">System</string>
+    <string name="language_english">English</string>
+    <string name="language_korean">Korean</string>
 
 </resources>

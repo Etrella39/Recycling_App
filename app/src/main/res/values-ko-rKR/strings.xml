@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Recycling App</string>
+    <string name="id">아이디</string>
+    <string name="password">비밀번호</string>
+    <string name="confirm_password">비밀번호 확인</string>
+    <string name="find_password">비밀번호 찾기</string>
+    <string name="sign_up">회원가입</string>
+    <string name="some_id">간편 로그인</string>
+    <string name="login">로그인</string>
+    <string name="log_in">로그인</string>
+    <string name="sign_up1">회원가입</string>
+    <string name="sign_up_sc2">회원가입</string>
+    <string name="profile">프로필</string>
+    <string name="blogs">블로그</string>
+    <string name="label">시작하기</string>
+    <string name="waste_record_string">기록 보기</string>
+    <string name="joined_date_string">가입 날짜</string>
+    <string name="user_id_string">아이디</string>
+    <string name="logout">로그아웃</string>
+    <string name="delete">계정 삭제</string>
+    <string name="setting">설정</string>
+    <string name="find_your_p">비밀번호 찾기</string>
+    <string name="forgotten_y">비밀번호를 잊었나요? 아래에 아이디를 입력하세요.</string>
+    <string name="your_id">아이디</string>
+    <string name="your_passwo">비밀번호</string>
+    <string name="ok">확인</string>
+    <string name="settings_title">설정</string>
+    <string name="screen_mode">화면 모드</string>
+    <string name="language">언어</string>
+    <string name="mode_light">라이트</string>
+    <string name="mode_dark">다크</string>
+    <string name="mode_system">시스템</string>
+    <string name="language_english">영어</string>
+    <string name="language_korean">한국어</string>
+</resources>
