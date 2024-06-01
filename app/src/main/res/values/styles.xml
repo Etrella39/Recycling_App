@@ -10,13 +10,13 @@
     <style name="id">
         <item name="android:textSize">15sp</item>
         <item name="android:letterSpacing">-0.03</item>
-        <item name="android:textColor">#A3A3A3</item>
+        <item name="android:textColor">@color/bbbbbb_ebebeb</item>
     </style>
 
     <style name="find_password">
         <item name="android:textSize">12sp</item>
         <item name="android:letterSpacing">-0.04</item>
-        <item name="android:textColor">#A3A3A3</item>
+        <item name="android:textColor">@color/bbbbbb_ebebeb</item>
     </style>
 
     <style name="some_id">
@@ -42,7 +42,7 @@
     <style name="confirm_password">
         <item name="android:textSize">15sp</item>
         <item name="android:letterSpacing">-0.03</item>
-        <item name="android:textColor">#A3A3A3</item>
+        <item name="android:textColor">@color/bbbbbb_ebebeb</item>
     </style>
 
 
@@ -70,7 +70,7 @@
     <style name="user_name">
         <item name="android:textSize">28sp</item>
         <item name="android:letterSpacing">-0.01</item>
-        <item name="android:textColor">#666666</item>
+        <item name="android:textColor">@color/gray</item>
     </style>
     <style name="waste_record">
         <item name="android:textSize">13sp</item>
@@ -95,7 +95,7 @@
     <style name="log_out">
         <item name="android:textSize">13sp</item>
         <item name="android:letterSpacing">-0.03</item>
-        <item name="android:textColor">#A3A3A3</item>
+        <item name="android:textColor">@color/bbbbbb_ebebeb</item>
     </style>
     <style name="delete">
         <item name="android:textSize">11sp</item>
@@ -122,7 +122,7 @@
     <style name="find_your_p">
         <item name="android:textSize">24sp</item>
         <item name="android:letterSpacing">-0.08</item>
-        <item name="android:textColor">#666666</item>
+        <item name="android:textColor">@color/gray</item>
     </style>
     <!-- Find Password Screen Styles -->
     <style name="forgotten_y">
@@ -133,19 +133,19 @@
     <style name="your_id">
         <item name="android:textSize">15sp</item>
         <item name="android:letterSpacing">-0.03</item>
-        <item name="android:textColor">#A3A3A3</item>
+        <item name="android:textColor">@color/bbbbbb_ebebeb</item>
     </style>
 
     <!-- Show Password Screen Styles -->
     <style name="your_passwo">
         <item name="android:textSize">24sp</item>
         <item name="android:letterSpacing">-0.02</item>
-        <item name="android:textColor">#666666</item>
+        <item name="android:textColor">@color/gray</item>
     </style>
     <style name="password_for_showing">
         <item name="android:textSize">15sp</item>
         <item name="android:letterSpacing">-0.03</item>
-        <item name="android:textColor">#A3A3A3</item>
+        <item name="android:textColor">@color/bbbbbb_ebebeb</item>
     </style>
     <style name="ok">
         <item name="android:textSize">14sp</item>
@@ -164,7 +164,7 @@
     <style name="pet">
         <item name="android:textSize">24sp</item>
         <item name="android:letterSpacing">-0.02</item>
-        <item name="android:textColor">#666666</item>
+        <item name="android:textColor">@color/gray</item>
     </style>
     <style name="result">
         <item name="android:textSize">12sp</item>
@@ -210,12 +210,12 @@
     <style name="toggle_title">
         <item name="android:textSize">20sp</item>
         <item name="android:letterSpacing">-0.02</item>
-        <item name="android:textColor">#666666</item>
+        <item name="android:textColor">@color/gray</item>
     </style>
     <style name="toggle_text">
         <item name="android:textSize">18sp</item>
         <item name="android:letterSpacing">-0.02</item>
-        <item name="android:textColor">#666666</item>
+        <item name="android:textColor">@color/gray</item>
     </style>
 
     <!-- Database Screen -->

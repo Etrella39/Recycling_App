@@ -93,10 +93,17 @@ class SettingsActivity : AppCompatActivity() {
         toggleLanguageKorean = findViewById(R.id.toggle_language_korean)
 
 
-        if (modeToggleList.visibility == View.VISIBLE) {
-            toggleModeLight.setOnClickListener {
+        toggleModeLight.setOnClickListener {
+            if (AppCompatDelegate.getDefaultNightMode() != AppCompatDelegate.MODE_NIGHT_NO) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             }
         }
+        toggleModeDark.setOnClickListener {
+            if (AppCompatDelegate.getDefaultNightMode() != AppCompatDelegate.MODE_NIGHT_YES) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            }
+        }
+
 
 
 

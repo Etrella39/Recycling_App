@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FFFFFFFF</color>
+    <color name="white">#393939</color>
+    <color name="gray">#FFFFFFFF</color>
+    <color name="id_box">#A3A3A3</color>
+    <color name="bbbbbb_ebebeb">#EBEBEB</color>
+
+</resources>

@@ -12,7 +12,7 @@
             />
         <path
             android:pathData="M1 1V127H142V1"
-            android:fillColor="#FFFFFF"
+            android:fillColor="@color/white"
             />
     </group>
     <group>
@@ -22,7 +22,7 @@
         <path
             android:pathData="M16 1H127C135.284 1 142 7.71573 142 16V112C142 120.284 135.284 127 127 127H16C7.71573 127 1 120.284 1 112V16C1 7.71573 7.71573 1 16 1Z"
             android:strokeWidth="2"
-            android:strokeColor="#666666"
+            android:strokeColor="@color/black"
             />
     </group>
 </vector>

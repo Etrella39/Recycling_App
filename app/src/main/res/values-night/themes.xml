@@ -1,7 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.RecyclingApp" parent="Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
+    <style name="Theme.RecyclingApp" parent="Base.Theme.RecyclingApp" />
+
 </resources>
