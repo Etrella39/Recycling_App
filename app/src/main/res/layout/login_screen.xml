@@ -19,7 +19,6 @@
             android:id="@+id/login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/interbold"
             android:gravity="center_horizontal|top"
             android:lineSpacingExtra="15sp"
             android:text="@string/login"
@@ -46,7 +45,7 @@
                 android:layout_gravity="center"
                 android:text="@string/log_in"
                 android:textAppearance="@style/log_in"
-                android:fontFamily="@font/interbold"/>
+                />
         </LinearLayout>
 
 
@@ -61,25 +60,24 @@
 
             <TextView
                 android:id="@+id/find_passwo"
-                android:layout_width="81dp"
+                android:layout_width="wrap_content"
                 android:layout_height="22dp"
                 android:gravity="center"
                 android:lineSpacingExtra="10sp"
                 android:text="@string/find_password"
                 android:textAppearance="@style/find_password"
-                android:clickable="true"
-                android:fontFamily="@font/interbold" />
+                android:clickable="true" />
 
             <TextView
                 android:id="@+id/signup_button"
-                android:layout_width="54dp"
+                android:layout_width="wrap_content"
                 android:layout_height="22dp"
                 android:gravity="center"
-                android:lineSpacingExtra="10sp"
+                android:lineSpacingExtra="20sp"
+                android:layout_marginStart="20dp"
                 android:text="@string/sign_up"
                 android:textAppearance="@style/find_password"
-                android:clickable="true"
-                android:fontFamily="@font/interbold" />
+                android:clickable="true" />
         </LinearLayout>
 
         <TextView
@@ -90,8 +88,7 @@
             android:gravity="center_horizontal|center_vertical"
             android:lineSpacingExtra="30sp"
             android:text="@string/some_id"
-            android:textAppearance="@style/some_id"
-            android:fontFamily="@font/interbold"/>
+            android:textAppearance="@style/some_id" />
 
         <!-- New LinearLayout for social media icon buttons -->
         <LinearLayout
@@ -105,7 +102,7 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:background="@drawable/login_google_icon"
-                android:contentDescription="@string/google_button" />
+                />
 
             <ImageButton
                 android:id="@+id/naver_button"
@@ -113,7 +110,7 @@
                 android:layout_height="48dp"
                 android:layout_marginStart="16dp"
                 android:background="@drawable/login_naver_icon"
-                android:contentDescription="@string/naver_button" />
+                />
 
             <ImageButton
                 android:id="@+id/kakaotalk_button"
@@ -121,7 +118,7 @@
                 android:layout_height="48dp"
                 android:layout_marginStart="16dp"
                 android:background="@drawable/login_kakaotalk_icon"
-                android:contentDescription="@string/kakaotalk_button" />
+                />
 
         </LinearLayout>
 

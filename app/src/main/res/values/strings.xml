@@ -56,7 +56,6 @@
 
     <!-- Find Password Screen Forgotten -->
     <string name="forgotten_y">Forgotten your Password?\nEnter your ID below</string>
-    <string name="find_passwo" translatable="false">Find Password</string>
     <string name="your_id">Your ID</string>
 
     <!-- Show Password Screen Your Password -->
@@ -90,8 +89,8 @@
 
 
     <!-- Scan Result Screen -->
-    <string name="retake" translatable="false">Re-Take</string>
-    <string name="pet" translatable="false">Pet</string>
+    <string name="retake">Re-Take</string>
+    <string name="pet">Pet</string>
     <string name="result" translatable="false">"         After thoroughly washing the inside of the plastic bottle, remove the label and separate it for recycling! Closing the lid after compression reduces the volume, making it more economical to collect and transport. The PET bottles separated in this way are     "</string>
 
     <string name="advice" translatable="false">
@@ -109,8 +108,7 @@ Recycled in many ways!
         <string name="screen_mode">Appearance</string>
         <string name="language">Language</string>
         <string name="about_us" translatable="false">About us</string>
-        <string name="about_us_details" translatable="false">
-            At Green Cycle, we\'re passionate about making a positive impact on our planet. Our mission is to revolutionize the way people think about recycling and contribute to a more sustainable future for generations to come.</string>
+        <string name="about_us_details" translatable="false">At Green Cycle, we\'re passionate about making a positive impact on our planet. Our mission is to revolutionize the way people think about recycling and contribute to a more sustainable future for generations to come.</string>
         <string name="back" translatable="false">Back</string>
 
     <string name="sustainabil" translatable="false">

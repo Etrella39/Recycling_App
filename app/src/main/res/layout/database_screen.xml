@@ -17,7 +17,6 @@
         android:layout_height="wrap_content"
         android:text="@string/title_recent"
         android:textAppearance="@style/setting_title_style"
-        android:fontFamily="@font/interbold"
         android:layout_marginTop="80dp"
         android:layout_marginStart="30dp" />
 
@@ -36,7 +35,9 @@
         <ListView
             android:id="@+id/list_itmes_database"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/list_db"
+            >
         </ListView>
 
 

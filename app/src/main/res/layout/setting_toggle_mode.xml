@@ -1,5 +1,6 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginBottom="8dp"
@@ -21,10 +22,9 @@
             android:textAppearance="@style/toggle_text"
             android:lineSpacingExtra="32sp"
             android:gravity="center_vertical"
-            android:fontFamily="@font/interbold"
             android:paddingStart="16dp"
             android:background="@drawable/setting_toggle_one"
-            />
+            tools:ignore="RtlSymmetry" />
         <TextView
             android:id="@+id/toggle_mode_dark"
             android:layout_width="match_parent"
@@ -33,10 +33,9 @@
             android:textAppearance="@style/toggle_text"
             android:lineSpacingExtra="32sp"
             android:gravity="center_vertical"
-            android:fontFamily="@font/interbold"
             android:paddingStart="16dp"
             android:background="@drawable/setting_toggle_one"
-            />
+            tools:ignore="RtlSymmetry" />
         <TextView
             android:id="@+id/toggle_mode_system"
             android:layout_width="match_parent"
@@ -45,9 +44,8 @@
             android:textAppearance="@style/toggle_text"
             android:lineSpacingExtra="32sp"
             android:gravity="center_vertical"
-            android:fontFamily="@font/interbold"
             android:paddingStart="16dp"
             android:background="@drawable/setting_toggle_one"
-            />
+            tools:ignore="RtlSymmetry" />
     </LinearLayout>
 </RelativeLayout>

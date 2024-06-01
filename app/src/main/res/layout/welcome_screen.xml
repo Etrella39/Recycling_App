@@ -32,7 +32,6 @@
             android:text="@string/recycle_sma"
             android:textAppearance="@style/recycle_sma"
             android:gravity="center_horizontal|top"
-            android:fontFamily="@font/interregular"
             android:lineHeight="15dp"
             />
     </LinearLayout>

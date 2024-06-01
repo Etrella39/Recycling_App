@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.InputFilter
 import android.text.InputType
-import android.view.View
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -101,7 +100,7 @@ class LoginActivity : AppCompatActivity() {
         } else {
             InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
         }
-        _pwEdit.typeface = ResourcesCompat.getFont(_context, R.font.interbold)
+        _pwEdit.typeface = ResourcesCompat.getFont(_context, R.font.inter_bold)
         _pwEdit.setSelection(_pwEdit.length()); // 커서를 끝에 위치시키기
 
     }

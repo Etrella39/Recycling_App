@@ -27,7 +27,6 @@
             android:text="@string/sign_up1"
             android:textAppearance="@style/login"
             android:translationY="-7.64sp"
-            android:fontFamily="@font/interbold"
             />
 
         <include layout="@layout/box_id_and_password"/>
@@ -97,7 +96,6 @@
                 android:lineSpacingExtra="36sp"
                 android:text="@string/sign_up_sc2"
                 android:textAppearance="@style/log_in"
-                android:fontFamily="@font/interbold"
                 />
         </LinearLayout>
 

@@ -68,7 +68,8 @@
                 android:layout_margin="8dp"
                 android:background="@drawable/user_profile_photo_2"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/character1" />
+                android:contentDescription="@string/character1"
+                />
 
             <ImageButton
                 android:id="@+id/character2"

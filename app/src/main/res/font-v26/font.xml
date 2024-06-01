@@ -3,22 +3,39 @@
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/interblack"/>
+        android:font="@font/inter_black"/>
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/interbold"/>
+        android:font="@font/inter_bold"/>
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/intermedium"/>
+        android:font="@font/inter_medium"/>
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/interregular"/>
+        android:font="@font/inter_regular"/>
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
         android:font="@font/abel"/>
+
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/pretendard_black"/>
+
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/pretendard_bold"/>
+
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/pretendard_medium"/>
+
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/pretendard_regular"
+        />
 
 </font-family>

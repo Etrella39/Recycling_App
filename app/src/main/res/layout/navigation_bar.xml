@@ -33,13 +33,13 @@
                 android:id="@+id/blogs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/interregular"
                 android:gravity="center_horizontal|top"
                 android:lineHeight="22sp"
                 android:lineSpacingExtra="10sp"
                 android:text="@string/blogs"
                 android:textAppearance="@style/Main_Disable"
-                android:translationY="-4.95sp" />
+                android:translationY="-4.95sp"
+                />
 
         </LinearLayout>
 
@@ -70,7 +70,6 @@
                 android:id="@+id/profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/interregular"
                 android:gravity="center_horizontal|top"
                 android:lineHeight="22sp"
                 android:lineSpacingExtra="10sp"
