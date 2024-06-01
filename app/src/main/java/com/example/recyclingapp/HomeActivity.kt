@@ -13,6 +13,7 @@ class HomeActivity : AppCompatActivity() {
 
     private lateinit var settingButton: Button
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home_screen)
