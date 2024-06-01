@@ -23,12 +23,8 @@ class HomeActivity : AppCompatActivity() {
         settingButton.setOnClickListener {
             Log.d("HomeActivity", "Setting button clicked")
             val intent = Intent(this@HomeActivity, SettingsActivity::class.java)
-
-            val homeLayout = findViewById<RelativeLayout>(R.id.home_screen)
-            val fadeOut: Animation = AnimationUtils.loadAnimation(this, R.anim.fade_out)
-            homeLayout.startAnimation(fadeOut)
-
             startActivity(intent)
+            overridePendingTransition(0, 0); // non animation
         }
     }
 }

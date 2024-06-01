@@ -1,10 +1,12 @@
 package com.example.recyclingapp
 
+import android.annotation.SuppressLint
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import android.view.animation.RotateAnimation
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.RelativeLayout
@@ -21,20 +23,29 @@ class SettingsActivity : AppCompatActivity() {
 
     private lateinit var backButton: Button
 
+    private lateinit var modeToggleList: RelativeLayout
+    private lateinit var languageToggleList: RelativeLayout
+
+    private lateinit var spinnerModeImage: ImageView
+    private lateinit var spinnerLanguageImage: ImageView
+
     private lateinit var sharedPreferences: SharedPreferences
 
-    private val spinnerAni: Animation = AnimationUtils.loadAnimation(this, R.anim.spinner_animation)
+    private lateinit var settingLayout: RelativeLayout
+    private lateinit var slideIn: Animation
 
+    private lateinit var spinnerAni: Animation
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.settings_screen)
 
-        val settingLayout = findViewById<RelativeLayout>(R.id.settings_screen)
-        setContentView(settingLayout)
-
-        val slideIn: Animation = AnimationUtils.loadAnimation(this, R.anim.slide_in)
+        settingLayout = findViewById(R.id.settings_screen)
+        slideIn = AnimationUtils.loadAnimation(this, R.anim.slide_in)
         settingLayout.startAnimation(slideIn)
+
+        spinnerAni = AnimationUtils.loadAnimation(this, R.anim.spinner_animation)
 
 
         backButton = findViewById(R.id.back_button)
@@ -43,31 +54,25 @@ class SettingsActivity : AppCompatActivity() {
         languageButton = findViewById(R.id.spinner_language)
 
 
-        val modeToggleList: RelativeLayout = findViewById(R.id.setting_toggle_mode)
-        val languageToggleList: RelativeLayout = findViewById(R.id.setting_toggle_language)
+        modeToggleList = findViewById(R.id.setting_toggle_mode)
+        languageToggleList = findViewById(R.id.setting_toggle_language)
         modeToggleList.visibility = View.GONE
         languageToggleList.visibility = View.GONE
 
-        val spinnerModeImage: ImageView = findViewById(R.id.spinner_mode_image)
-        val spinnerLanguageImage: ImageView = findViewById(R.id.spinner_language_image)
+        spinnerModeImage = findViewById(R.id.spinner_mode_image)
+        spinnerLanguageImage = findViewById(R.id.spinner_language_image)
 
 
         screenModeButton.setOnClickListener {
-            setToggleButton(modeToggleList, spinnerModeImage, isClickModeToggle)
+            setToggleButton(modeToggleList, spinnerModeImage, spinnerAni)
             isClickModeToggle = !isClickModeToggle
-            if (isClickLgToggle) {
-                setToggleButton(languageToggleList, spinnerLanguageImage, true)
-                isClickLgToggle = !isClickLgToggle
-            }
+
         }
-        
+
         languageButton.setOnClickListener {
-            setToggleButton(languageToggleList, spinnerLanguageImage, isClickLgToggle)
+            setToggleButton(languageToggleList, spinnerLanguageImage, spinnerAni)
             isClickLgToggle = !isClickLgToggle
-            if (isClickModeToggle) {
-                setToggleButton(modeToggleList, spinnerModeImage, true)
-                isClickModeToggle = !isClickModeToggle
-            }
+
         }
 
 
@@ -113,17 +118,24 @@ class SettingsActivity : AppCompatActivity() {
 //        recreate() // Recreate activity to apply the new theme
     }
 
-    private fun setToggleButton(list: RelativeLayout, image: ImageView, isclick: Boolean) {
-        if (!isclick) {
+    private fun setToggleButton(list: RelativeLayout, image: ImageView, ani: Animation) {
+        if (list.visibility == View.GONE) {
             list.visibility = View.VISIBLE
-            image.startAnimation(spinnerAni)
+            rotateView(image, 0f, 180f)
         } else {
             list.visibility = View.GONE
-            image.startAnimation(spinnerAni)
+            rotateView(image, 180f, 360f)
         }
     }
 
-
+    private fun rotateView(view: View, fromDegrees: Float, toDegrees: Float) {
+        val rotate = RotateAnimation(fromDegrees, toDegrees,
+            Animation.RELATIVE_TO_SELF, 0.5f,
+            Animation.RELATIVE_TO_SELF, 0.5f)
+        rotate.duration = 100
+        rotate.fillAfter = true
+        view.startAnimation(rotate)
+    }
 
 }
 
