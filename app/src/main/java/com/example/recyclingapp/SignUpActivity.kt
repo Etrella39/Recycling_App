@@ -41,13 +41,13 @@ class SignUpActivity : AppCompatActivity() {
         pwEdit = findViewById(R.id.password_edit)
 
         confirmPassword = findViewById(R.id.confirm_password)
-        confirmPasswordView = confirmPassword.findViewById<EditText>(R.id.password_edit)
+        confirmPasswordView = confirmPassword.findViewById(R.id.password_edit)
         confirmPasswordView.hint = "Confirm Password"
 
         SignUpBotton = findViewById(R.id.sign_up_button)
 
         pwShowButton = findViewById(R.id.password_icon)
-        pwShowButton2 = confirmPassword.findViewById<LinearLayout>(R.id.password_icon)
+        pwShowButton2 = confirmPassword.findViewById(R.id.password_icon)
 
         backButton = findViewById(R.id.back_button)
 

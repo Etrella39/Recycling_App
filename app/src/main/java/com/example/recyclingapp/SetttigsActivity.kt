@@ -10,7 +10,9 @@ import android.view.animation.RotateAnimation
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.RelativeLayout
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 
 
 class SettingsActivity : AppCompatActivity() {
@@ -33,19 +35,27 @@ class SettingsActivity : AppCompatActivity() {
 
     private lateinit var settingLayout: RelativeLayout
     private lateinit var slideIn: Animation
+    private lateinit var slideOut: Animation
+    private lateinit var toggleOpen: Animation
 
-    private lateinit var spinnerAni: Animation
+    private lateinit var toggleModeLight: TextView
+    private lateinit var toggleModeDark: TextView
+    private lateinit var toggleModeSystem: TextView
+
+    private lateinit var toggleLanguageEnglish: TextView
+    private lateinit var toggleLanguageKorean: TextView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings_screen)
 
-        settingLayout = findViewById(R.id.settings_screen)
         slideIn = AnimationUtils.loadAnimation(this, R.anim.slide_in)
-        settingLayout.startAnimation(slideIn)
+        slideOut = AnimationUtils.loadAnimation(this, R.anim.slide_out)
+        toggleOpen = AnimationUtils.loadAnimation(this, R.anim.toggle_open)
 
-        spinnerAni = AnimationUtils.loadAnimation(this, R.anim.spinner_animation)
+        settingLayout = findViewById(R.id.settings_screen)
+        settingLayout.startAnimation(slideIn)
 
 
         backButton = findViewById(R.id.back_button)
@@ -63,24 +73,39 @@ class SettingsActivity : AppCompatActivity() {
         spinnerLanguageImage = findViewById(R.id.spinner_language_image)
 
 
-        screenModeButton.setOnClickListener {
-            setToggleButton(modeToggleList, spinnerModeImage, spinnerAni)
-            isClickModeToggle = !isClickModeToggle
 
+        screenModeButton.setOnClickListener {
+            setToggleButton(modeToggleList, spinnerModeImage)
+            isClickModeToggle = !isClickModeToggle
         }
 
         languageButton.setOnClickListener {
-            setToggleButton(languageToggleList, spinnerLanguageImage, spinnerAni)
+            setToggleButton(languageToggleList, spinnerLanguageImage)
             isClickLgToggle = !isClickLgToggle
-
         }
 
+
+        toggleModeLight = modeToggleList.findViewById(R.id.toggle_mode_light)
+        toggleModeDark = modeToggleList.findViewById(R.id.toggle_mode_dark)
+        toggleModeSystem = modeToggleList.findViewById(R.id.toggle_mode_system)
+
+        toggleLanguageEnglish = findViewById(R.id.toggle_language_english)
+        toggleLanguageKorean = findViewById(R.id.toggle_language_korean)
+
+
+        if (modeToggleList.visibility == View.VISIBLE) {
+            toggleModeLight.setOnClickListener {
+            }
+        }
 
 
 
         backButton.setOnClickListener {
+            settingLayout.startAnimation(slideOut)
             finish()
         }
+
+
 
 
 
@@ -118,7 +143,8 @@ class SettingsActivity : AppCompatActivity() {
 //        recreate() // Recreate activity to apply the new theme
     }
 
-    private fun setToggleButton(list: RelativeLayout, image: ImageView, ani: Animation) {
+
+    private fun setToggleButton(list: RelativeLayout, image: ImageView) {
         if (list.visibility == View.GONE) {
             list.visibility = View.VISIBLE
             rotateView(image, 0f, 180f)

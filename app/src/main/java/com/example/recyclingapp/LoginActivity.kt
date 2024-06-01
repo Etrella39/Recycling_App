@@ -93,7 +93,6 @@ class LoginActivity : AppCompatActivity() {
             isPasswordVisible = !isPasswordVisible
             ShowPassword(pwEdit, isPasswordVisible, this)
         }
-
     }
 
     fun ShowPassword(_pwEdit: EditText, PasswordVisible: Boolean, _context: Context) {
