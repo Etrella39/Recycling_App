@@ -9,10 +9,12 @@
     android:background="@color/white"
     >
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
+
         <View
             android:layout_width="match_parent"
             android:layout_height="180dp"
@@ -20,6 +22,8 @@
             android:layout_alignParentTop="true"
             android:background="#78A55A"
             />
+
+        <include layout="@layout/top_bar_back" />
 
         <LinearLayout
             android:id="@+id/user_profile1"
