@@ -5,13 +5,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class FindPasswordActivity : AppCompatActivity() {
     private lateinit var backButton: Button
     private lateinit var userIdEditText: EditText
-    private lateinit var findPasswordButton: Button
+    private lateinit var findPasswordButton: RelativeLayout
     private lateinit var dbHelper: DBHelper // Assuming DBHelper is your SQLiteOpenHelper class
 
     override fun onCreate(savedInstanceState: Bundle?) {
