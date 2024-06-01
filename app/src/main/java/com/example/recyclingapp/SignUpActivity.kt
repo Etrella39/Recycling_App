@@ -3,7 +3,6 @@ package com.example.recyclingapp
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputFilter
-import android.text.InputFilter.AllCaps
 import android.text.InputFilter.LengthFilter
 import android.widget.Button
 import android.widget.EditText
@@ -23,7 +22,7 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var confirmPassword: LinearLayout
     private lateinit var confirmPasswordView: EditText
 
-    private lateinit var SignUpBotton: LinearLayout
+    private lateinit var SignUpButton: LinearLayout
 
     private lateinit var pwShowButton: LinearLayout
     private lateinit var pwShowButton2: LinearLayout
@@ -44,7 +43,7 @@ class SignUpActivity : AppCompatActivity() {
         confirmPasswordView = confirmPassword.findViewById(R.id.password_edit)
         confirmPasswordView.hint = "Confirm Password"
 
-        SignUpBotton = findViewById(R.id.sign_up_button)
+        SignUpButton = findViewById(R.id.sign_up_button)
 
         pwShowButton = findViewById(R.id.password_icon)
         pwShowButton2 = confirmPassword.findViewById(R.id.password_icon)
@@ -67,7 +66,7 @@ class SignUpActivity : AppCompatActivity() {
         pwEdit.filters = arrayOf(filter)
         confirmPasswordView.filters = arrayOf(filter)
 
-        SignUpBotton.setOnClickListener {
+        SignUpButton.setOnClickListener {
             val user = idEdit.text.toString()
             val pass = pwEdit.text.toString()
             val repass = confirmPasswordView.text.toString()
