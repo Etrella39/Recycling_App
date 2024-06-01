@@ -1,6 +1,7 @@
 package com.example.recyclingapp
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
@@ -14,6 +15,7 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import java.util.Locale
 
 
 class SettingsActivity : AppCompatActivity() {
@@ -110,6 +112,13 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
 
+        toggleLanguageEnglish.setOnClickListener {
+            setLocale("en")
+        }
+        toggleLanguageKorean.setOnClickListener {
+            setLocale("ko")
+        }
+
 
 
 
@@ -171,10 +180,24 @@ class SettingsActivity : AppCompatActivity() {
         val rotate = RotateAnimation(fromDegrees, toDegrees,
             Animation.RELATIVE_TO_SELF, 0.5f,
             Animation.RELATIVE_TO_SELF, 0.5f)
-        rotate.duration = 100
+        rotate.duration = 200
         rotate.fillAfter = true
         view.startAnimation(rotate)
     }
+
+    private fun setLocale(lang: String) {
+        val myLocale = Locale(lang)
+        val res = resources
+        val dm = res.displayMetrics
+        val conf = res.configuration
+        conf.setLocale(myLocale)
+
+        res.updateConfiguration(conf, dm)
+        val refresh = Intent(this, MainActivity::class.java)
+        startActivity(refresh)
+        finish()
+    }
+
 
 }
 
