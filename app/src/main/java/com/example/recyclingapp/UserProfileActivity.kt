@@ -2,6 +2,7 @@ package com.example.recyclingapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.ImageButton
@@ -13,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity
 class UserProfileActivity : AppCompatActivity() {
 
     private lateinit var user_main_photo: ImageView
+    private lateinit var person : View
+
 
 
     private lateinit var settingButton: Button
@@ -24,6 +27,7 @@ class UserProfileActivity : AppCompatActivity() {
 
         user_main_photo = findViewById(R.id.profile_photo)
         settingButton = findViewById(R.id.setting_button)
+        person = findViewById(R.id.person_photo)
         logout = findViewById(R.id.log_out)
 //        userMainPhoto = findViewById(R.id.profile_photo)
 
@@ -42,6 +46,8 @@ class UserProfileActivity : AppCompatActivity() {
             val intent = Intent(this@UserProfileActivity, LoginActivity::class.java)
             startActivity(intent)
         }
+
+        person.visibility = View.INVISIBLE
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
