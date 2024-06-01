@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    >
+    android:background="@color/white">
     <!-- Top Bar -->
     <include layout="@layout/top_bar_back" />
     <!-- User Profile Photo and Lines -->
@@ -20,11 +19,11 @@
             android:layout_width="150dp"
             android:layout_height="8dp"
             android:layout_centerVertical="true"
-            android:layout_toStartOf="@id/ellipse_15"
+            android:layout_toStartOf="@id/user_main_photo_chose"
             android:background="@drawable/user_profile_left_line" />
         <!-- User Profile Photo -->
         <View
-            android:id="@+id/ellipse_15"
+            android:id="@+id/user_main_photo_chose"
             android:layout_width="112dp"
             android:layout_height="112dp"
             android:layout_centerInParent="true"
@@ -35,13 +34,13 @@
             android:layout_width="150dp"
             android:layout_height="8dp"
             android:layout_centerVertical="true"
-            android:layout_toEndOf="@id/ellipse_15"
+            android:layout_toEndOf="@id/user_main_photo_chose"
             android:background="@drawable/user_profile_right_line" />
         <View
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_alignBottom="@id/ellipse_15"
-            android:layout_alignEnd="@id/ellipse_15"
+            android:layout_alignBottom="@id/user_main_photo_chose"
+            android:layout_alignEnd="@id/user_main_photo_chose"
             android:background="@drawable/user_profile_camera_icon" />
     </RelativeLayout>
 
@@ -49,8 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/user_container"
-        android:layout_centerHorizontal="true"
-        >
+        android:layout_centerHorizontal="true">
         <!-- Character Buttons Grid -->
         <GridLayout
             android:id="@+id/character_grid"
@@ -61,10 +59,10 @@
             android:rowCount="6"
             android:padding="26dp"
             android:orientation="horizontal"
-            android:layout_gravity="center"
-            >
+            android:layout_gravity="center">
             <!-- Example Character Buttons -->
             <ImageButton
+                android:id="@+id/character1"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="8dp"
@@ -73,143 +71,177 @@
                 android:contentDescription="@string/character1" />
 
             <ImageButton
+                android:id="@+id/character2"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/user_profile_photo_4"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/character1" />
+                android:contentDescription="@string/character2" />
+
             <ImageButton
+                android:id="@+id/character3"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/user_profile_photo_5"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/character1" />
+                android:contentDescription="@string/character3" />
+
             <ImageButton
+                android:id="@+id/character4"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/user_profile_photo_6"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/character1" />
+                android:contentDescription="@string/character4" />
+
             <ImageButton
+                android:id="@+id/character5"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/user_profile_photo_7"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/character1" />
+                android:contentDescription="@string/character5" />
+
             <ImageButton
+                android:id="@+id/character6"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/user_profile_photo_8"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/character1" />
+                android:contentDescription="@string/character6" />
+
             <ImageButton
+                android:id="@+id/character7"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/user_profile_photo_9"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/character1" />
+                android:contentDescription="@string/character7" />
+
             <ImageButton
+                android:id="@+id/character8"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/user_profile_photo_10"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/character1" />
+                android:contentDescription="@string/character8" />
+
             <ImageButton
+                android:id="@+id/character9"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/user_profile_photo_11"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/character1" />
+                android:contentDescription="@string/character9" />
+
             <ImageButton
+                android:id="@+id/character10"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/user_profile_photo_12"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/character1" />
+                android:contentDescription="@string/character10" />
+
             <ImageButton
+                android:id="@+id/character11"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/user_profile_photo_13"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/character1" />
+                android:contentDescription="@string/character11" />
+
             <ImageButton
+                android:id="@+id/character12"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/user_profile_photo_14"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/character1" />
+                android:contentDescription="@string/character12" />
+
             <ImageButton
+                android:id="@+id/character13"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/user_profile_photo_15"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/character1" />
+                android:contentDescription="@string/character13" />
 
             <ImageButton
+                android:id="@+id/character14"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/user_profile_photo_16"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/character1" />
+                android:contentDescription="@string/character14" />
+
             <ImageButton
+                android:id="@+id/character15"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/user_profile_photo_1"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/character1" />
+                android:contentDescription="@string/character15" />
+
             <ImageButton
+                android:id="@+id/character16"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/user_profile_photo_3"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/character1" />
+                android:contentDescription="@string/character16" />
+
             <ImageButton
+                android:id="@+id/character17"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/user_profile_photo_17"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/character1" />
+                android:contentDescription="@string/character17" />
+
             <ImageButton
+                android:id="@+id/character18"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/user_profile_photo_18"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/character1" />
+                android:contentDescription="@string/character18" />
+
             <ImageButton
+                android:id="@+id/character19"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/user_profile_photo_19"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/character1" />
+                android:contentDescription="@string/character19" />
+
             <ImageButton
+                android:id="@+id/character20"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/user_profile_photo_20"
                 android:scaleType="centerCrop"
-                android:contentDescription="@string/character1" />
-
+                android:contentDescription="@string/character20" />
 
             <!-- Add more ImageButtons here for other characters -->
         </GridLayout>
-
     </LinearLayout>
 </RelativeLayout>

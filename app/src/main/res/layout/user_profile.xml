@@ -34,7 +34,7 @@
                 android:layout_width="154dp"
                 android:layout_height="154dp"
                 >
-                <View
+                <ImageView
                     android:id="@+id/profile_photo"
                     android:layout_width="154dp"
                     android:layout_height="154dp"
@@ -42,7 +42,8 @@
                     android:background="@drawable/user_profile_main"
                     />
                 <View
-                     android:layout_width="83.49dp"
+                    android:id="@+id/person_photo"
+                    android:layout_width="83.49dp"
                     android:layout_height="83.49dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="35.25dp"

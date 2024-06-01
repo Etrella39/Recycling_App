@@ -66,6 +66,27 @@
 
     <!-- User Profile Characters Screen -->
     <string name="character1" translatable="false">characters_for_profile</string>
+    <string name="character2" translatable="false">characters_for_profile</string>
+    <string name="character3" translatable="false">characters_for_profile</string>
+    <string name="character4" translatable="false">characters_for_profile</string>
+    <string name="character5" translatable="false">characters_for_profile</string>
+    <string name="character6" translatable="false">characters_for_profile</string>
+    <string name="character7" translatable="false">characters_for_profile</string>
+    <string name="character8" translatable="false">characters_for_profile</string>
+    <string name="character9" translatable="false">characters_for_profile</string>
+    <string name="character10" translatable="false">characters_for_profile</string>
+    <string name="character11" translatable="false">characters_for_profile</string>
+    <string name="character12" translatable="false">characters_for_profile</string>
+    <string name="character13" translatable="false">characters_for_profile</string>
+    <string name="character14" translatable="false">characters_for_profile</string>
+    <string name="character15" translatable="false">characters_for_profile</string>
+    <string name="character16" translatable="false">characters_for_profile</string>
+    <string name="character17" translatable="false">characters_for_profile</string>
+    <string name="character18" translatable="false">characters_for_profile</string>
+    <string name="character19" translatable="false">characters_for_profile</string>
+    <string name="character20" translatable="false">characters_for_profile</string>
+
+
 
 
     <!-- Scan Result Screen -->
@@ -106,5 +127,9 @@ Recycled in many ways!
     <string name="mode_system">System</string>
     <string name="language_english">English</string>
     <string name="language_korean">Korean</string>
+
+
+    <!-- Strings for photo user main -->
+
 
 </resources>
