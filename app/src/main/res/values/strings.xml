@@ -100,7 +100,7 @@ Recycled in many ways!
     <!-- Database Screen String-->
     <string name="title_recent" translatable="false">Recent Actions</string>
     <string name="settings_screen_title" translatable="false">settings_screen_title</string>
-    <string name="waste_record_string">Waste Record</string>
+
     <string name="mode_light">Light</string>
     <string name="mode_dark">Dark</string>
     <string name="mode_system">System</string>
