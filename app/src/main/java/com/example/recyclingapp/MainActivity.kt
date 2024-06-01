@@ -1,6 +1,7 @@
 package com.example.recyclingapp
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -21,11 +22,22 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
+        val userID = auto.getString("userId", null)
+        val passwordNo = auto.getString("passwordNo", null)
+
         val hand = Handler()
         hand.postDelayed(Runnable {
-            val intent = Intent(this@MainActivity, LoginActivity::class.java)
-            startActivity(intent)
-            finish()
+            if(userID != null && passwordNo != null) {
+                val intent = Intent(this@MainActivity, HomeActivity::class.java)
+                startActivity(intent)
+                finish()
+            } else {
+                val intent = Intent(this@MainActivity, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+
         }, 2000)
 
 

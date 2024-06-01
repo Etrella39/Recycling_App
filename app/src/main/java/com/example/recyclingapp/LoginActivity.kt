@@ -2,6 +2,7 @@ package com.example.recyclingapp
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.text.InputFilter
 import android.text.InputType
@@ -11,6 +12,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
+
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var signUpBTN: TextView // 회원가입 버튼
@@ -22,6 +24,7 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var pwShowButton: LinearLayout // 비밀번호 확인 버튼
     private var isPasswordVisible = false
+
 
     var DB:DBHelper? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,6 +41,7 @@ class LoginActivity : AppCompatActivity() {
         pwEdit = findViewById(R.id.password_edit)
 
         pwShowButton = findViewById(R.id.password_icon)
+
 
         val filter = InputFilter { source, start, end, dest, dstart, dend ->
             val pattern = Regex("[^a-zA-Z0-9!@#$%^&*()_+\\-=\\[\\]{};:\"\\\\|,.<>/?]")
@@ -60,19 +64,29 @@ class LoginActivity : AppCompatActivity() {
 
             // 빈칸 제출시 Toast
             if (user == "" || pass == "") {
-                Toast.makeText(this@LoginActivity, "아이디와 비밀번호를 모두 입력해주세요.", Toast.LENGTH_SHORT).show()
-            }
-            else {
+                Toast.makeText(this@LoginActivity, "아이디와 비밀번호를 모두 입력해주세요.", Toast.LENGTH_SHORT)
+                    .show()
+            } else {
                 val checkUserpass = DB!!.checkUserpass(user, pass)
                 // id 와 password 일치시
                 if (checkUserpass) {
+                    // 로그인 정보 저장
+                    val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
+                    val autoLoginEdit = auto.edit()
+                    autoLoginEdit.putString("userId", user)
+                    autoLoginEdit.putString("passwordNo", pass)
+                    autoLoginEdit.apply()
+
                     Toast.makeText(this@LoginActivity, "로그인 되었습니다.", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, HomeActivity::class.java)
                     startActivity(intent)
                     finish()
-                }
-                else {
-                    Toast.makeText(this@LoginActivity, "아이디와 비밀번호를 확인해 주세요.", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(
+                        this@LoginActivity,
+                        "아이디와 비밀번호를 확인해 주세요.",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
         }
@@ -92,6 +106,7 @@ class LoginActivity : AppCompatActivity() {
             isPasswordVisible = !isPasswordVisible
             ShowPassword(pwEdit, isPasswordVisible, this)
         }
+
     }
 
     fun ShowPassword(_pwEdit: EditText, PasswordVisible: Boolean, _context: Context) {

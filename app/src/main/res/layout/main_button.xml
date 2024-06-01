@@ -8,7 +8,7 @@
     >
 
     <ImageView
-        android:id="@+id/trash"
+        android:id="@+id/trashcan_image"
         android:layout_width="56.98dp"
         android:layout_height="56.98dp"
         android:layout_centerInParent="true"

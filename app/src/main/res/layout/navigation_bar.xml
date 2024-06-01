@@ -14,7 +14,7 @@
         >
 
         <LinearLayout
-            android:id="@+id/profile_button"
+            android:id="@+id/blogs_button"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="84dp"
@@ -50,7 +50,7 @@
             />
 
         <LinearLayout
-            android:id="@+id/blogs_button"
+            android:id="@+id/profile_button"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="84dp"
@@ -84,7 +84,9 @@
 
     </LinearLayout>
 
-    <include layout="@layout/main_button"/>
+    <include
+        android:id="@+id/main_button"
+        layout="@layout/main_button"/>
 
 
 </RelativeLayout>

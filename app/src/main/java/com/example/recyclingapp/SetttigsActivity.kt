@@ -193,8 +193,8 @@ class SettingsActivity : AppCompatActivity() {
         conf.setLocale(myLocale)
 
         res.updateConfiguration(conf, dm)
-        val refresh = Intent(this, MainActivity::class.java)
-        startActivity(refresh)
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
         finish()
     }
 

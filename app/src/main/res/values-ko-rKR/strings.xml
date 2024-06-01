@@ -35,4 +35,7 @@
     <string name="language_korean">한국어</string>
     <string name="retake">다시 찍기</string>
     <string name="pet">페트</string>
+    <string name="do_you_logout">로그아웃 하시겠습니까?</string>
+    <string name="no">아니오</string>
+    <string name="yes">네</string>
 </resources>

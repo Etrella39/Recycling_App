@@ -28,7 +28,7 @@
     <string name="blogs">Blogs</string>
 
     <!-- Main Frame Strings -->
-    <string name="take_a_picture" translatable="false">Take a Picture  Scan the waste</string>
+    <string name="take_a_picture" translatable="false">Take a Picture\nScan the waste</string>
     <string name="label">Get Started</string>
 
     <!-- User Frame Strings -->
@@ -125,6 +125,9 @@ Recycled in many ways!
     <string name="mode_system">System</string>
     <string name="language_english">English</string>
     <string name="language_korean">Korean</string>
+    <string name="do_you_logout">Do you want to log out?</string>
+    <string name="no">NO</string>
+    <string name="yes">YES</string>
 
 
     <!-- Strings for photo user main -->

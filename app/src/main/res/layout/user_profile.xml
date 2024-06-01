@@ -11,6 +11,7 @@
 
 
     <RelativeLayout
+        android:id="@+id/user_profile_1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
@@ -23,12 +24,10 @@
             android:background="#78A55A"
             />
 
-        <include layout="@layout/top_bar_back" />
-
         <LinearLayout
             android:id="@+id/user_profile1"
             android:layout_width="match_parent"
-            android:layout_height="304dp"
+            android:layout_height="330dp"
             android:gravity="center_horizontal"
             android:orientation="vertical"
             android:layout_marginTop="95dp"
@@ -71,7 +70,7 @@
                 android:id="@+id/property_de"
                 android:layout_width="237dp"
                 android:layout_height="61dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="25dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:background="@drawable/user_record_button"
@@ -116,82 +115,41 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="122dp"
+            android:layout_height="61dp"
             android:layout_below="@id/user_profile1"
-            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
             >
+            <View
+                android:layout_width="49.74dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="24.87dp"
+                android:background="@drawable/user_calendar"
+                />
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="61dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                >
-                <View
-                    android:layout_width="49.74dp"
-                    android:layout_height="44dp"
-                    android:layout_marginLeft="24.87dp"
-                    android:background="@drawable/user_calendar"
-                    />
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20.62dp"
-                    android:orientation="vertical"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/joined_date_string"
-                        android:textAppearance="@style/joined_date"
-                        android:gravity="center_vertical"
-                        />
-                    <!-- Auto layout, variables, and unit scale are not yet supported -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/joined_date"
-                        android:textAppearance="@style/joined_date1"
-                        android:gravity="center_vertical"
-                        />
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
+                android:layout_marginLeft="20.62dp"
+                android:orientation="vertical"
                 >
-                <View
-                    android:layout_width="44dp"
-                    android:layout_height="44dp"
-                    android:layout_marginLeft="28dp"
-                    android:background="@drawable/user_id"
-                    />
-                <LinearLayout
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20.62dp"
-                    android:orientation="vertical"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/user_id_string"
-                        android:textAppearance="@style/joined_date"
-                        android:gravity="center_vertical"
-                        android:fontFamily="@font/inter_bold"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/user_id"
-                        android:textAppearance="@style/joined_date1"
-                        android:gravity="center_vertical"
-                        android:fontFamily="@font/inter_medium"
-                        />
-                </LinearLayout>
+                    android:text="@string/joined_date_string"
+                    android:textAppearance="@style/joined_date"
+                    android:gravity="center_vertical"
+                    />
+                <!-- Auto layout, variables, and unit scale are not yet supported -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/joined_date"
+                    android:textAppearance="@style/joined_date1"
+                    android:gravity="center_vertical"
+                    />
             </LinearLayout>
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"

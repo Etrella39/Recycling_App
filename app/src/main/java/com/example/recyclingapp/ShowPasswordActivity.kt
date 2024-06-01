@@ -1,6 +1,10 @@
 package com.example.recyclingapp
 
+import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.Dialog
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.Window
@@ -8,6 +12,7 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.DialogFragment
 
 
 class ShowPasswordActivity : Activity() {
@@ -21,10 +26,13 @@ class ShowPasswordActivity : Activity() {
     private lateinit var pwShowButton: LinearLayout
     private var isPasswordVisible = false
 
+    @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        this.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
         setContentView(R.layout.show_password_dialog)
 
         okButton = findViewById(R.id.find_button_for_show_dialog)
