@@ -11,6 +11,8 @@ coreKtx = "1.13.1"
 library = "3.2.0-alpha11"
 androidx-macro-benchmark = "1.2.2"
 my-library = "1.4"
+tedpermission = "2.3.0"
+
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -26,6 +28,7 @@ androidx-benchmark-macro = { group = "androidx.benchmark", name = "benchmark-mac
 my-library = { group = "com.myapplication", name = "mylibrary", version.ref = "my-library" }
 mysql-connector-java = { group = "mysql", name = "mysql-connector-java", version = "5.1.49" }
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version = "1.6.4" }
+tedpermission = { group = "io.github.ParkSangGwon", name = "tedpermission", version.ref = "tedpermission" }
 
 
 [plugins]

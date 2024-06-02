@@ -3,16 +3,16 @@ package com.example.recyclingapp
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.provider.MediaStore
 import android.util.Log
-import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 
 
 class HomeActivity : AppCompatActivity() {
@@ -32,6 +32,9 @@ class HomeActivity : AppCompatActivity() {
 
     private lateinit var fadeIn: Animation
     private lateinit var fadeOut: Animation
+
+    val ALREADY_GRANTED: Int = -1
+    val REQUEST_PERMISSION: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,6 +61,8 @@ class HomeActivity : AppCompatActivity() {
         mainButton.setBackgroundResource(R.drawable.main_button_press)
         trashcanImage.setBackgroundResource(R.drawable.main_icon_trashcan_press)
 
+
+
         settingButton.setOnClickListener {
             Log.d("HomeActivity", "Setting button clicked")
             val intent = Intent(this@HomeActivity, SettingsActivity::class.java)
@@ -79,26 +84,13 @@ class HomeActivity : AppCompatActivity() {
 
 
         startButton.setOnClickListener {
-            // Camera App이 있는지 조사
-            if (isExistsCameraApplication()) {
-                // Camera Application을 실행
-                val cameraApp = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-                startActivityForResult(cameraApp, 10000)
-            }
+
+
+
         }
 
 
+
     }
-
-    private fun isExistsCameraApplication(): Boolean {
-        val packageManager = packageManager
-        val cameraApp = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-
-        // MediaStore.ACTION_IMAGE_CAPTURE의 Intent를 처리할 수 있는 Application 정보 가져옴
-        val cameraApps =
-            packageManager.queryIntentActivities(cameraApp, PackageManager.MATCH_DEFAULT_ONLY)
-        return cameraApps.size > 0
-    }
-
-
 }
+
