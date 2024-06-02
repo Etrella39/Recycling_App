@@ -6,16 +6,32 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/text_view_title"
+        android:id="@+id/blog_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:text="Blog Title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/inter_bold"
+        android:paddingBottom="4dp"/>
 
     <TextView
-        android:id="@+id/text_view_description"
+        android:id="@+id/blog_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp" />
+        android:text="Blog Description"
+        android:fontFamily="@font/inter_medium"
+        android:paddingBottom="8dp"/>
 
+    <Button
+        android:id="@+id/read_more_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/find_password_findbutton"
+        style="@style/ok"
+        android:fontFamily="@font/inter_medium"
+        android:layout_gravity="end"
+        android:text="Read More"/>
 </LinearLayout>
+
+

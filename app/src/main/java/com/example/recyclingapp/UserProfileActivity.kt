@@ -54,11 +54,13 @@ class UserProfileActivity : AppCompatActivity() {
         deleteAccount = findViewById(R.id.delete)
         userName = findViewById(R.id.user_name)
 
-        navigationBar = findViewById(R.id.navigation_bar)
-        mainButton = navigationBar.findViewById(R.id.main_button)
-        profileButton = navigationBar.findViewById(R.id.profile_button)
-        blogButton = navigationBar.findViewById(R.id.blogs_button)
+
+        mainButton = findViewById(R.id.main_button)
+        profileButton = findViewById(R.id.profile_button)
+
+        blogButton = findViewById(R.id.blogs_button)
         customerImage = findViewById(R.id.customer)
+
         customerImage.setBackgroundResource(R.drawable.main_icon_customer_press)
         customerText = findViewById(R.id.profile)
         customerText.setTextColor(Color.parseColor("#547E38"))
@@ -80,6 +82,7 @@ class UserProfileActivity : AppCompatActivity() {
             val intent = Intent(this, LogOutDialogue::class.java)
             startActivity(intent)
         }
+
 
         deleteAccount.setOnClickListener {
             val userId = getCurrentUserId() // Replace with actual method to fetch the current user ID
