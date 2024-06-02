@@ -41,4 +41,9 @@
     <string name="home_2_vinyl">비닐류</string>
     <string name="home_2_styrofoam">스티로폼</string>
     <string name="home_2_plastic">플라스틱</string>
+    <string name="home_2_glass">유리병류</string>
+    <string name="home_2_paper">종이류</string>
+    <string name="home_2_can">캔류</string>
+    <string name="home_2_title">분리배출 요령</string>
+    <string name="dialogue_delete">계정을 삭제하시겠습니까?</string>
 </resources>

@@ -268,5 +268,12 @@
         <item name="android:fontFamily">@font/inter_medium</item>
     </style>
 
+    <style name="home_2_title">
+        <item name="android:textSize">32sp</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:textColor">#78A55A</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+    </style>
+
 
 </resources>

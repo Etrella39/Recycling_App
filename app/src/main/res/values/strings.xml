@@ -130,7 +130,12 @@ Recycled in many ways!
     <string name="yes">YES</string>
     <string name="home_2_vinyl">Vinyl</string>
     <string name="home_2_styrofoam">Styrofoam</string>
-    <string name="home_2_plastic">Plastic</string>
+    <string name="home_2_plastic">Plastic pet</string>
+    <string name="home_2_glass">Glass</string>
+    <string name="home_2_paper">Paper</string>
+    <string name="home_2_can">Can</string>
+    <string name="home_2_title">Methods for Separate Discharge</string>
+    <string name="dialogue_delete">Do you really want to delete your account?</string>
 
 
     <!-- Strings for photo user main -->

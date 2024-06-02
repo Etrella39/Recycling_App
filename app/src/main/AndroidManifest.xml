@@ -60,6 +60,7 @@
             android:name=".DeleteDialog"
             android:theme="@android:style/Theme.Dialog"/>
 
+        <activity android:name=".DescriptionActivity"/>
 
     </application>
 

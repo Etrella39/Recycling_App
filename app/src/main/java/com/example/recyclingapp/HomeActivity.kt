@@ -28,17 +28,15 @@ class HomeActivity : AppCompatActivity() {
 
     private lateinit var trashcanImage: ImageView
 
-    private lateinit var startButton: LinearLayout
+    private lateinit var buttonPaper: RelativeLayout
+
 
     private lateinit var fadeIn: Animation
     private lateinit var fadeOut: Animation
 
-    val ALREADY_GRANTED: Int = -1
-    val REQUEST_PERMISSION: Int = 0
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.home_screen)
+        setContentView(R.layout.home_screen_2)
 
         fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
         fadeOut = AnimationUtils.loadAnimation(this, R.anim.fade_out)
@@ -46,8 +44,6 @@ class HomeActivity : AppCompatActivity() {
         homeLayout = findViewById(R.id.home_screen_1)
         homeLayout.startAnimation(fadeIn)
         overridePendingTransition(0, 0); // non animation
-
-        startButton = findViewById(R.id.start_button)
 
         settingButton = findViewById(R.id.setting_button)
 
@@ -60,6 +56,9 @@ class HomeActivity : AppCompatActivity() {
 
         mainButton.setBackgroundResource(R.drawable.main_button_press)
         trashcanImage.setBackgroundResource(R.drawable.main_icon_trashcan_press)
+
+
+        buttonPaper = findViewById(R.id.home_paper)
 
 
 
@@ -83,9 +82,10 @@ class HomeActivity : AppCompatActivity() {
         }
 
 
-        startButton.setOnClickListener {
+        buttonPaper.setOnClickListener {
 
-
+            val intent = Intent(this@HomeActivity, DescriptionActivity::class.java)
+            startActivity(intent)
 
         }
 

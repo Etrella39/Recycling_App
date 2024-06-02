@@ -2,6 +2,7 @@ package com.example.recyclingapp
 
 import android.app.Activity
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -16,25 +17,31 @@ class DeleteDialog : Activity() {
     private lateinit var noButton: TextView
     private lateinit var dbHelper: DBHelper
 
+    private lateinit var dialogText: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        setContentView(R.layout.delete_account)
+        setContentView(R.layout.dialogue_log_out)
+
+        yesButton = findViewById(R.id.log_out_yes_button)
+        noButton = findViewById(R.id.log_out_no_button)
 
         dbHelper = DBHelper(this)
 
-        yesButton = findViewById(R.id.delete_yes_button)
-        noButton = findViewById(R.id.delete_no_button)
+        dialogText = findViewById(R.id.your_password)
+        dialogText.text = getString(R.string.dialogue_delete)
 
-        val userId = intent.getStringExtra("USER_ID")
+        val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
+        val userId = auto.getString("userId", null)
 
         yesButton.setOnClickListener {
             if (userId != null) {
                 val isDeleted = dbHelper.deleteUser(userId)
                 if (isDeleted) {
                     Toast.makeText(this, "User account deleted successfully", Toast.LENGTH_SHORT).show()
-                    clearAutoLoginPreferences()
+                    clearAutoLoginPreferences(auto)
                     navigateToLoginScreen()
                 } else {
                     Toast.makeText(this, "Failed to delete user account", Toast.LENGTH_SHORT).show()
@@ -52,8 +59,7 @@ class DeleteDialog : Activity() {
         }
     }
 
-    private fun clearAutoLoginPreferences() {
-        val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
+    private fun clearAutoLoginPreferences(auto: SharedPreferences) {
         val autoLoginEdit = auto.edit()
         autoLoginEdit.clear()
         autoLoginEdit.apply()

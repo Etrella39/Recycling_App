@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
         val userID = auto.getString("userId", null)
-        val passwordNo = auto.getString("passwordNo", null)
+        val passwordNo = auto.getString("userPass", null)
 
 
 

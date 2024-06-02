@@ -88,13 +88,14 @@ class UserProfileActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-        user_name.text = getCurrentUserId() ?: "User ID not found"
+
+        user_name.text = getCurrentUserId()
 
     }
 
     private fun getCurrentUserId(): String? {
-        val sharedPreferences = getSharedPreferences("userPrefs", Context.MODE_PRIVATE)
-        return sharedPreferences.getString("USER_ID", null)
+        val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
+        return auto.getString("userId", null)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

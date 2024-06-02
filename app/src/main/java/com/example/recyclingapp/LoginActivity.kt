@@ -67,8 +67,7 @@ class LoginActivity : AppCompatActivity() {
                 val checkUserpass = DB!!.checkUserpass(user, pass)
                 if (checkUserpass) {
                     // Save user ID to SharedPreferences
-                    saveUserId(user)
-
+                    saveUserId(user, pass)
                     Toast.makeText(this@LoginActivity, "로그인 되었습니다.", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, HomeActivity::class.java)
                     startActivity(intent)
@@ -110,10 +109,11 @@ class LoginActivity : AppCompatActivity() {
     }
 
     // Function to save user ID to SharedPreferences
-    private fun saveUserId(userId: String) {
+    private fun saveUserId(userId: String, userPass: String) {
         val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
         val autoLoginEdit = auto.edit()
         autoLoginEdit.putString("userId", userId)
+        autoLoginEdit.putString("userPass", userPass)
         autoLoginEdit.apply()
     }
 }
