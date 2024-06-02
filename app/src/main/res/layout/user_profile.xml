@@ -27,7 +27,7 @@
         <LinearLayout
             android:id="@+id/user_profile1"
             android:layout_width="match_parent"
-            android:layout_height="330dp"
+            android:layout_height="250dp"
             android:gravity="center_horizontal"
             android:orientation="vertical"
             android:layout_marginTop="95dp"
@@ -72,57 +72,12 @@
                 android:lineHeight="22sp"
                 />
 
-            <!-- Auto layout, variables, and unit scale are not yet supported -->
-            <LinearLayout
-                android:id="@+id/property_de"
-                android:layout_width="237dp"
-                android:layout_height="61dp"
-                android:layout_marginTop="25dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:background="@drawable/user_record_button"
-                >
-                <View
-                    android:id="@+id/data_backup"
-                    android:layout_width="43dp"
-                    android:layout_height="31dp"
-                    android:layout_marginLeft="13dp"
-                    android:background="@drawable/user_data_backup"
-                    />
-                <LinearLayout
-                    android:id="@+id/text"
-                    android:layout_width="91dp"
-                    android:layout_height="30.62dp"
-                    android:layout_marginLeft="10dp"
-                    android:orientation="vertical"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/waste_record_string"
-                        android:textAppearance="@style/waste_record"
-                        android:lineSpacingExtra="6sp"
-                        android:gravity="center_vertical"
-                        android:lineHeight="22sp"
-                        />
-                    <!-- Auto layout, variables, and unit scale are not yet supported -->
-                    <TextView
-                        android:id="@+id/january_202"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/waste_record"
-                        android:textAppearance="@style/waste_record1"
-                        android:lineSpacingExtra="9sp"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:lineHeight="22sp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="61dp"
+            android:layout_height="wrap_content"
             android:layout_below="@id/user_profile1"
             android:gravity="center_vertical"
             android:orientation="horizontal"
@@ -144,52 +99,54 @@
                     android:layout_height="wrap_content"
                     android:text="@string/joined_date_string"
                     android:textAppearance="@style/joined_date"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/inter_bold"
                     android:gravity="center_vertical"
                     />
-                <!-- Auto layout, variables, and unit scale are not yet supported -->
                 <TextView
                     android:id="@+id/joined_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="will change"
+                    android:fontFamily="@font/inter_medium"
+                    android:textSize="14dp"
                     android:textAppearance="@style/joined_date1"
                     android:gravity="center_vertical"
                     />
             </LinearLayout>
+
         </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginBottom="167dp"
+            android:layout_marginBottom="180dp"
             android:layout_alignParentBottom="true"
             >
             <TextView
                 android:id="@+id/log_out"
-                android:layout_width="57dp"
-                android:layout_height="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/logout"
                 android:textAppearance="@style/log_out"
-                android:lineSpacingExtra="6sp"
                 android:translationY="-3.13sp"
                 android:gravity="center"
+                android:textSize="14dp"
                 android:lineHeight="22sp"
                 />
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                />
+
             <TextView
                 android:id="@+id/delete"
-                android:layout_width="57dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/delete"
                 android:textAppearance="@style/delete"
                 android:gravity="center"
+                android:textSize="14dp"
                 android:background="@drawable/user_delete_id"
                 />
         </LinearLayout>
