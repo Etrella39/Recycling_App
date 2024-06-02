@@ -35,6 +35,7 @@ class UserProfileActivity : AppCompatActivity() {
     private lateinit var dbHelper: DBHelper
     private lateinit var deleteAccount: TextView
     private lateinit var userName : TextView
+    private lateinit var joinedDateTextView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,6 +55,7 @@ class UserProfileActivity : AppCompatActivity() {
         logout = findViewById(R.id.log_out)
         deleteAccount = findViewById(R.id.delete)
         userName = findViewById(R.id.user_name)
+        joinedDateTextView = findViewById(R.id.joined_date)
 
 
         mainButton = findViewById(R.id.main_button)
@@ -116,11 +118,28 @@ class UserProfileActivity : AppCompatActivity() {
 
         userName.text = getCurrentUserId(auto)
 
+
+
+
+        //fetch
+        val userId = getCurrentUserId()
+        if (userId != null) {
+            val joinedDate = dbHelper.getJoinedDate(userId)
+            if (joinedDate != null) {
+                joinedDateTextView.text = joinedDate
+            }
+        }
+
+
+
+
     }
 
     private fun getCurrentUserId(auto: SharedPreferences): String? {
         return auto.getString("userId", null)
     }
+
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
