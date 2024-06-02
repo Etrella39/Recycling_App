@@ -17,19 +17,23 @@ class UserProfileActivity : AppCompatActivity() {
     private lateinit var userMainPhoto: ImageView
     private lateinit var personPhoto: View
     private lateinit var navigationBar: RelativeLayout
+
     private lateinit var mainButton: RelativeLayout
     private lateinit var profileButton: LinearLayout
     private lateinit var blogButton: LinearLayout
+
     private lateinit var customerImage: ImageView
     private lateinit var customerText: TextView
+
     private lateinit var settingButton: Button
+
     private lateinit var logout: TextView
     private lateinit var fadeIn: Animation
     private lateinit var fadeOut: Animation
 
     private lateinit var dbHelper: DBHelper
     private lateinit var deleteAccount: TextView
-    private lateinit var user_name : TextView
+    private lateinit var userName : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,7 +52,7 @@ class UserProfileActivity : AppCompatActivity() {
         settingButton = findViewById(R.id.setting_button)
         logout = findViewById(R.id.log_out)
         deleteAccount = findViewById(R.id.delete)
-        user_name = findViewById(R.id.user_name)
+        userName = findViewById(R.id.user_name)
 
         navigationBar = findViewById(R.id.navigation_bar)
         mainButton = navigationBar.findViewById(R.id.main_button)
@@ -69,6 +73,7 @@ class UserProfileActivity : AppCompatActivity() {
         settingButton.setOnClickListener {
             val intent = Intent(this@UserProfileActivity, SettingsActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, 0); // non animation
         }
 
         logout.setOnClickListener {
@@ -87,10 +92,17 @@ class UserProfileActivity : AppCompatActivity() {
         mainButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
+            userLayout.startAnimation(fadeOut)
+            finish()
+        }
+        blogButton.setOnClickListener {
+            val intent = Intent(this@UserProfileActivity, BlogsActivity::class.java)
+            startActivity(intent)
+            userLayout.startAnimation(fadeOut)
             finish()
         }
 
-        user_name.text = getCurrentUserId()
+        userName.text = getCurrentUserId()
 
     }
 

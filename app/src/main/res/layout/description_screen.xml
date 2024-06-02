@@ -20,16 +20,12 @@
         >
 
         <ImageView
+            android:id="@+id/description_back"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:src="@drawable/description_can_back"/>
+            android:src="@drawable/description_paper_back"/>
 
     </ScrollView>
 
-    <!-- Settings Title -->
-
-    <!-- Settings Options Container -->
-
-    <!-- About Us Section -->
 </RelativeLayout>

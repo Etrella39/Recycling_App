@@ -48,6 +48,7 @@ class SettingsActivity : AppCompatActivity() {
     private lateinit var toggleLanguageEnglish: TextView
     private lateinit var toggleLanguageKorean: TextView
 
+    private lateinit var currentLocale: Locale
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,6 +76,8 @@ class SettingsActivity : AppCompatActivity() {
         spinnerModeImage = findViewById(R.id.spinner_mode_image)
         spinnerLanguageImage = findViewById(R.id.spinner_language_image)
 
+        currentLocale = this.resources.configuration.locales.get(0)
+
 
 
         screenModeButton.setOnClickListener {
@@ -86,7 +89,6 @@ class SettingsActivity : AppCompatActivity() {
             setToggleButton(languageToggleList, spinnerLanguageImage)
             isClickLgToggle = !isClickLgToggle
         }
-
 
         toggleModeLight = modeToggleList.findViewById(R.id.toggle_mode_light)
         toggleModeDark = modeToggleList.findViewById(R.id.toggle_mode_dark)
@@ -113,10 +115,12 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         toggleLanguageEnglish.setOnClickListener {
-            setLocale("en")
+            if (currentLocale.language == Locale.KOREAN.language)
+                setLocale("en")
         }
         toggleLanguageKorean.setOnClickListener {
-            setLocale("ko")
+            if (currentLocale.language == Locale.ENGLISH.language)
+                setLocale("ko")
         }
 
 
@@ -127,42 +131,6 @@ class SettingsActivity : AppCompatActivity() {
             finish()
         }
 
-
-
-
-
-        
-//        // Set up listener for screen mode spinner
-//        screenModeSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-//            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-//                when (position) {
-//                    0 -> setTheme(AppCompatDelegate.MODE_NIGHT_NO, "light") // Light Mode
-//                    1 -> setTheme(AppCompatDelegate.MODE_NIGHT_YES, "dark") // Dark Mode
-//                    2 -> setTheme(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM, "system") // System Default
-//                }
-//            }
-//
-//            override fun onNothingSelected(parent: AdapterView<*>?) {
-//                // Do nothing
-//            }
-//        }
-//
-//        // Set up listener for language spinner
-//        languageSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-//            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-//                // Implement language change logic here
-//            }
-//
-//            override fun onNothingSelected(parent: AdapterView<*>?) {
-//                // Do nothing
-//            }
-//        }
-//    }
-//
-//    private fun setTheme(mode: Int, theme: String) {
-//        AppCompatDelegate.setDefaultNightMode(mode)
-//        sharedPreferences.edit().putString("theme", theme).apply()
-//        recreate() // Recreate activity to apply the new theme
     }
 
 

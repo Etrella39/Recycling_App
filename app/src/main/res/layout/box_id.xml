@@ -26,4 +26,4 @@
         android:digits="0123456789_qwertzuiopasdfghjklyxcvbnm"
         />
 
-    </LinearLayout>
+</LinearLayout>

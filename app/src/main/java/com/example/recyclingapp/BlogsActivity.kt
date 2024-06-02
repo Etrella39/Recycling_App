@@ -2,12 +2,15 @@ package com.example.recyclingapp
 
 import Blog
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.Button
-import android.widget.EditText
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
-import android.widget.Toast
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -23,22 +26,40 @@ class BlogsActivity : AppCompatActivity() {
     private lateinit var recyclerViewBlogs: RecyclerView
     private lateinit var blogsAdapter: BlogsAdapter
 
+    private lateinit var blogsScreen: LinearLayout
 
+    private lateinit var webImage: ImageView
+    private lateinit var webText: TextView
 
+    private lateinit var fadeIn: Animation
+    private lateinit var fadeOut: Animation
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.blogs_scree)
+        setContentView(R.layout.blogs_screen)
 
         mainButton = findViewById(R.id.main_button)
         profileButton = findViewById(R.id.profile_button)
         blogButton = findViewById(R.id.blogs_button)
 
         settings = findViewById(R.id.setting_button)
+        blogsScreen = findViewById(R.id.blogs_screen_1)
+
+        fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
+        fadeOut = AnimationUtils.loadAnimation(this, R.anim.fade_out)
+
+        overridePendingTransition(0, 0) // non animation
+        blogsScreen.startAnimation(fadeIn)
+
+        webImage = findViewById(R.id.web_design)
+        webImage.setBackgroundResource(R.drawable.main_icon_web_press)
+        webText = findViewById(R.id.blogs)
+        webText.setTextColor(Color.parseColor("#547E38"))
 
 
-       // Initialize RecyclerView
-                recyclerViewBlogs = findViewById(R.id.recycler_view_blogs)
+
+        // Initialize RecyclerView
+        recyclerViewBlogs = findViewById(R.id.recycler_view_blogs)
         recyclerViewBlogs.layoutManager = LinearLayoutManager(this)
 
         // Initialize and set adapter
@@ -62,7 +83,7 @@ class BlogsActivity : AppCompatActivity() {
         settings.setOnClickListener() {
             val intent = Intent(this@BlogsActivity, SettingsActivity::class.java)
             startActivity(intent)
-            finish()
+            overridePendingTransition(0, 0); // non animation
         }
 
 

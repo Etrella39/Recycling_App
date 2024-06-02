@@ -29,7 +29,11 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var trashcanImage: ImageView
 
     private lateinit var buttonPaper: RelativeLayout
-
+    private lateinit var buttonCan: RelativeLayout
+    private lateinit var buttonGlass: RelativeLayout
+    private lateinit var buttonPet: RelativeLayout
+    private lateinit var buttonVinyl: RelativeLayout
+    private lateinit var buttonStyro: RelativeLayout
 
     private lateinit var fadeIn: Animation
     private lateinit var fadeOut: Animation
@@ -57,9 +61,12 @@ class HomeActivity : AppCompatActivity() {
         mainButton.setBackgroundResource(R.drawable.main_button_press)
         trashcanImage.setBackgroundResource(R.drawable.main_icon_trashcan_press)
 
-
         buttonPaper = findViewById(R.id.home_paper)
-
+        buttonCan = findViewById(R.id.home_can)
+        buttonGlass = findViewById(R.id.home_glass)
+        buttonPet = findViewById(R.id.home_plastic)
+        buttonVinyl = findViewById(R.id.home_vinvl)
+        buttonStyro = findViewById(R.id.home_styrofoam)
 
 
         settingButton.setOnClickListener {
@@ -83,14 +90,30 @@ class HomeActivity : AppCompatActivity() {
 
 
         buttonPaper.setOnClickListener {
-
-            val intent = Intent(this@HomeActivity, DescriptionActivity::class.java)
-            startActivity(intent)
-
+            setDescription("paper")
+        }
+        buttonCan.setOnClickListener {
+            setDescription("can")
+        }
+        buttonGlass.setOnClickListener {
+            setDescription("glass")
+        }
+        buttonPet.setOnClickListener {
+            setDescription("pet")
+        }
+        buttonVinyl.setOnClickListener {
+            setDescription("vinyl")
+        }
+        buttonStyro.setOnClickListener {
+            setDescription("styro")
         }
 
+    }
 
-
+    private fun setDescription(key: String) {
+        val intent = Intent(this@HomeActivity, DescriptionActivity::class.java)
+        intent.putExtra("Description_KEY", key)
+        startActivity(intent)
     }
 }
 
