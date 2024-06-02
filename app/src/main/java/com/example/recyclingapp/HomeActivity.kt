@@ -64,6 +64,8 @@ class HomeActivity : AppCompatActivity() {
             finish()
         }
         blogButton.setOnClickListener {
+            val intent = Intent(this@HomeActivity, BlogsActivity::class.java)
+            startActivity(intent)
             homeLayout.startAnimation(fadeOut)
             finish()
         }
