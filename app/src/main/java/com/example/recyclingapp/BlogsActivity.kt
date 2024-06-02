@@ -15,17 +15,21 @@ class BlogsActivity : AppCompatActivity() {
     private lateinit var mainButton: RelativeLayout
     private lateinit var profileButton: LinearLayout
     private lateinit var blogButton: LinearLayout
+    private lateinit var settings : Button
+
 
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.database_screen)
+        setContentView(R.layout.blogs_scree)
 
         mainButton = findViewById(R.id.main_button)
-
         profileButton = findViewById(R.id.profile_button)
         blogButton = findViewById(R.id.blogs_button)
+
+        settings = findViewById(R.id.setting_button)
+
 
 
 
@@ -41,6 +45,14 @@ class BlogsActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+        settings.setOnClickListener() {
+            val intent = Intent(this@BlogsActivity, SettingsActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+
 
 
     }

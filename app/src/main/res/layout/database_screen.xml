@@ -9,7 +9,8 @@
     android:background="@color/white"
     >
 
-    <include layout="@layout/top_bar_back"/>
+
+    <include layout="@layout/top_bar_setting"/>
 
     <TextView
         android:id="@+id/settings_title"
