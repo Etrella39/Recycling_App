@@ -15,14 +15,15 @@ class HomeActivity : AppCompatActivity() {
 
     private lateinit var homeLayout: LinearLayout
 
-    private lateinit var navigationBar: RelativeLayout
     private lateinit var settingButton: Button
 
+    private lateinit var navigationBar: RelativeLayout
     private lateinit var mainButton: RelativeLayout
     private lateinit var profileButton: LinearLayout
     private lateinit var blogButton: LinearLayout
 
     private lateinit var trashcanImage: ImageView
+
     private lateinit var fadeIn: Animation
     private lateinit var fadeOut: Animation
 
@@ -35,6 +36,8 @@ class HomeActivity : AppCompatActivity() {
 
         homeLayout = findViewById(R.id.home_screen_1)
         homeLayout.startAnimation(fadeIn)
+        overridePendingTransition(0, 0); // non animation
+
 
         settingButton = findViewById(R.id.setting_button)
 
@@ -58,9 +61,11 @@ class HomeActivity : AppCompatActivity() {
             val intent = Intent(this@HomeActivity, UserProfileActivity::class.java)
             startActivity(intent)
             homeLayout.startAnimation(fadeOut)
+            finish()
         }
         blogButton.setOnClickListener {
             homeLayout.startAnimation(fadeOut)
+            finish()
         }
 
     }

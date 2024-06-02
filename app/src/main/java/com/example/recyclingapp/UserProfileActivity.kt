@@ -1,6 +1,7 @@
 package com.example.recyclingapp
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
@@ -20,10 +21,16 @@ class UserProfileActivity : AppCompatActivity() {
     private lateinit var userMainPhoto: ImageView
     private lateinit var personPhoto: View
 
+    private lateinit var navigationBar: RelativeLayout
+    private lateinit var mainButton: RelativeLayout
+    private lateinit var profileButton: LinearLayout
+    private lateinit var blogButton: LinearLayout
+
+    private lateinit var customerImage: ImageView
+    private lateinit var customerText: TextView
 
     private lateinit var settingButton: Button
     private lateinit var logout: TextView
-    private lateinit var backButton : Button
 
     private lateinit var fadeIn: Animation
     private lateinit var fadeOut: Animation
@@ -36,17 +43,24 @@ class UserProfileActivity : AppCompatActivity() {
         fadeOut = AnimationUtils.loadAnimation(this, R.anim.fade_out)
 
         userLayout = findViewById(R.id.user_profile_1)
+        overridePendingTransition(0, 0); // non animation
+
         userLayout.startAnimation(fadeIn)
 
         userMainPhoto = findViewById(R.id.profile_photo)
         personPhoto = findViewById(R.id.person_photo)
         settingButton = findViewById(R.id.setting_button)
         logout = findViewById(R.id.log_out)
-        backButton = findViewById(R.id.back_button)
 
-        backButton.setOnClickListener() {
-            finish()
-        }
+        navigationBar = findViewById(R.id.navigation_bar)
+        mainButton = navigationBar.findViewById(R.id.main_button)
+        profileButton = navigationBar.findViewById(R.id.profile_button)
+        blogButton = navigationBar.findViewById(R.id.blogs_button)
+
+        customerImage = findViewById(R.id.customer)
+        customerImage.setBackgroundResource(R.drawable.main_icon_customer_press)
+        customerText = findViewById(R.id.profile)
+        customerText.setTextColor(Color.parseColor("#547E38"))
 
         personPhoto.visibility = View.VISIBLE
 
@@ -64,6 +78,14 @@ class UserProfileActivity : AppCompatActivity() {
             val intent = Intent(this, LogOutDialogue::class.java)
             startActivity(intent)
         }
+
+
+        mainButton.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
