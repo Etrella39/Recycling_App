@@ -2,6 +2,7 @@
 
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -18,7 +19,151 @@
         android:paddingBottom="60dp"
         android:orientation="vertical"
         android:gravity="center"
-        />
+        >
+        <LinearLayout
+            android:layout_width="346dp"
+            android:layout_height="wrap_content"
+            >
+            <RelativeLayout
+                android:id="@+id/home_glass"
+                android:layout_width="167dp"
+                android:layout_height="120dp"
+                android:background="@drawable/home_2_vinyl"
+                android:clipChildren="true"
+                tools:ignore="UselessParent"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:background="@drawable/home_icon_vinvl"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_2_vinyl"
+                        android:textAppearance="@style/home_2_text"
+                        android:layout_marginStart="5dp"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <RelativeLayout
+                android:id="@+id/home_plastic"
+                android:layout_width="167dp"
+                android:layout_height="120dp"
+                android:background="@drawable/home_2_plastic"
+                android:clipChildren="true"
+                tools:ignore="UselessParent"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:background="@drawable/home_icon_plastic"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_2_plastic"
+                        android:textAppearance="@style/home_2_text"
+                        android:layout_marginStart="5dp"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="346dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+            <RelativeLayout
+                android:id="@+id/home_vinvl"
+                android:layout_width="167dp"
+                android:layout_height="120dp"
+                android:background="@drawable/home_2_vinyl"
+                android:clipChildren="true"
+                tools:ignore="UselessParent"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:background="@drawable/home_icon_vinvl"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_2_vinyl"
+                        android:textAppearance="@style/home_2_text"
+                        android:layout_marginStart="5dp"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <RelativeLayout
+                android:id="@+id/home_styrofoam"
+                android:layout_width="167dp"
+                android:layout_height="120dp"
+                android:background="@drawable/home_2_styrofoam"
+                android:clipChildren="true"
+                tools:ignore="UselessParent"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:background="@drawable/home_icon_plastic"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_2_styrofoam"
+                        android:textAppearance="@style/home_2_text"
+                        android:layout_marginStart="5dp"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
 
 
     <include

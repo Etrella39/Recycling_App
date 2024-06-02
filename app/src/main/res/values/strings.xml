@@ -128,6 +128,9 @@ Recycled in many ways!
     <string name="do_you_logout">Do you want to log out?</string>
     <string name="no">NO</string>
     <string name="yes">YES</string>
+    <string name="home_2_vinyl">Vinyl</string>
+    <string name="home_2_styrofoam">Styrofoam</string>
+    <string name="home_2_plastic">Plastic</string>
 
 
     <!-- Strings for photo user main -->
