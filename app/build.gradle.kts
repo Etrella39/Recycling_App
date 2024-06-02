@@ -56,6 +56,4 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.mysql.connector.java)
-    implementation(libs.tedpermission)
-
 }
