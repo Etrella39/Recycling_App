@@ -5,9 +5,10 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.util.Log
 import android.view.Window
 import android.widget.TextView
+import android.widget.Toast
+import com.example.recyclingapp.DBHelper
 
 class DeleteDialog : Activity() {
 
@@ -18,7 +19,7 @@ class DeleteDialog : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
-        this.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         setContentView(R.layout.delete_account)
 
         dbHelper = DBHelper(this)
@@ -27,36 +28,40 @@ class DeleteDialog : Activity() {
         noButton = findViewById(R.id.delete_no_button)
 
         val userId = intent.getStringExtra("USER_ID")
-        Log.d("DeleteDialog", "Received USER_ID: $userId")
 
         yesButton.setOnClickListener {
             if (userId != null) {
-                Log.d("DeleteDialog", "Attempting to delete user with ID: $userId")
                 val isDeleted = dbHelper.deleteUser(userId)
                 if (isDeleted) {
-                    Log.d("DeleteDialog", "User deleted successfully")
-
-                    // Clear auto-login preferences if any
-                    val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
-                    val autoLoginEdit = auto.edit()
-                    autoLoginEdit.clear()
-                    autoLoginEdit.apply()
-
-                    // Redirect to LoginActivity
-                    val intent = Intent(this, LoginActivity::class.java)
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                    startActivity(intent)
-                    finish()
+                    Toast.makeText(this, "User account deleted successfully", Toast.LENGTH_SHORT).show()
+                    clearAutoLoginPreferences()
+                    navigateToLoginScreen()
                 } else {
-                    Log.d("DeleteDialog", "Failed to delete user")
+                    Toast.makeText(this, "Failed to delete user account", Toast.LENGTH_SHORT).show()
                 }
-            } else {
-                Log.d("DeleteDialog", "USER_ID is null")
             }
+
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+
+            finish()
         }
 
         noButton.setOnClickListener {
             finish()
         }
+    }
+
+    private fun clearAutoLoginPreferences() {
+        val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
+        val autoLoginEdit = auto.edit()
+        autoLoginEdit.clear()
+        autoLoginEdit.apply()
+    }
+
+    private fun navigateToLoginScreen() {
+        val intent = Intent(this, LoginActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        startActivity(intent)
     }
 }
