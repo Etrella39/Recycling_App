@@ -26,6 +26,7 @@ class UserProfileActivity : AppCompatActivity() {
     private lateinit var logout: TextView
     private lateinit var fadeIn: Animation
     private lateinit var fadeOut: Animation
+
     private lateinit var dbHelper: DBHelper
     private lateinit var deleteAccount: TextView
     private lateinit var user_name : TextView

@@ -91,6 +91,7 @@ class SignUpActivity : AppCompatActivity() {
                                 val insert = DB!!.insertData(user, pass)
                                 // 가입 성공 시 Toast를 띄우고 메인 화면으로 전환
                                 if (insert == true) {
+                                    loginActivity.saveUserId(user, pass, this)
                                     Toast.makeText(this@SignUpActivity, "가입되었습니다.", Toast.LENGTH_SHORT).show()
                                     val intent = Intent(this, HomeActivity::class.java)
                                     startActivity(intent)
