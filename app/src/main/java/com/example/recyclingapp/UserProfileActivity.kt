@@ -28,6 +28,7 @@ class UserProfileActivity : AppCompatActivity() {
     private lateinit var fadeOut: Animation
     private lateinit var dbHelper: DBHelper
     private lateinit var deleteAccount: TextView
+    private lateinit var user_name : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +47,7 @@ class UserProfileActivity : AppCompatActivity() {
         settingButton = findViewById(R.id.setting_button)
         logout = findViewById(R.id.log_out)
         deleteAccount = findViewById(R.id.delete)
+        user_name = findViewById(R.id.user_name)
 
         navigationBar = findViewById(R.id.navigation_bar)
         mainButton = navigationBar.findViewById(R.id.main_button)
@@ -86,6 +88,8 @@ class UserProfileActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+        user_name.text = getCurrentUserId() ?: "User ID not found"
+
     }
 
     private fun getCurrentUserId(): String? {
@@ -103,6 +107,7 @@ class UserProfileActivity : AppCompatActivity() {
             }
         }
     }
+
 
     companion object {
         const val REQUEST_CODE_SELECT_PHOTO = 1001
