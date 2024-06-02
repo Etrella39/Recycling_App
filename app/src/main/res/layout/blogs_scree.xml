@@ -1,22 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/blogs_screen"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:clipToOutline="true"
-    android:background="@color/white"
-    >
 
+
+
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <include layout="@layout/top_bar_setting"/>
 
-
-
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_blogs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:clipToPadding="false"
+            android:background="@android:color/white"
+            android:scrollbars="vertical" />
 
     <include layout="@layout/navigation_bar"/>
 
+    </LinearLayout>
 
 
-</RelativeLayout>
+
+
+
+

@@ -12,7 +12,6 @@ class PhotoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.user_profile_photo)
-
         backButton = findViewById(R.id.back_button)
 
         backButton.setOnClickListener() {

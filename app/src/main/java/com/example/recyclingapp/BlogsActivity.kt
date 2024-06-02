@@ -1,5 +1,6 @@
 package com.example.recyclingapp
 
+import Blog
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -8,6 +9,8 @@ import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class BlogsActivity : AppCompatActivity() {
 
@@ -16,6 +19,9 @@ class BlogsActivity : AppCompatActivity() {
     private lateinit var profileButton: LinearLayout
     private lateinit var blogButton: LinearLayout
     private lateinit var settings : Button
+
+    private lateinit var recyclerViewBlogs: RecyclerView
+    private lateinit var blogsAdapter: BlogsAdapter
 
 
 
@@ -31,6 +37,13 @@ class BlogsActivity : AppCompatActivity() {
         settings = findViewById(R.id.setting_button)
 
 
+       // Initialize RecyclerView
+                recyclerViewBlogs = findViewById(R.id.recycler_view_blogs)
+        recyclerViewBlogs.layoutManager = LinearLayoutManager(this)
+
+        // Initialize and set adapter
+        blogsAdapter = BlogsAdapter(getSampleBlogs()) // Replace with your data source
+        recyclerViewBlogs.adapter = blogsAdapter
 
 
 
@@ -55,5 +68,14 @@ class BlogsActivity : AppCompatActivity() {
 
 
 
+    }
+    private fun getSampleBlogs(): List<Blog> {
+        // Replace this with your actual data source (e.g., fetching from a server)
+        val blogs = mutableListOf<Blog>()
+        blogs.add(Blog("Article 1", "Description of Article 1"))
+        blogs.add(Blog("Article 2", "Description of Article 2"))
+        blogs.add(Blog("Article 3", "Description of Article 3"))
+        // Add more articles as needed
+        return blogs
     }
 }
