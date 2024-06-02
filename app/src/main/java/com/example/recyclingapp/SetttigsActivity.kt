@@ -1,6 +1,7 @@
 package com.example.recyclingapp
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Build
@@ -50,6 +51,7 @@ class SettingsActivity : AppCompatActivity() {
 
     private lateinit var currentLocale: Locale
 
+    @SuppressLint("CommitPrefEdits")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings_screen)
@@ -78,8 +80,6 @@ class SettingsActivity : AppCompatActivity() {
 
         currentLocale = this.resources.configuration.locales.get(0)
 
-
-
         screenModeButton.setOnClickListener {
             setToggleButton(modeToggleList, spinnerModeImage)
             isClickModeToggle = !isClickModeToggle
@@ -97,30 +97,42 @@ class SettingsActivity : AppCompatActivity() {
         toggleLanguageEnglish = findViewById(R.id.toggle_language_english)
         toggleLanguageKorean = findViewById(R.id.toggle_language_korean)
 
+        val sharedPreferences = getSharedPreferences("appPreferences", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
 
         toggleModeLight.setOnClickListener {
             if (AppCompatDelegate.getDefaultNightMode() != AppCompatDelegate.MODE_NIGHT_NO) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                editor.putString("settingMode", "Light")
+                editor.apply()
             }
         }
         toggleModeDark.setOnClickListener {
             if (AppCompatDelegate.getDefaultNightMode() != AppCompatDelegate.MODE_NIGHT_YES) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            }
+                editor.putString("settingMode", "Dark")
+                editor.apply()}
         }
         toggleModeSystem.setOnClickListener {
             if (AppCompatDelegate.getDefaultNightMode() != AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
-            }
+                editor.putString("settingMode", "System")
+                editor.apply()}
         }
 
         toggleLanguageEnglish.setOnClickListener {
-            if (currentLocale.language == Locale.KOREAN.language)
-                setLocale("en")
+            if (currentLocale.language == Locale.KOREAN.language) {
+                editor.putString("settingLanguage", "en")
+                editor.apply()
+                setLocale("en", this)
+            }
         }
         toggleLanguageKorean.setOnClickListener {
-            if (currentLocale.language == Locale.ENGLISH.language)
-                setLocale("ko")
+            if (currentLocale.language == Locale.ENGLISH.language) {
+                editor.putString("settingLanguage", "ko")
+                editor.apply()
+                setLocale("ko", this)
+            }
         }
 
 
@@ -153,11 +165,11 @@ class SettingsActivity : AppCompatActivity() {
         view.startAnimation(rotate)
     }
 
-    private fun setLocale(lang: String) {
+    fun setLocale(lang: String, context: Context) {
         val myLocale = Locale(lang)
-        val res = resources
-        val dm = res.displayMetrics
-        val conf = res.configuration
+        val res = context.resources
+        val dm = context.resources.displayMetrics
+        val conf = context.resources.configuration
         conf.setLocale(myLocale)
 
         res.updateConfiguration(conf, dm)

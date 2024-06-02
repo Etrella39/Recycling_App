@@ -28,7 +28,8 @@ class LogOutDialogue : Activity() {
         yesButton.setOnClickListener {
             val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
             val autoLoginEdit = auto.edit()
-            autoLoginEdit.clear()
+            autoLoginEdit.remove("userID")
+            autoLoginEdit.remove("userPass")
             autoLoginEdit.apply()
 
             val intent = Intent(this, MainActivity::class.java)

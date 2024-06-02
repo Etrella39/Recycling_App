@@ -1,5 +1,6 @@
 package com.example.recyclingapp
 
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
@@ -10,10 +11,12 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.os.Handler
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -29,7 +32,9 @@ class MainActivity : AppCompatActivity() {
         val userID = auto.getString("userId", null)
         val passwordNo = auto.getString("userPass", null)
 
+        val sharedPreferences = getSharedPreferences("appPreferences", MODE_PRIVATE)
 
+        loadModeSetting(sharedPreferences)
 
         val hand = Handler()
         hand.postDelayed(Runnable {
@@ -47,4 +52,16 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+    private fun loadModeSetting(sharedPreferences: SharedPreferences) {
+        val isMode = sharedPreferences.getString("settingMode", null)
+
+        when (isMode) {
+            "Light" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            "Dark" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            "System" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+            else -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+        }
+    }
+
+
 }

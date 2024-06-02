@@ -2,6 +2,7 @@ package com.example.recyclingapp
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
@@ -67,7 +68,15 @@ class UserProfileActivity : AppCompatActivity() {
 
         personPhoto.visibility = View.VISIBLE
 
-        userMainPhoto.setOnClickListener {
+        val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
+        val userPhoto = auto.getInt("userPhoto", 0)
+        if (userPhoto != 0) {
+            userMainPhoto.setImageResource(userPhoto)
+            personPhoto.visibility = View.INVISIBLE
+        }
+
+
+            userMainPhoto.setOnClickListener {
             val intent = Intent(this@UserProfileActivity, PhotoActivity::class.java)
             startActivityForResult(intent, REQUEST_CODE_SELECT_PHOTO)
         }
@@ -85,7 +94,7 @@ class UserProfileActivity : AppCompatActivity() {
 
 
         deleteAccount.setOnClickListener {
-            val userId = getCurrentUserId() // Replace with actual method to fetch the current user ID
+            val userId = getCurrentUserId(auto) // Replace with actual method to fetch the current user ID
             Log.d("UserProfileActivity", "Attempting to delete user with ID: $userId")
             val intent = Intent(this, DeleteDialog::class.java)
             intent.putExtra("USER_ID", userId)
@@ -105,12 +114,11 @@ class UserProfileActivity : AppCompatActivity() {
             finish()
         }
 
-        userName.text = getCurrentUserId()
+        userName.text = getCurrentUserId(auto)
 
     }
 
-    private fun getCurrentUserId(): String? {
-        val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
+    private fun getCurrentUserId(auto: SharedPreferences): String? {
         return auto.getString("userId", null)
     }
 

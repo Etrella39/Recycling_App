@@ -39,10 +39,17 @@
                 >
                 <ImageView
                     android:id="@+id/profile_photo"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/user_profile_main"
+                    android:layout_gravity="center"
+                    />
+                <ImageView
+                    android:id="@+id/profile_photo_frame"
                     android:layout_width="154dp"
                     android:layout_height="154dp"
-                    android:clipToOutline="true"
-                    android:background="@drawable/user_profile_main"
+                    android:background="@drawable/user_profile_main_ellipse"
+                    android:layout_gravity="center"
                     />
                 <View
                     android:id="@+id/person_photo"

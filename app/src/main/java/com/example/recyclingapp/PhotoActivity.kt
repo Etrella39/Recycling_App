@@ -1,5 +1,6 @@
 package com.example.recyclingapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -40,10 +41,17 @@ class PhotoActivity : AppCompatActivity() {
         findViewById<ImageButton>(R.id.character20).setOnClickListener { onImageButtonClick(R.drawable.user_profile_photo_20) }
     }
 
+    @SuppressLint("CommitPrefEdits")
     private fun onImageButtonClick(imageResourceId: Int) {
         val resultIntent = Intent()
         resultIntent.putExtra("selectedImageResourceId", imageResourceId)
         setResult(RESULT_OK, resultIntent)
+
+        val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
+        val autoLoginEdit = auto.edit()
+        autoLoginEdit.putInt("userPhoto", imageResourceId)
+        autoLoginEdit.apply()
+
         finish()
     }
 }
