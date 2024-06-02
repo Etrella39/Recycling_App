@@ -1,8 +1,11 @@
 package com.example.recyclingapp
 
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Log
+import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Button
@@ -10,6 +13,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
+
 
 class HomeActivity : AppCompatActivity() {
 
@@ -23,6 +27,8 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var blogButton: LinearLayout
 
     private lateinit var trashcanImage: ImageView
+
+    private lateinit var startButton: LinearLayout
 
     private lateinit var fadeIn: Animation
     private lateinit var fadeOut: Animation
@@ -38,6 +44,7 @@ class HomeActivity : AppCompatActivity() {
         homeLayout.startAnimation(fadeIn)
         overridePendingTransition(0, 0); // non animation
 
+        startButton = findViewById(R.id.start_button)
 
         settingButton = findViewById(R.id.setting_button)
 
@@ -70,5 +77,28 @@ class HomeActivity : AppCompatActivity() {
             finish()
         }
 
+
+        startButton.setOnClickListener {
+            // Camera App이 있는지 조사
+            if (isExistsCameraApplication()) {
+                // Camera Application을 실행
+                val cameraApp = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+                startActivityForResult(cameraApp, 10000)
+            }
+        }
+
+
     }
+
+    private fun isExistsCameraApplication(): Boolean {
+        val packageManager = packageManager
+        val cameraApp = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+
+        // MediaStore.ACTION_IMAGE_CAPTURE의 Intent를 처리할 수 있는 Application 정보 가져옴
+        val cameraApps =
+            packageManager.queryIntentActivities(cameraApp, PackageManager.MATCH_DEFAULT_ONLY)
+        return cameraApps.size > 0
+    }
+
+
 }

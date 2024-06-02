@@ -58,7 +58,6 @@
             android:clickable="true"
             >
 
-            <!-- Auto layout, variables, and unit scale are not yet supported -->
             <TextView
                 android:id="@+id/label"
                 android:layout_width="match_parent"

@@ -66,7 +66,20 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "Login.db", null, 1
 
         cursor.close()
         return password
+
     }
+
+//    private fun connectToDatabase(): Connection? {
+//        val url = resources.getString(R.string.db_url)
+//        val user = resources.getString(R.string.db_user)
+//        val password = resources.getString(R.string.db_password)
+//
+//        return try {
+//            DriverManager.getConnection(url, user, password)
+//        } catch (e: SQLException) {
+//            null
+//        }
+//    }
 
     // id 삭제
     fun deleteUser(id: String): Boolean {
@@ -74,5 +87,10 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "Login.db", null, 1
         val result = MyDB.delete("users", "id = ?", arrayOf(id))
         MyDB.close()
         return result > 0
+    }
+
+    // DB name을 Login.db로 설정
+    companion object {
+        const val DBNAME = "Login.db"
     }
 }

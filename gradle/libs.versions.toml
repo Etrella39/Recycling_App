@@ -24,6 +24,9 @@ core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx"
 library = { group = "androidx.databinding", name = "library", version.ref = "library" }
 androidx-benchmark-macro = { group = "androidx.benchmark", name = "benchmark-macro-junit4", version.ref = "androidx-macro-benchmark" }
 my-library = { group = "com.myapplication", name = "mylibrary", version.ref = "my-library" }
+mysql-connector-java = { group = "mysql", name = "mysql-connector-java", version = "5.1.49" }
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version = "1.6.4" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
