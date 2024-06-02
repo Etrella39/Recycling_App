@@ -24,4 +24,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "Recycling App"
 include(":app")
- 

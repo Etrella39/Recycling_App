@@ -35,4 +35,3 @@ tedpermission = { group = "io.github.ParkSangGwon", name = "tedpermission", vers
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version = "2.0.0" }
 
-
