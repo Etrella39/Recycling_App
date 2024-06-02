@@ -73,7 +73,7 @@ class SignUpActivity : AppCompatActivity() {
             val pass = pwEdit.text.toString()
             val repass = confirmPasswordView.text.toString()
 
-            val idPattern = "^(?=.*[a-z])(?=.*[0-9])[A-Za-z0-9]{6,15}$"
+            val idPattern = "^(?=.*[a-z])[A-Za-z0-9]{6,15}$"
             val pwPattern = "^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z0-9!@#\$%^&*()_+\\-=\\[\\]{};:\"\\\\|,.<>/?]{8,15}$"
 
             // 사용자 입력이 비었을 때
@@ -95,6 +95,9 @@ class SignUpActivity : AppCompatActivity() {
                                     Toast.makeText(this@SignUpActivity, R.string.register, Toast.LENGTH_SHORT).show()
                                     val intent = Intent(this, HomeActivity::class.java)
                                     startActivity(intent)
+
+                                    val returnIntent = Intent()
+                                    setResult(RESULT_OK, returnIntent)
                                     finish()
                                 } else {
                                     Toast.makeText(this@SignUpActivity, R.string.signup_fail, Toast.LENGTH_SHORT).show()

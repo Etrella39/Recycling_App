@@ -42,15 +42,14 @@ class DeleteDialog : Activity() {
                 if (isDeleted) {
                     Toast.makeText(this, R.string.delete_success, Toast.LENGTH_SHORT).show()
                     clearAutoLoginPreferences(auto)
-                    navigateToLoginScreen()
+                    val intent = Intent(this, MainActivity::class.java)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                    startActivity(intent)
+                    finish()
                 } else {
                     Toast.makeText(this, R.string.delete_fail, Toast.LENGTH_SHORT).show()
                 }
             }
-
-                val intent = Intent(this, LoginActivity::class.java)
-                startActivity(intent)
-
             finish()
         }
 
@@ -65,10 +64,4 @@ class DeleteDialog : Activity() {
         autoLoginEdit.apply()
     }
 
-    private fun navigateToLoginScreen() {
-        val intent = Intent(this, LoginActivity::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-        startActivity(intent)
-        finish()
-    }
 }

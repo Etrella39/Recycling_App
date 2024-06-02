@@ -3,23 +3,25 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/white"
+    >
 
     <TextView
         android:id="@+id/blog_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:fontFamily="@font/inter_bold"
-        android:paddingBottom="4dp"/>
+        android:paddingBottom="4dp"
+        android:textAppearance="@style/blog_title"
+        />
 
     <TextView
         android:id="@+id/blog_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/inter_medium"
-        android:paddingBottom="8dp"/>
+        android:paddingBottom="8dp"
+        android:textAppearance="@style/blog_text"
+        />
 
     <Button
         android:id="@+id/read_more_button"

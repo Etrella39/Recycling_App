@@ -30,6 +30,13 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_screen)
 
+        val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
+        val userID = auto.getString("userId", null)
+        val passwordNo = auto.getString("userPass", null)
+        if (userID != null && passwordNo != null) {
+            finish()
+        }
+
         DB = DBHelper(this)
 
         signUpBTN = findViewById(R.id.signup_button)
@@ -83,8 +90,8 @@ class LoginActivity : AppCompatActivity() {
         }
 
         signUpBTN.setOnClickListener {
-            val intent = Intent(this@LoginActivity, SignUpActivity::class.java)
-            startActivity(intent)
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivityForResult(intent, REQUEST_CODE_SIGN)
         }
 
         find_password.setOnClickListener {
@@ -115,5 +122,17 @@ class LoginActivity : AppCompatActivity() {
         autoLoginEdit.putString("userId", userId)
         autoLoginEdit.putString("userPass", userPass)
         autoLoginEdit.apply()
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == REQUEST_CODE_SIGN && resultCode == RESULT_OK) {
+            // 가입 절차가 성공적으로 완료되었다는 결과를 받았으므로, Login 액티비티도 종료합니다.
+            finish()
+        }
+    }
+
+    companion object {
+        const val REQUEST_CODE_SIGN = 1001
     }
 }

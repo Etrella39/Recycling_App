@@ -44,18 +44,16 @@ class BlogsActivity : AppCompatActivity() {
         settings = findViewById(R.id.setting_button)
         blogsScreen = findViewById(R.id.blogs_screen_1)
 
+        webImage = findViewById(R.id.web_design)
+        webImage.setBackgroundResource(R.drawable.main_icon_web_press)
+        webText = findViewById(R.id.blogs)
+        webText.setTextColor(Color.parseColor("#547E38"))
+
         fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
         fadeOut = AnimationUtils.loadAnimation(this, R.anim.fade_out)
 
         overridePendingTransition(0, 0) // non animation
         blogsScreen.startAnimation(fadeIn)
-
-        webImage = findViewById(R.id.web_design)
-        webImage.setBackgroundResource(R.drawable.main_icon_web_press)
-        webText = findViewById(R.id.blogs)
-        webText.setTextColor(ContextCompat.getColor(this, R.color.black))
-
-
 
         // Initialize RecyclerView
         recyclerViewBlogs = findViewById(R.id.recycler_view_blogs)

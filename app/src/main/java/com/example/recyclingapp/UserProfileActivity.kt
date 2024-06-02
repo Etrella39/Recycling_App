@@ -100,13 +100,11 @@ class UserProfileActivity : AppCompatActivity() {
         mainButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
-            userLayout.startAnimation(fadeOut)
             finish()
         }
         blogButton.setOnClickListener {
             val intent = Intent(this@UserProfileActivity, BlogsActivity::class.java)
             startActivity(intent)
-            userLayout.startAnimation(fadeOut)
             finish()
         }
 
