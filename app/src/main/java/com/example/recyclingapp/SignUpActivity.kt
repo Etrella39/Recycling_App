@@ -78,7 +78,7 @@ class SignUpActivity : AppCompatActivity() {
 
             // 사용자 입력이 비었을 때
             if (user == "" || pass == "" || repass == "")
-                Toast.makeText(this@SignUpActivity, "회원정보를 모두 입력해주세요.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@SignUpActivity, R.string.all_info, Toast.LENGTH_SHORT).show()
             else {
                 // 아이디 형식이 맞을 때
                 if (Pattern.matches(idPattern, user)) {
@@ -92,24 +92,24 @@ class SignUpActivity : AppCompatActivity() {
                                 // 가입 성공 시 Toast를 띄우고 메인 화면으로 전환
                                 if (insert == true) {
                                     loginActivity.saveUserId(user, pass, this)
-                                    Toast.makeText(this@SignUpActivity, "가입되었습니다.", Toast.LENGTH_SHORT).show()
+                                    Toast.makeText(this@SignUpActivity, R.string.register, Toast.LENGTH_SHORT).show()
                                     val intent = Intent(this, HomeActivity::class.java)
                                     startActivity(intent)
                                     finish()
                                 } else {
-                                    Toast.makeText(this@SignUpActivity, "가입에 실패하였습니다.", Toast.LENGTH_SHORT).show()
+                                    Toast.makeText(this@SignUpActivity, R.string.signup_fail, Toast.LENGTH_SHORT).show()
                                 }
                             } else {
-                                Toast.makeText(this@SignUpActivity, "이미 존재하는 아이디입니다.", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this@SignUpActivity, R.string.exist_id, Toast.LENGTH_SHORT).show()
                             }
                         } else {
-                            Toast.makeText(this@SignUpActivity, "비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@SignUpActivity, R.string.password_not_match, Toast.LENGTH_SHORT).show()
                         }
                     } else {
-                        Toast.makeText(this@SignUpActivity, "비밀번호는 영어와 숫자를 포함하여 8자 이상 입력해 주세요.", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@SignUpActivity, R.string.password_try_again, Toast.LENGTH_SHORT).show()
                     }
                 } else {
-                    Toast.makeText(this@SignUpActivity, "아이디는 영어와 숫자를 포함하여 6자 이상 입력해 주세요.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@SignUpActivity, R.string.id_try_again, Toast.LENGTH_SHORT).show()
                 }
             }
         }

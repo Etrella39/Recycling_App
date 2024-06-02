@@ -122,7 +122,7 @@ class UserProfileActivity : AppCompatActivity() {
 
 
         //fetch
-        val userId = getCurrentUserId()
+        val userId = getCurrentUserId(auto)
         if (userId != null) {
             val joinedDate = dbHelper.getJoinedDate(userId)
             if (joinedDate != null) {

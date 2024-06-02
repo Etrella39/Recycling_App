@@ -35,7 +35,7 @@ class FindPasswordActivity : AppCompatActivity() {
                 intent.putExtra("USER_ID", userId)
                 startActivity(intent)
             } else {
-                Toast.makeText(this, "ID not found", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.id_not_found, Toast.LENGTH_SHORT).show()
             }
         }
     }

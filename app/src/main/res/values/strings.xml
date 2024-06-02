@@ -136,6 +136,19 @@ Recycled in many ways!
     <string name="home_2_can">Can</string>
     <string name="home_2_title">Methods for Separate Discharge</string>
     <string name="dialogue_delete">Do you really want to delete your account?</string>
+    <string name="login_2">Input ID and Password</string>
+    <string name="login_success">login successfully</string>
+    <string name="checkID_pass">Check ID and Password!</string>
+    <string name="all_info">Enter all memeber information</string>
+    <string name="register">successfully registered</string>
+    <string name="signup_fail">Failed to sign up</string>
+    <string name="exist_id">Already existing ID</string>
+    <string name="password_not_match">Password don\'t match</string>
+    <string name="password_try_again">Please enter your password in English and at least 8 characters, including numbers.</string>
+    <string name="id_try_again">Please enter at least 6 characters of your ID, including English and numbers.</string>
+    <string name="delete_success">User account deleted successfully</string>
+    <string name="delete_fail">Failed to delete user account</string>
+    <string name="id_not_found">ID not found</string>
 
 
     <!-- Strings for photo user main -->

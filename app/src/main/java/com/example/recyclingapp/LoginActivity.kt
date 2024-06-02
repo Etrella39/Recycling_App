@@ -61,21 +61,21 @@ class LoginActivity : AppCompatActivity() {
             val pass = pwEdit.text.toString()
 
             if (user == "" || pass == "") {
-                Toast.makeText(this@LoginActivity, "아이디와 비밀번호를 모두 입력해주세요.", Toast.LENGTH_SHORT)
+                Toast.makeText(this@LoginActivity, R.string.login_2, Toast.LENGTH_SHORT)
                     .show()
             } else {
                 val checkUserpass = DB!!.checkUserpass(user, pass)
                 if (checkUserpass) {
                     // Save user ID to SharedPreferences
                     saveUserId(user, pass, this)
-                    Toast.makeText(this@LoginActivity, "로그인 되었습니다.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@LoginActivity, R.string.login_success, Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, HomeActivity::class.java)
                     startActivity(intent)
                     finish()
                 } else {
                     Toast.makeText(
                         this@LoginActivity,
-                        "아이디와 비밀번호를 확인해 주세요.",
+                        R.string.checkID_pass,
                         Toast.LENGTH_SHORT
                     ).show()
                 }

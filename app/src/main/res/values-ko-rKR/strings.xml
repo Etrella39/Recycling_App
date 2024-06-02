@@ -46,4 +46,17 @@
     <string name="home_2_can">캔류</string>
     <string name="home_2_title">분리배출 요령</string>
     <string name="dialogue_delete">계정을 삭제하시겠습니까?</string>
+    <string name="login_2">아이디와 비밀번호를 모두 입력해주세요.</string>
+    <string name="login_success">로그인 되었습니다.</string>
+    <string name="checkID_pass">아이디와 비밀번호를 확인해 주세요.</string>
+    <string name="all_info">회원정보를 모두 입력해주세요</string>
+    <string name="register">가입되었습니다</string>
+    <string name="signup_fail">가입에 실패하였습니다</string>
+    <string name="exist_id">이미 존재하는 아이디입니다</string>
+    <string name="password_not_match">비밀번호가 일치하지 않습니다.</string>
+    <string name="password_try_again">비밀번호는 영어와 숫자를 포함하여 8자 이상 입력해 주세요.</string>
+    <string name="id_try_again">아이디는 영어와 숫자를 포함하여 6자 이상 입력해 주세요.</string>
+    <string name="delete_success">사용자 계정이 성공적으로 삭제되었습니다.</string>
+    <string name="delete_fail">사용자 계정을 삭제하지 못했습니다.</string>
+    <string name="id_not_found">ID를 찾을 수 없습니다.</string>
 </resources>

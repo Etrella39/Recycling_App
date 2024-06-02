@@ -40,11 +40,11 @@ class DeleteDialog : Activity() {
             if (userId != null) {
                 val isDeleted = dbHelper.deleteUser(userId)
                 if (isDeleted) {
-                    Toast.makeText(this, "User account deleted successfully", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, R.string.delete_success, Toast.LENGTH_SHORT).show()
                     clearAutoLoginPreferences(auto)
                     navigateToLoginScreen()
                 } else {
-                    Toast.makeText(this, "Failed to delete user account", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, R.string.delete_fail, Toast.LENGTH_SHORT).show()
                 }
             }
 
