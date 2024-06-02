@@ -29,6 +29,7 @@ class UserProfileActivity : AppCompatActivity() {
     private lateinit var dbHelper: DBHelper
     private lateinit var deleteAccount: TextView
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.user_profile)
@@ -83,6 +84,11 @@ class UserProfileActivity : AppCompatActivity() {
 
         mainButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+        blogButton.setOnClickListener() {
+            val intent = Intent(this, BlogsActivity::class.java)
             startActivity(intent)
             finish()
         }
