@@ -109,6 +109,8 @@ class BlogsActivity : AppCompatActivity() {
                 "We urge you to never send clothing to the landfill. Textile recycling is alive and well in the United States. Almost always, nonprofits that accept donations of clothing will recycle " +
                 "articles that are not reusable.\n", "https://earth911.com/how-to-recycle/recycling-mystery-underwear/"))
 
+        blogs.add(Blog("Preventing Wasted Food At Home", "Most people don't realize how much food they throw away every day — from uneaten " +
+                "leftovers to spoiled produce to parts of fruits and vegetables that could be eaten or repurposed.", "https://www.epa.gov/recycle/preventing-wasted-food-home"))
         return blogs
     }
 }
