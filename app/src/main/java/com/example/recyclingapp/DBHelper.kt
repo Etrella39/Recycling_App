@@ -9,11 +9,11 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-class DBHelper(context: Context) : SQLiteOpenHelper(context, "Login.db", null, 2) {
+class DBHelper(context: Context) : SQLiteOpenHelper(context, "Login.db", null, 2) { //2
 
     // users 테이블 생성
     override fun onCreate(MyDB: SQLiteDatabase?) {
-        MyDB!!.execSQL("CREATE TABLE users(id TEXT PRIMARY KEY, password TEXT, joined_date TEXT)")
+        MyDB!!.execSQL("CREATE TABLE users (id TEXT PRIMARY KEY, password TEXT, joined_date TEXT, profile_image INT)")
     }
 
 
@@ -31,6 +31,7 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "Login.db", null, 2
         contentValues.put("id", id)
         contentValues.put("password", password)
 
+        //joined date
         val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
         val currentDate = sdf.format(Date())
         contentValues.put("joined_date", currentDate)
@@ -53,6 +54,23 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "Login.db", null, 2
 
         cursor.close()
         return joinedDate
+    }
+
+    @SuppressLint("Range")
+    fun getUserPhoto(userId: String): Int {
+        val db = this.readableDatabase
+        val cursor = db.rawQuery("SELECT profile_image FROM users WHERE id = ?", arrayOf(userId))
+        var profileImage = 0
+
+        if (cursor != null && cursor.moveToFirst()) {
+            if (cursor.moveToFirst())
+                profileImage = cursor.getInt(cursor.getColumnIndex("profile_image"))
+            cursor.close()
+            return profileImage
+        } else {
+            cursor.close()
+            return 0
+        }
     }
 
 
@@ -115,6 +133,16 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "Login.db", null, 2
         val result = MyDB.delete("users", "id = ?", arrayOf(id))
         MyDB.close()
         return result > 0
+    }
+
+    fun addUserPhoto(id: String, profileImageResId: Int) {
+        val values = ContentValues().apply {
+            put("profile_image", profileImageResId)
+        }
+        val MyDB = this.writableDatabase
+
+        MyDB.update("users", values, "id = ?", arrayOf(id))
+        MyDB.close()
     }
 
     // DB name을 Login.db로 설정

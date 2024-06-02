@@ -41,6 +41,8 @@ class UserProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.user_profile)
 
+        val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
+
         dbHelper = DBHelper(this)
         fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
         fadeOut = AnimationUtils.loadAnimation(this, R.anim.fade_out)
@@ -70,15 +72,7 @@ class UserProfileActivity : AppCompatActivity() {
 
         personPhoto.visibility = View.VISIBLE
 
-        val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
-        val userPhoto = auto.getInt("userPhoto", 0)
-        if (userPhoto != 0) {
-            userMainPhoto.setImageResource(userPhoto)
-            personPhoto.visibility = View.INVISIBLE
-        }
-
-
-            userMainPhoto.setOnClickListener {
+        userMainPhoto.setOnClickListener {
             val intent = Intent(this@UserProfileActivity, PhotoActivity::class.java)
             startActivityForResult(intent, REQUEST_CODE_SELECT_PHOTO)
         }
@@ -116,10 +110,8 @@ class UserProfileActivity : AppCompatActivity() {
             finish()
         }
 
+
         userName.text = getCurrentUserId(auto)
-
-
-
 
         //fetch
         val userId = getCurrentUserId(auto)
@@ -130,8 +122,12 @@ class UserProfileActivity : AppCompatActivity() {
             }
         }
 
-
-
+        if (userId != null) {
+            val UserPhoto = dbHelper.getUserPhoto(userId)
+            if (UserPhoto != 0) {
+                userMainPhoto.setImageResource(UserPhoto)
+            }
+        }
 
     }
 

@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
         val hand = Handler()
         hand.postDelayed(Runnable {
-            if(userID != null && passwordNo != null) {
+            if (userID != null && passwordNo != null) {
                 val intent = Intent(this@MainActivity, HomeActivity::class.java)
                 startActivity(intent)
                 finish()

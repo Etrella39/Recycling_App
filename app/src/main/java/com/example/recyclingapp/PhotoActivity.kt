@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 class PhotoActivity : AppCompatActivity() {
 
     private lateinit var backButton : Button
+    private lateinit var dbHelper: DBHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.user_profile_photo)
@@ -48,9 +50,16 @@ class PhotoActivity : AppCompatActivity() {
         setResult(RESULT_OK, resultIntent)
 
         val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
-        val autoLoginEdit = auto.edit()
-        autoLoginEdit.putInt("userPhoto", imageResourceId)
-        autoLoginEdit.apply()
+        val userId = auto.getString("userId", null)
+
+        if (userId != null) {
+            dbHelper.addUserPhoto(userId, imageResourceId)
+        }
+
+//        val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
+//        val autoLoginEdit = auto.edit()
+//        autoLoginEdit.putInt("userPhoto", imageResourceId)
+//        autoLoginEdit.apply()
 
         finish()
     }
