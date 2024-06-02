@@ -34,6 +34,7 @@ class UserProfileActivity : AppCompatActivity() {
     private lateinit var dbHelper: DBHelper
     private lateinit var deleteAccount: TextView
     private lateinit var userName : TextView
+    private lateinit var joinedDateTextView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,6 +54,7 @@ class UserProfileActivity : AppCompatActivity() {
         logout = findViewById(R.id.log_out)
         deleteAccount = findViewById(R.id.delete)
         userName = findViewById(R.id.user_name)
+        joinedDateTextView = findViewById(R.id.joined_date)
 
 
         mainButton = findViewById(R.id.main_button)
@@ -85,7 +87,7 @@ class UserProfileActivity : AppCompatActivity() {
 
 
         deleteAccount.setOnClickListener {
-            val userId = getCurrentUserId() // Replace with actual method to fetch the current user ID
+            val userId = getCurrentUserId()
             Log.d("UserProfileActivity", "Attempting to delete user with ID: $userId")
             val intent = Intent(this, DeleteDialog::class.java)
             intent.putExtra("USER_ID", userId)
@@ -107,12 +109,29 @@ class UserProfileActivity : AppCompatActivity() {
 
         userName.text = getCurrentUserId()
 
+
+
+
+        //fetch
+        val userId = getCurrentUserId()
+        if (userId != null) {
+            val joinedDate = dbHelper.getJoinedDate(userId)
+            if (joinedDate != null) {
+                joinedDateTextView.text = joinedDate
+            }
+        }
+
+
+
+
     }
 
     private fun getCurrentUserId(): String? {
         val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
         return auto.getString("userId", null)
     }
+
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)

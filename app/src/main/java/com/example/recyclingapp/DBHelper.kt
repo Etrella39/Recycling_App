@@ -5,17 +5,23 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
-class DBHelper(context: Context) : SQLiteOpenHelper(context, "Login.db", null, 1) {
+class DBHelper(context: Context) : SQLiteOpenHelper(context, "Login.db", null, 2) {
 
     // users 테이블 생성
     override fun onCreate(MyDB: SQLiteDatabase?) {
-        MyDB!!.execSQL("create Table users(id TEXT primary key, password TEXT)")
+        MyDB!!.execSQL("CREATE TABLE users(id TEXT PRIMARY KEY, password TEXT, joined_date TEXT)")
     }
 
+
     // 정보 갱신
-    override fun onUpgrade(MyDB: SQLiteDatabase?, i: Int, i1: Int) {
-        MyDB!!.execSQL("drop Table if exists users")
+    override fun onUpgrade(MyDB: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+        if (oldVersion < 2) {
+            MyDB!!.execSQL("ALTER TABLE users ADD COLUMN joined_date TEXT")
+        }
     }
 
     // id, password 삽입 (성공시 true, 실패시 false)
@@ -24,10 +30,32 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "Login.db", null, 1
         val contentValues = ContentValues()
         contentValues.put("id", id)
         contentValues.put("password", password)
+
+        val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+        val currentDate = sdf.format(Date())
+        contentValues.put("joined_date", currentDate)
+
         val result = MyDB.insert("users", null, contentValues)
         MyDB.close()
         return result != -1L
     }
+
+    //joined date
+    @SuppressLint("Range")
+    fun getJoinedDate(userId: String): String? {
+        val db = this.readableDatabase
+        val cursor = db.rawQuery("SELECT joined_date FROM users WHERE id = ?", arrayOf(userId))
+        var joinedDate: String? = null
+
+        if (cursor.moveToFirst()) {
+            joinedDate = cursor.getString(cursor.getColumnIndex("joined_date"))
+        }
+
+        cursor.close()
+        return joinedDate
+    }
+
+
 
     // 사용자 아이디가 없으면 false, 이미 존재하면 true
     @SuppressLint("Recycle")

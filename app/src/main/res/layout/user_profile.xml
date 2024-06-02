@@ -141,9 +141,10 @@
                     />
                 <!-- Auto layout, variables, and unit scale are not yet supported -->
                 <TextView
+                    android:id="@+id/joined_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/joined_date"
+                    android:text="will change"
                     android:textAppearance="@style/joined_date1"
                     android:gravity="center_vertical"
                     />
