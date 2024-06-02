@@ -9,7 +9,6 @@
         android:id="@+id/blog_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Blog Title"
         android:textSize="20sp"
         android:textStyle="bold"
         android:fontFamily="@font/inter_bold"
@@ -19,7 +18,6 @@
         android:id="@+id/blog_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Blog Description"
         android:fontFamily="@font/inter_medium"
         android:paddingBottom="8dp"/>
 
@@ -28,10 +26,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/find_password_findbutton"
-        style="@style/ok"
-        android:fontFamily="@font/inter_medium"
+        android:textAppearance="@style/ok"
         android:layout_gravity="end"
-        android:text="Read More"/>
+        android:text="@string/blog_read_more"
+        />
 </LinearLayout>
 
 

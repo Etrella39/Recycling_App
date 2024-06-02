@@ -28,7 +28,9 @@
     </LinearLayout>
 
 
-    <include layout="@layout/navigation_bar"/>
+    <include
+        android:id="@+id/nevigation_bar"
+        layout="@layout/navigation_bar"/>
 
 
 </RelativeLayout>

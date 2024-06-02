@@ -59,4 +59,5 @@
     <string name="delete_success">사용자 계정이 성공적으로 삭제되었습니다.</string>
     <string name="delete_fail">사용자 계정을 삭제하지 못했습니다.</string>
     <string name="id_not_found">ID를 찾을 수 없습니다.</string>
+    <string name="blog_read_more">더 보기</string>
 </resources>

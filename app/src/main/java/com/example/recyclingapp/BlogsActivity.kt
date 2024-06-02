@@ -1,6 +1,5 @@
 package com.example.recyclingapp
 
-import Blog
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -12,6 +11,7 @@ import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -53,7 +53,7 @@ class BlogsActivity : AppCompatActivity() {
         webImage = findViewById(R.id.web_design)
         webImage.setBackgroundResource(R.drawable.main_icon_web_press)
         webText = findViewById(R.id.blogs)
-        webText.setTextColor(Color.parseColor("#547E38"))
+        webText.setTextColor(ContextCompat.getColor(this, R.color.black))
 
 
 
@@ -111,6 +111,14 @@ class BlogsActivity : AppCompatActivity() {
 
         blogs.add(Blog("Preventing Wasted Food At Home", "Most people don't realize how much food they throw away every day — from uneaten " +
                 "leftovers to spoiled produce to parts of fruits and vegetables that could be eaten or repurposed.", "https://www.epa.gov/recycle/preventing-wasted-food-home"))
+        blogs.add(Blog("", "" +
+                "", ""))
         return blogs
+
     }
 }
+data class Blog (
+    val title: String,
+    val description: String,
+    val link: String
+)

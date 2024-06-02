@@ -99,7 +99,6 @@
                     android:layout_height="wrap_content"
                     android:text="@string/joined_date_string"
                     android:textAppearance="@style/joined_date"
-                    android:textSize="16dp"
                     android:fontFamily="@font/inter_bold"
                     android:gravity="center_vertical"
                     />
@@ -107,9 +106,7 @@
                     android:id="@+id/joined_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="will change"
                     android:fontFamily="@font/inter_medium"
-                    android:textSize="14dp"
                     android:textAppearance="@style/joined_date1"
                     android:gravity="center_vertical"
                     />
@@ -128,25 +125,23 @@
             >
             <TextView
                 android:id="@+id/log_out"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
                 android:text="@string/logout"
                 android:textAppearance="@style/log_out"
                 android:translationY="-3.13sp"
                 android:gravity="center"
-                android:textSize="14dp"
                 android:lineHeight="22sp"
                 />
 
             <TextView
                 android:id="@+id/delete"
                 android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
                 android:text="@string/delete"
                 android:textAppearance="@style/delete"
                 android:gravity="center"
-                android:textSize="14dp"
                 android:background="@drawable/user_delete_id"
                 />
         </LinearLayout>
