@@ -13,7 +13,6 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-
 class UserProfileActivity : AppCompatActivity() {
 
     private lateinit var userLayout: RelativeLayout
@@ -35,15 +34,20 @@ class UserProfileActivity : AppCompatActivity() {
     private lateinit var fadeIn: Animation
     private lateinit var fadeOut: Animation
 
+    private lateinit var dbHelper: DBHelper
+    private lateinit var deleteAccount: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.user_profile)
+
+        dbHelper = DBHelper(this)
 
         fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
         fadeOut = AnimationUtils.loadAnimation(this, R.anim.fade_out)
 
         userLayout = findViewById(R.id.user_profile_1)
-        overridePendingTransition(0, 0); // non animation
+        overridePendingTransition(0, 0) // non animation
 
         userLayout.startAnimation(fadeIn)
 
@@ -51,6 +55,7 @@ class UserProfileActivity : AppCompatActivity() {
         personPhoto = findViewById(R.id.person_photo)
         settingButton = findViewById(R.id.setting_button)
         logout = findViewById(R.id.log_out)
+        deleteAccount = findViewById(R.id.delete)
 
         navigationBar = findViewById(R.id.navigation_bar)
         mainButton = navigationBar.findViewById(R.id.main_button)
@@ -79,13 +84,16 @@ class UserProfileActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        deleteAccount.setOnClickListener {
+            val intent = Intent(this, DeleteDialog::class.java)
+            startActivity(intent)
+        }
 
         mainButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
             finish()
         }
-
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

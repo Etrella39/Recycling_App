@@ -51,8 +51,13 @@
             android:name=".LogOutDialogue"
             android:theme="@android:style/Theme.Dialog"/>
 
+        <activity
+            android:name=".DeleteDialog"
+            android:theme="@android:style/Theme.Dialog"/>
+
 
     </application>
+
 
 </manifest>
 

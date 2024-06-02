@@ -67,6 +67,12 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "Login.db", null, 1
         cursor.close()
         return password
     }
+    fun deleteUser(id: String): Boolean {
+        val MyDB = this.writableDatabase
+        val result = MyDB.delete("users", "id=?", arrayOf(id))
+        MyDB.close()
+        return result > 0
+    }
 
 
     // DB name을 Login.db로 설정
