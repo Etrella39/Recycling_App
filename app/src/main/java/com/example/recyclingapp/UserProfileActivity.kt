@@ -126,6 +126,7 @@ class UserProfileActivity : AppCompatActivity() {
             val UserPhoto = dbHelper.getUserPhoto(userId)
             if (UserPhoto != 0) {
                 userMainPhoto.setImageResource(UserPhoto)
+                personPhoto.visibility = View.INVISIBLE
             }
         }
 
