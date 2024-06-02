@@ -18,15 +18,15 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "Login.db", null, 1
         MyDB!!.execSQL("drop Table if exists users")
     }
 
-    // id, password, nick, phone 삽입 (성공시 true, 실패시 false)
-    fun insertData (id: String?, password: String?): Boolean {
+    // id, password 삽입 (성공시 true, 실패시 false)
+    fun insertData(id: String?, password: String?): Boolean {
         val MyDB = this.writableDatabase
         val contentValues = ContentValues()
         contentValues.put("id", id)
         contentValues.put("password", password)
         val result = MyDB.insert("users", null, contentValues)
         MyDB.close()
-        return if (result == -1L) false else true
+        return result != -1L
     }
 
     // 사용자 아이디가 없으면 false, 이미 존재하면 true
@@ -36,11 +36,12 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "Login.db", null, 1
         var res = true
         val cursor = MyDB.rawQuery("Select * from users where id =?", arrayOf(id))
         if (cursor.count <= 0) res = false
+        cursor.close()
         return res
     }
 
     // 해당 id, password가 있는지 확인 (없다면 false)
-    fun checkUserpass(id: String, password: String) : Boolean {
+    fun checkUserpass(id: String, password: String): Boolean {
         val MyDB = this.writableDatabase
         var res = true
         val cursor = MyDB.rawQuery(
@@ -48,11 +49,11 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "Login.db", null, 1
             arrayOf(id, password)
         )
         if (cursor.count <= 0) res = false
+        cursor.close()
         return res
     }
 
-
-    //db for finding password
+    // db for finding password
     @SuppressLint("Range")
     fun findPasswordByUserId(userId: String): String? {
         val db = this.readableDatabase
@@ -60,23 +61,18 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "Login.db", null, 1
         var password: String? = null
 
         if (cursor.moveToFirst()) {
-            // Password found, retrieve it from the cursor
             password = cursor.getString(cursor.getColumnIndex("password"))
         }
 
         cursor.close()
         return password
     }
+
+    // id 삭제
     fun deleteUser(id: String): Boolean {
         val MyDB = this.writableDatabase
-        val result = MyDB.delete("users", "id=?", arrayOf(id))
+        val result = MyDB.delete("users", "id = ?", arrayOf(id))
         MyDB.close()
         return result > 0
-    }
-
-
-    // DB name을 Login.db로 설정
-    companion object {
-        const val DBNAME = "Login.db"
     }
 }
