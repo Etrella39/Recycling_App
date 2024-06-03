@@ -266,4 +266,32 @@ Recycled in many ways!
     <string name="label_2">Recycling Tips</string>
 
 
+
+    <!-- New York Times Blog -->
+    <string name="blog1_title">New York Times</string>
+    <string name="blog1_description">There\'s an Explosion of Plastic Waste. By 2025, Nestle promises not to use any plastic in its products that isn\'t recyclable. By that same year, L\'Oreal says all of its packaging will be “refillable, reusable, recyclable or compostable.”</string>
+
+    <!-- Reduce, Reuse, Recycle Blog -->
+    <string name="blog2_title">Reduce, Reuse, Recycle</string>
+    <string name="blog2_description">The best place to start making a difference is right in your own home. Learn how you can reduce, reuse, and recycle materials to decrease household waste. The tips below will help you get started.</string>
+
+    <!-- Inspiration: For Future Generation Blog -->
+    <string name="blog3_title">Inspiration: For Future Generation</string>
+    <string name="blog3_description">The ultimate test of man’s conscience may be his willingness to sacrifice something today for future generations whose words of thanks will not be heard.</string>
+
+    <!-- Health and Climate Blog -->
+    <string name="blog4_title">Health and Climate</string>
+    <string name="blog4_description">Consumers rank malnutrition, pesticides, obesity and diet-related health issues, and plastic waste from packaging as the most concerning aspects of the food system, according to an EAT-GlobeScan survey.</string>
+
+    <!-- Can You Recycle Underwear? Blog -->
+    <string name="blog5_title">Can You Recycle Underwear?</string>
+    <string name="blog5_description">When it comes to greening your wardrobe, a lot depends on what you do with your clothing at the end of its usefulness to you. We urge you to never send clothing to the landfill. Textile recycling is alive and well in the United States. Almost always, nonprofits that accept donations of clothing will recycle articles that are not reusable.</string>
+
+    <!-- Preventing Wasted Food At Home Blog -->
+    <string name="blog6_title">Preventing Wasted Food At Home</string>
+    <string name="blog6_description">Most people don\'t realize how much food they throw away every day — from uneaten leftovers to spoiled produce to parts of fruits and vegetables that could be eaten or repurposed.</string>
+
+
+
+
 </resources>

@@ -19,14 +19,14 @@
         android:id="@+id/blog_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="8dp"
+        android:paddingBottom="10dp"
         android:textAppearance="@style/blog_text"
         />
 
     <Button
         android:id="@+id/read_more_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
         android:background="@drawable/find_password_findbutton"
         android:textAppearance="@style/ok"
         android:layout_gravity="end"
