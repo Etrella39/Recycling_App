@@ -37,7 +37,9 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="10dp"
             android:layout_marginTop="50dp"
             android:gravity="center"
             android:text="@string/pet_5"
@@ -116,7 +118,9 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="10dp"
             android:layout_marginTop="50dp"
             android:gravity="center"
             android:text="@string/pet_6"
@@ -196,7 +200,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="10dp"
+            android:padding="20dp"
             android:background="@drawable/radius"
             >
 

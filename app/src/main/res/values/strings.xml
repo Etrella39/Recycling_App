@@ -159,17 +159,17 @@ Recycled in many ways!
 
     <string name="paper_1">Paper</string>
     <string name="paper_2">| Newspaper</string>
-    <string name="paper_3">ㆍMake sure it doesn\'t get wet, straighten it out, stack it one by one, and then tie it up and drain it.</string>
+    <string name="paper_3">ㆍ Make sure it doesn\'t get wet, straighten it out, stack it one by one, and then tie it up and drain it.</string>
     <string name="paper_4">| Booklet, notebook</string>
-    <string name="paper_5">ㆍRemove vinyl-coated covers, notebook springs, etc., before discharging.</string>
+    <string name="paper_5">ㆍ Remove vinyl-coated covers, notebook springs, etc., before discharging.</string>
     <string name="paper_6">* Plastic wrapping paper is excluded</string>
     <string name="paper_7">| Boxes (cardboard boxes, etc.)</string>
-    <string name="paper_8">ㆍRemove the vinyl coating part, tape iron pins attached to the box, aluminum foil, etc., and fold it to discharge.</string>
+    <string name="paper_8">ㆍ Remove the vinyl coating part, tape iron pins attached to the box, aluminum foil, etc., and fold it to discharge.</string>
     <string name="paper_9">| Paper Cups</string>
-    <string name="paper_10">ㆍEmpty the contents, rinse once with water, squeeze and put in a bag or bundle to discharge.</string>
+    <string name="paper_10">ㆍ Empty the contents, rinse once with water, squeeze and put in a bag or bundle to discharge.</string>
     <string name="paper_11">Cartons</string>
     <string name="paper_12">| Normal Pack, Sterile Pack</string>
-    <string name="paper_13">ㆍEmpty the contents, march once with water, squeeze and put in a bag or bundle together and discharge.</string>
+    <string name="paper_13">ㆍ Empty the contents, march once with water, squeeze and put in a bag or bundle together and discharge.</string>
     <string name="paper_14">Please dispose of the cartons in the collection box.</string>
     <string name="paper_15">Cartons are not the same as paper.</string>
     <string name="paper_16">Paper is made into new paper, and cartons are made into different products, such as toilet paper and beauty tissues.</string>
@@ -179,7 +179,7 @@ Recycled in many ways!
     <string name="paper_20">2. What is not paper</string>
     <string name="paper_22">3. Paper contaminated with foreign substances, etc.</string>
     <string name="paper_23">Oil Pollution Food contamination</string>
-    <string name="paper_24">ㆍDo not mix plastic-coated flyers, vinyls, or other filth.</string>
+    <string name="paper_24">ㆍ Do not mix plastic-coated flyers, vinyls, or other filth.</string>
     <string name="paper_25">Dispose separately in designated outdoor storage areas to prevent mixing with other paper waste.</string>
     <string name="paper_26">Remove materials such as straws and plastic before disposing of paper packs.</string>
     <string name="paper_27">Dispose of in paper pack dedicated collection bins to prevent mixing with other paper waste.</string>
@@ -187,33 +187,33 @@ Recycled in many ways!
 
     <string name="can_1">Metal cans</string>
     <string name="can_2">| Tin cans, aluminum cans (beverage, liquor cans, food cans)</string>
-    <string name="can_3">ㆍEmpty the contents, rinse with water, and remove any foreign substances before disposal.</string>
-    <string name="can_4">ㆍRemove materials of different types, such as plastic lids, from metal cans before disposal.</string>
-    <string name="can_5">ㆍDispose of aluminum foil according to local regulations, such as using designated waste bags.</string>
+    <string name="can_3">ㆍ Empty the contents, rinse with water, and remove any foreign substances before disposal.</string>
+    <string name="can_4">ㆍ Remove materials of different types, such as plastic lids, from metal cans before disposal.</string>
+    <string name="can_5">ㆍ Dispose of aluminum foil according to local regulations, such as using designated waste bags.</string>
     <string name="can_6">* Dispose of cigarette butts and other foreign substances separately.</string>
     <string name="can_7">| Other cans (propane gas, insecticide containers, etc.)</string>
-    <string name="can_8">ㆍDispose after removing contents.</string>
-    <string name="can_9">ㆍCans with remaining contents (lacquer, paint cans, etc.) are disposed of according to local regulations, such as using special-sized crates.</string>
+    <string name="can_8">ㆍ Dispose after removing contents.</string>
+    <string name="can_9">ㆍ Cans with remaining contents (lacquer, paint cans, etc.) are disposed of according to local regulations, such as using special-sized crates.</string>
     <string name="can_10">Gas containers should be discharged preferably in well-ventilated areas by depressing the nozzle to completely remove the contents before disposal.</string>
     <string name="can_11">Scrap metal.</string>
     <string name="can_12">| Scrap metal (air ducts, iron wires, nails, etc.)</string>
     <string name="can_13">| Non-ferrous metals (aluminum, stainless steel, etc.)</string>
-    <string name="can_14">ㆍEnsure no other substances are mixed, then dispose by placing in bags or tying with string before disposal.</string>
+    <string name="can_14">ㆍ Ensure no other substances are mixed, then dispose by placing in bags or tying with string before disposal.</string>
     <string name="can_15">Please dispose of metal cans and scrap metal in the metal collection bin.</string>
 
 
     <string name="glass_1">Beverage bottles, other types of bottles</string>
-    <string name="glass_2">ㆍEmpty the contents, rinse with water, remove any foreign substances, and then dispose.</string>
-    <string name="glass_3">ㆍDispose without including cigarette butts or other substances.</string>
-    <string name="glass_4">ㆍDispose of glass bottles with care to prevent breakage.</string>
+    <string name="glass_2">ㆍ Empty the contents, rinse with water, remove any foreign substances, and then dispose.</string>
+    <string name="glass_3">ㆍ Dispose without including cigarette butts or other substances.</string>
+    <string name="glass_4">ㆍ Dispose of glass bottles with care to prevent breakage.</string>
 
-    <string name="glass_5">ㆍIf separate containers are available by color, separate and dispose accordingly.</string>
-    <string name="glass_6">ㆍIf labels can be removed without adhesive, remove labels before disposal.</string>
-    <string name="glass_7">ㆍWrap broken glass products in newspaper or similar materials before disposing in designated waste bags.</string>
+    <string name="glass_5">ㆍ If separate containers are available by color, separate and dispose accordingly.</string>
+    <string name="glass_6">ㆍ If labels can be removed without adhesive, remove labels before disposal.</string>
+    <string name="glass_7">ㆍ Wrap broken glass products in newspaper or similar materials before disposing in designated waste bags.</string>
     <string name="glass_8">Deposit bottles</string>
-    <string name="glass_9">ㆍReturn empty deposit glass bottles such as soju and beer bottles to retail stores to receive a refund of the deposit.</string>
-    <string name="glass_10">ㆍCheck for deposit refund information on bottle caps and labels.</string>
-    <string name="glass_11">ㆍEmpty the contents. We don\'t accept items with cigarette butts or other foreign substances.</string>
+    <string name="glass_9">ㆍ Return empty deposit glass bottles such as soju and beer bottles to retail stores to receive a refund of the deposit.</string>
+    <string name="glass_10">ㆍ  Check for deposit refund information on bottle caps and labels.</string>
+    <string name="glass_11">ㆍ Empty the contents. We don\'t accept items with cigarette butts or other foreign substances.</string>
     <string name="glass_12">Report refusal of deposit refund and receive up to 50,000 won in compensation!</string>
     <string name="glass_13">Please dispose of in the glass bottle collection bin.</string>
     <string name="glass_14">It\'s not glass bottles!</string>
@@ -227,26 +227,26 @@ Recycled in many ways!
     <string name="glass_22">Toxic substance bottle</string>
 
     <string name="pet_0">Plastic</string>
-    <string name="pet_1">Colorless transparent PET bottles for drinking water and beverages</string>
-    <string name="pet_3">ㆍEmpty the contents completely and remove attached labels. Whenever possible, crush the bottle and close the lid tightly before disposing in the PET bottle collection bin.</string>
-    <string name="pet_4">ㆍTransparent or semi-transparent bags that allow the contents to be seen should be used to contain colorless polyethylene terephthalate (PET) bottles. Separate them from other plastics and colored PET bottles before disposal.</string>
+    <string name="pet_1">PET bottles for drinking water and beverages</string>
+    <string name="pet_3">ㆍ Empty the contents completely and remove attached labels. Whenever possible, crush the bottle and close the lid tightly before disposing in the PET bottle collection bin.</string>
+    <string name="pet_4">ㆍ Transparent or semi-transparent bags that allow the contents to be seen should be used to contain colorless polyethylene terephthalate (PET) bottles. Separate them from other plastics and colored PET bottles before disposal.</string>
     <string name="pet_5">" Dispose of colorless PET bottles in the PET bottle collection bin."</string>
     <string name="pet_13">Make sure to check the material under the recycling mark and separate them according to their types.</string>
-    <string name="pet_14">ㆍEmpty the contents, rinse with water, and remove any foreign substances before disposal.</string>
+    <string name="pet_14">ㆍ Empty the contents, rinse with water, and remove any foreign substances before disposal.</string>
     <string name="pet_26">* Containers with structures that cannot be rinsed with water (such as toothpaste tubes) should be emptied of their contents before disposal.</string>
-    <string name="pet_27">ㆍFor pumping containers, remove the internal iron spring attached to the pump before disposal.</string>
+    <string name="pet_27">ㆍ For pumping containers, remove the internal iron spring attached to the pump before disposal.</string>
     <string name="pet_28">Plastic, clothing hangers, toothbrushes, file holders, telephones, fishing rods, strollers, CD/DVDs, travel trunks, golf bags, and other items with materials other than plastic are disposed of according to local regulations, such as using designated waste bags, special-sized crates, or large waste disposal methods.</string>
     <string name="pet_6">Dispose of in the plastic collection bin.</string>
     <string name="pet_15">To Note</string>
-    <string name="pet_16">ㆍShampoo, dishwashing liquid, and other pump-style (dispenser) containers should be disposed of with the pump separated.</string>
+    <string name="pet_16">ㆍ Shampoo, dishwashing liquid, and other pump-style (dispenser) containers should be disposed of with the pump separated.</string>
     <string name="pet_17">If the contents are dirty, please rinse before disposal.</string>
     <string name="pet_18">If the lid is made of the same material, compress and close the lid before disposal.</string>
     <string name="pet_20">Please separate plastic bags and dispose of them in the plastic collection bin.</string>
 
     <string name="vinyl_00">Vinyl is also recyclable.</string>
     <string name="vinyl_1">Plastic packaging, single-use plastic bags</string>
-    <string name="vinyl_3">ㆍEmpty the contents and rinse with water to remove any substances and discharge them.</string>
-    <string name="vinyl_2">ㆍDrain in a bag to prevent sucking.</string>
+    <string name="vinyl_3">ㆍ Empty the contents and rinse with water to remove any substances and discharge them.</string>
+    <string name="vinyl_2">ㆍ Drain in a bag to prevent sucking.</string>
     <string name="vinyl_4">* Film, sheet-type, wrap film, packaging materials with a surface area of less than 500 square meters, and contents with a capacity of 30 meters or 30 grams or less, including packaging materials for which separation and disposal instructions cannot be indicated.</string>
     <string name="vinyl_5">Please dispose of plastic materials in the plastic collection bin.</string>
     <string name="vinyl_15">Items such as wrap film, tablecloths, rubber gloves, mats, carpets, and textiles (tents, banners, clothing, bedding, etc.) that cannot be cleaned thoroughly or have foreign substances removed should be disposed of according to local regulations, such as using designated waste bags, special-sized crates, or large waste disposal methods.</string>
@@ -256,11 +256,11 @@ Recycled in many ways!
 
     <string name="styrofoam_0">Please dispose of food scraps after marching to the water.</string>
     <string name="styrofoam_1">Styrofoam cushioning</string>
-    <string name="styrofoam_3">ㆍEmpty the contents and rinse with water to remove any foreign substances and discharge them.</string>
-    <string name="styrofoam_2">ㆍRemove Styrofoam and other materials, such as labels, and dispose of them.</string>
-    <string name="styrofoam_4">ㆍRemove Styrofoam and other materials, such as labels, and dispose of them.</string>
-    <string name="styrofoam_5">ㆍWhen purchasing electronic products such as TVs, foam packaging materials used as cushioning materials should be returned to the place of purchase as much as possible.</string>
-    <string name="styrofoam_6">ㆍCoated or bonded with other materials, foam styrene, construction interior. Styrofoam as exterior material, food stains, or foreign substances that are difficult to remove should be disposed of in accordance with local government ordinances, such as pay-as-you-go bags, special-sized sacks, or large-sized waste disposal.</string>
+    <string name="styrofoam_3">ㆍ Empty the contents and rinse with water to remove any foreign substances and discharge them.</string>
+    <string name="styrofoam_2">ㆍ Remove Styrofoam and other materials, such as labels, and dispose of them.</string>
+    <string name="styrofoam_4">ㆍ Remove Styrofoam and other materials, such as labels, and dispose of them.</string>
+    <string name="styrofoam_5">ㆍ When purchasing electronic products such as TVs, foam packaging materials used as cushioning materials should be returned to the place of purchase as much as possible.</string>
+    <string name="styrofoam_6">ㆍ  Coated or bonded with other materials, foam styrene, construction interior. Styrofoam as exterior material, food stains, or foreign substances that are difficult to remove should be disposed of in accordance with local government ordinances, such as pay-as-you-go bags, special-sized sacks, or large-sized waste disposal.</string>
     <string name="styrofoam_16">Separate them from plastic containers and plastic items and dispose of them in a separate collection box.</string>
     <string name="styrofoam_17">Styrofoam for building materials is an industrial waste.</string>
 
