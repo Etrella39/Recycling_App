@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -37,6 +38,8 @@ class HomeActivity : AppCompatActivity() {
 
     private lateinit var fadeIn: Animation
     private lateinit var fadeOut: Animation
+
+    private lateinit var home_title : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,6 +70,13 @@ class HomeActivity : AppCompatActivity() {
         buttonPet = findViewById(R.id.home_plastic)
         buttonVinyl = findViewById(R.id.home_vinvl)
         buttonStyro = findViewById(R.id.home_styrofoam)
+
+        home_title = findViewById(R.id.home_title)
+        home_title.setOnClickListener {
+            val intent = Intent(this@HomeActivity, HomeCameraActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
 
         settingButton.setOnClickListener {
