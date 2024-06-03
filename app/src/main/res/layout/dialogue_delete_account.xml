@@ -35,7 +35,7 @@ android:background="@drawable/show_password_dialoge"
         android:textAppearance="@style/ok"
         android:gravity="center"
         android:background="@drawable/dialogue_left"
-        android:textColor="@color/black"
+        android:textColor="#666666"
         />
     <View
         android:layout_width="0dp"

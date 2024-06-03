@@ -3,6 +3,8 @@
     <color name="black">#FFFFFFFF</color>
     <color name="white">#393939</color>
     <color name="gray">#FFFFFFFF</color>
+    <color name="red">#F48F8F</color>
+    <color name="blue">#A9ACFC</color>
     <color name="id_box">#A3A3A3</color>
     <color name="bbbbbb_ebebeb">#EBEBEB</color>
     <color name="main_button">#666A64</color>

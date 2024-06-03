@@ -9,9 +9,10 @@ import android.os.Bundle
 import android.view.Window
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.recyclingapp.DBHelper
 
-class DeleteDialog : Activity() {
+class DeleteDialog : AppCompatActivity() {
 
     private lateinit var yesButton: TextView
     private lateinit var noButton: TextView
@@ -24,6 +25,7 @@ class DeleteDialog : Activity() {
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         setContentView(R.layout.dialogue_log_out)
+
 
         yesButton = findViewById(R.id.log_out_yes_button)
         noButton = findViewById(R.id.log_out_no_button)

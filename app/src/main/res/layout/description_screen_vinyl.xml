@@ -34,15 +34,24 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="30dp"
             android:text="@string/vinyl_1"
             android:textAppearance="@style/des_title"
             />
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="60dp"
+            android:src="@drawable/description_vinyl_2"
+            android:adjustViewBounds="true"
+        />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"
             android:text="@string/vinyl_3"
             android:textAppearance="@style/des_text"
@@ -63,7 +72,7 @@
             android:text="@string/vinyl_4"
             android:textAppearance="@style/des_text"
             android:textSize="14sp"
-            android:textColor="#B80E0E"
+            android:textColor="@color/red"
             />
 
 
@@ -94,7 +103,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp"
+            android:padding="10dp"
             android:background="@drawable/radius"
             >
 

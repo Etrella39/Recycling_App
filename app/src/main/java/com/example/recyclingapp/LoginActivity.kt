@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.text.InputFilter
 import android.text.InputType
+import android.view.Window
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -127,7 +128,6 @@ class LoginActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_CODE_SIGN && resultCode == RESULT_OK) {
-            // 가입 절차가 성공적으로 완료되었다는 결과를 받았으므로, Login 액티비티도 종료합니다.
             finish()
         }
     }

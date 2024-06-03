@@ -7,9 +7,9 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.Window
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
-
-class LogOutDialogue : Activity() {
+class LogOutDialogue : AppCompatActivity() {
 
     private lateinit var yesButton: TextView
     private lateinit var noButton: TextView

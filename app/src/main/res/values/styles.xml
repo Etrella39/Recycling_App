@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="Theme.MyDialog" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
     <!-- Common Styles -->
     <style name="recycle_sma">
         <item name="android:textSize">15sp</item>

@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
 
 
-class ShowPasswordActivity : Activity() {
+class ShowPasswordActivity : AppCompatActivity() {
 
     private val loginActivity = LoginActivity()
 

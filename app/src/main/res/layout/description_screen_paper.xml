@@ -67,7 +67,7 @@
             android:layout_marginStart="10dp"
             android:text="@string/paper_6"
             android:textAppearance="@style/des_text"
-            android:textColor="#B80E0E"
+            android:textColor="@color/red"
             android:textSize="13dp"
             />
 
@@ -229,6 +229,7 @@
                 android:gravity="center"
                 android:text="@string/paper_16"
                 android:textAppearance="@style/des_text"
+                android:textColor="#666666"
                 />
         </LinearLayout>
         <View

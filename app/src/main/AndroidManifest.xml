@@ -43,19 +43,19 @@
         <activity android:name=".PhotoActivity"/>
         <activity android:name=".BlogsActivity"/>
         <activity android:name=".ScanActivity"/>
-        <activity android:name=".CameraActivity"/>
         <activity android:name=".SettingsActivity" />
         <activity android:name=".DescriptionActivity"/>
 
         <activity
+            android:name=".DeleteDialog"
+            android:theme="@style/Theme.MyDialog" />
+        <activity
             android:name=".ShowPasswordActivity"
-            android:theme="@android:style/Theme.Dialog"/>
+            android:theme="@style/Theme.MyDialog"/>
         <activity
             android:name=".LogOutDialogue"
-            android:theme="@android:style/Theme.Dialog"/>
-        <activity
-            android:name=".DeleteDialog"
-            android:theme="@android:style/Theme.Dialog"/>
+            android:theme="@style/Theme.MyDialog"/>
+
 
         <!-- Camera activity -->
         <activity

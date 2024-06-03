@@ -2,6 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.RecyclingApp" parent="Theme.AppCompat.DayNight.NoActionBar">
         <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>

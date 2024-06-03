@@ -40,7 +40,7 @@
             android:layout_marginStart="10dp"
             android:text="@string/can_6"
             android:textAppearance="@style/des_text"
-            android:textColor="#B80E0E"
+            android:textColor="@color/red"
             android:textSize="13dp"
             />
         <TextView
@@ -93,7 +93,7 @@
             android:layout_marginStart="10dp"
             android:text="@string/can_10"
             android:textAppearance="@style/des_text"
-            android:textColor="#0E15B8"
+            android:textColor="@color/blue"
             android:textSize="13dp"
             />
 

@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.RecyclingApp" parent="Theme.AppCompat.Light">
         <item name="windowNoTitle">true</item>
-
+        <item name="windowActionBar">false</item>
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
