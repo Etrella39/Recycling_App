@@ -75,7 +75,6 @@ class HomeActivity : AppCompatActivity() {
         home_title.setOnClickListener {
             val intent = Intent(this@HomeActivity, HomeCameraActivity::class.java)
             startActivity(intent)
-            finish()
         }
 
 

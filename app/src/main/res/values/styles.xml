@@ -80,6 +80,13 @@
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:fontFamily">@font/inter_bold</item>
     </style>
+    <style name="label_2">
+        <item name="android:textSize">17sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:lineSpacingExtra">-2sp</item>
+    </style>
 
     <!-- User Frame Styles -->
     <style name="user_name">

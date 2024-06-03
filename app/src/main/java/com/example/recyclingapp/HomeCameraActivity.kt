@@ -7,13 +7,15 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 
-class HomeCameraActivity : Activity() {
+class HomeCameraActivity : AppCompatActivity() {
 
-    private lateinit var startButton: LinearLayout
+    private lateinit var startButton: TextView
     private val CAMERA_REQUEST_CODE = 100
 
     override fun onCreate(savedInstanceState: Bundle?) {
