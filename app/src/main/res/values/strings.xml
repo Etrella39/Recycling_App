@@ -155,6 +155,7 @@ Recycled in many ways!
 
 
     <string name="watchout">주의</string>
+    <string name="refer">참고</string>
 
     <string name="paper_1">Paper</string>
     <string name="paper_2">| 신문지</string>
@@ -243,5 +244,16 @@ Recycled in many ways!
     <string name="pet_18">ㆍ뚜껑이 같은 재질이면 압축 후 뚜껑을 다시 닫아서 배출하세요.</string>
     <string name="pet_20">비닐은 따로 모아 비닐수거함으로 분리해주세요.</string>
 
+    <string name="vinyl_00">비닐도 재활용품입니다.</string>
+    <string name="vinyl_1">비닐포장재, 1회용 비닐봉투</string>
+    <string name="vinyl_3">ㆍ내용물을 비우고 물로 행구는 등 이물질을 제거하여 배출합니다.</string>
+    <string name="vinyl_2">ㆍ흡날리지 않도록 봉투에 담아 배출합니다.</string>
+    <string name="vinyl_4">* 필름.시트형, 랩필름, 각 포장재의 표면적이 500m 미만, 내용물의 용량이 30m 또는 30g이하인 표장재 등 분리배출 표시를 할 수 없는 포장재 포함</string>
+    <string name="vinyl_5">비닐류 수거함으로 배출해주세요.</string>
+    <string name="vinyl_15">깨끗하게 이물질이 제거가 되지 않은 랩필름, 식탁보, 고무장갑, 장판, 돗자리, 섬유류 등(천막, 현수막, 의류, 침구류 등)은 종량제봉투, 특수규격 마대 또는 대형폐기물 처리 등 지자체 조례에 따라 배출 합니다.</string>
+    <string name="vinyl_16">뽁뽁이(버블랩)도 비닐로 버리시면 됩니다.</string>
+    <string name="vinyl_0">플라스틱</string>
+    <string name="vinyl_0">플라스틱</string>
+    <string name="vinyl_0">플라스틱</string>
 
 </resources>
