@@ -1,6 +1,5 @@
 package com.example.recyclingapp
 
-import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Color
@@ -121,9 +120,9 @@ class UserProfileActivity : AppCompatActivity() {
         }
 
         if (userId != null) {
-            val UserPhoto = dbHelper.getUserPhoto(userId)
-            if (UserPhoto != 0) {
-                userMainPhoto.setImageResource(UserPhoto)
+            val userPhoto = dbHelper.getUserPhoto(userId)
+            if (userPhoto != 0) {
+                userMainPhoto.setImageResource(userPhoto)
                 personPhoto.visibility = View.INVISIBLE
             }
         }

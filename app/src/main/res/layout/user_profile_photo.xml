@@ -6,13 +6,15 @@
     android:background="@color/white">
     <!-- Top Bar -->
     <include layout="@layout/top_bar_back" />
+
+
     <!-- User Profile Photo and Lines -->
     <RelativeLayout
         android:id="@+id/user_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="102dp">
+        android:layout_marginTop="70dp">
         <!-- Left Line -->
         <View
             android:id="@+id/line_2"
@@ -48,7 +50,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/user_container"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:gravity="right"
+        android:orientation="vertical"
+        >
         <!-- Character Buttons Grid -->
         <GridLayout
             android:id="@+id/character_grid"
@@ -57,7 +62,7 @@
             android:alignmentMode="alignMargins"
             android:columnCount="4"
             android:rowCount="6"
-            android:padding="26dp"
+            android:padding="20dp"
             android:orientation="horizontal"
             android:layout_gravity="center">
             <!-- Example Character Buttons -->
@@ -244,5 +249,17 @@
 
             <!-- Add more ImageButtons here for other characters -->
         </GridLayout>
+
+        <TextView
+            android:id="@+id/delete_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/show_password_ok_button"
+            android:layout_marginEnd="30dp"
+            android:text="@string/photo_delete"
+            android:gravity="center"
+            android:textAppearance="@style/waste_record"
+            />
+
     </LinearLayout>
 </RelativeLayout>

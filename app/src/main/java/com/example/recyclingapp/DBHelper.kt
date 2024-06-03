@@ -135,10 +135,18 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "Login.db", null, 2
         MyDB.close()
         return result > 0
     }
-
     fun addUserPhoto(id: String, profileImageResId: Int) {
         val values = ContentValues().apply {
             put("profile_image", profileImageResId)
+        }
+        val MyDB = this.writableDatabase
+
+        MyDB.update("users", values, "id = ?", arrayOf(id))
+        MyDB.close()
+    }
+    fun deleteUserPhoto(id: String) {
+        val values = ContentValues().apply {
+            put("profile_image", 0)
         }
         val MyDB = this.writableDatabase
 

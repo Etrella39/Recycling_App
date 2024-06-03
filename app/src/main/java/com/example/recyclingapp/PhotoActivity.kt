@@ -3,20 +3,26 @@ package com.example.recyclingapp
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class PhotoActivity : AppCompatActivity() {
 
     private lateinit var backButton : Button
     private lateinit var dbHelper: DBHelper
+    private lateinit var deletePhoto: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.user_profile_photo)
 
         dbHelper = DBHelper(this)
+        val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
+
+        deletePhoto = findViewById(R.id.delete_photo)
 
         backButton = findViewById(R.id.back_button)
         backButton.setOnClickListener() {
@@ -43,6 +49,20 @@ class PhotoActivity : AppCompatActivity() {
         findViewById<ImageButton>(R.id.character18).setOnClickListener { onImageButtonClick(R.drawable.user_profile_photo_18) }
         findViewById<ImageButton>(R.id.character19).setOnClickListener { onImageButtonClick(R.drawable.user_profile_photo_19) }
         findViewById<ImageButton>(R.id.character20).setOnClickListener { onImageButtonClick(R.drawable.user_profile_photo_20) }
+
+
+
+        deletePhoto.setOnClickListener {
+            val userId = auto.getString("userId", null)
+            if (userId != null) {
+                val userPhoto = dbHelper.getUserPhoto(userId)
+                if (userPhoto != 0) {
+                    dbHelper.deleteUserPhoto(userId)
+                    finish()
+                }
+            }
+        }
+
     }
 
     @SuppressLint("CommitPrefEdits")

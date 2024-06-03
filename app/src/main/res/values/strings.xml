@@ -150,6 +150,7 @@ Recycled in many ways!
     <string name="delete_fail">Failed to delete user account</string>
     <string name="id_not_found">ID not found</string>
     <string name="blog_read_more">READ MORE</string>
+    <string name="photo_delete">Delete</string>
 
 
     <!-- Strings for photo user main -->
