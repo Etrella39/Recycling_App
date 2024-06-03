@@ -154,41 +154,40 @@ Recycled in many ways!
 
 
 
-    <string name="watchout">주의</string>
-    <string name="refer">참고</string>
+    <string name="watchout">Attention!</string>
+    <string name="refer">to know</string>
 
     <string name="paper_1">Paper</string>
-    <string name="paper_2">| 신문지</string>
-    <string name="paper_3">ㆍ물기에 젖지 않도록 하고 반듯하게 펴서 차곡차곡 쌓은 후 묶어서 배출합니다.</string>
-    <string name="paper_4">| 책자·노트 등</string>
-    <string name="paper_5">ㆍ비닐코팅된 표지, 공책의 스프링 등은 제거한 후 배출합니다.</string>
-    <string name="paper_6">* 비닐포장지는 제외</string>
-    <string name="paper_7">| 상자류 (골판지 상자 등)</string>
-    <string name="paper_8">ㆍ비닐코팅 부분, 상자에 붙어있는 테이프 철핀, 알루미늄박 등을 제거하고 접어서 배출합니다.</string>
-    <string name="paper_9">| 종이컵</string>
-    <string name="paper_10">ㆍ내용물을 비우고 물로 한번 헹군 후 압착하여 봉투에 넣거나 한데 묶어서 배출합니다.</string>
-    <string name="paper_11">종이팩</string>
-    <string name="paper_12">| 일반팩, 멸균팩</string>
-    <string name="paper_13">ㆍ내용물을 비우고 물로 한번 행군 후 압착하여 봉투에 넣거나 한데 묶어서 배출합니다.</string>
-    <string name="paper_14">종이팩 수거함으로 배출해주세요.</string>
-    <string name="paper_15">종이팩은 종이류와 다릅니다.</string>
-    <string name="paper_16">종이류는 새 종이로, 종이팩은 화장지, 미용 티슈와 같은 서로 다른 제품으로 탄생합니다.</string>
-    <string name="paper_17">종량제봉투로 배출하세요!</string>
-    <string name="paper_18">1. 다른 재질과 혼합된 종이</string>
-    <string name="paper_19">ㆍ영수증\nㆍ금박지, 은박지\nㆍ벽지</string>
-    <string name="paper_20">2. 종이가 아닌 것</string>
-    <string name="paper_21">ㆍ부직포\nㆍ플라스틱 합성지</string>
-    <string name="paper_22">3. 이물질 등으로 오염된 종이</string>
-    <string name="paper_23">ㆍ기름 오염\nㆍ음식물 오염</string>
-    <string name="paper_24">ㆍ비닐 코팅된 광고지, 비닐류, 기타 오물이 섞이지 않도록 합니다.</string>
-    <string name="paper_25">ㆍ야외 별도 보관 장소 마련 등 다른 종이류와 섞이지 않게 배출합니다.</string>
-    <string name="paper_26">ㆍ빨대, 비닐 등 종이팩과 다른 재질은 제거한 후 배출합니다.</string>
-    <string name="paper_27">ㆍ일반 증이류와 혼합되지 않게 종이팩 전용수거함에 배출합니다.</string>
-    <string name="paper_28">ㆍ종이팩 전용수거함이 없는 경우에는 종이류와 구분할 수 있도록 가급적 끈 등으로 묶어 종이류 수거함으로 배출합니다.</string>
+    <string name="paper_2">| Newspaper</string>
+    <string name="paper_3">ㆍMake sure it doesn\'t get wet, straighten it out, stack it one by one, and then tie it up and drain it.</string>
+    <string name="paper_4">| Booklet, notebook</string>
+    <string name="paper_5">ㆍRemove vinyl-coated covers, notebook springs, etc., before discharging.</string>
+    <string name="paper_6">* Plastic wrapping paper is excluded</string>
+    <string name="paper_7">| Boxes (cardboard boxes, etc.)</string>
+    <string name="paper_8">ㆍRemove the vinyl coating part, tape iron pins attached to the box, aluminum foil, etc., and fold it to discharge.</string>
+    <string name="paper_9">| Paper Cups</string>
+    <string name="paper_10">ㆍEmpty the contents, rinse once with water, squeeze and put in a bag or bundle to discharge.</string>
+    <string name="paper_11">Cartons</string>
+    <string name="paper_12">| Normal Pack, Sterile Pack</string>
+    <string name="paper_13">ㆍEmpty the contents, march once with water, squeeze and put in a bag or bundle together and discharge.</string>
+    <string name="paper_14">Please dispose of the cartons in the collection box.</string>
+    <string name="paper_15">Cartons are not the same as paper.</string>
+    <string name="paper_16">Paper is made into new paper, and cartons are made into different products, such as toilet paper and beauty tissues.</string>
+    <string name="paper_17">Dispose of it in a pay-as-you-go bag!</string>
+    <string name="paper_18">1. Paper mixed with other materials</string>
+    <string name="paper_19">receipt gold foil, tin foil wallpaper</string>
+    <string name="paper_20">2. What is not paper</string>
+    <string name="paper_22">3. Paper contaminated with foreign substances, etc.</string>
+    <string name="paper_23">Oil Pollution Food contamination</string>
+    <string name="paper_24">ㆍDo not mix plastic-coated flyers, vinyls, or other filth.</string>
+    <string name="paper_25">Dispose separately in designated outdoor storage areas to prevent mixing with other paper waste.</string>
+    <string name="paper_26">Remove materials such as straws and plastic before disposing of paper packs.</string>
+    <string name="paper_27">Dispose of in paper pack dedicated collection bins to prevent mixing with other paper waste.</string>
+    <string name="paper_28">If there is no dedicated collection bin for paper packs, please tie them with string or another method to distinguish them from other paper items and dispose of them in the paper collection bin if possible.</string>
 
-    <string name="can_1">금속캔</string>
-    <string name="can_2">| 철캔, 알루미늄캔 (음료·주류캔, 식료품캔)</string>
-    <string name="can_3">ㆍ내용물을 비우고 물로 행구는 등 이물질을 제거하여 배출합니다.</string>
+    <string name="can_1">Metal cans</string>
+    <string name="can_2">| Tin cans, aluminum cans (beverage, liquor cans, food cans)</string>
+    <string name="can_3">ㆍEmpty the contents, rinse with water, and remove any foreign substances before disposal.</string>
     <string name="can_4">ㆍRemove materials of different types, such as plastic lids, from metal cans before disposal.</string>
     <string name="can_5">ㆍDispose of aluminum foil according to local regulations, such as using designated waste bags.</string>
     <string name="can_6">* Dispose of cigarette butts and other foreign substances separately.</string>
@@ -199,8 +198,8 @@ Recycled in many ways!
     <string name="can_11">Scrap metal.</string>
     <string name="can_12">| Scrap metal (air ducts, iron wires, nails, etc.)</string>
     <string name="can_13">| Non-ferrous metals (aluminum, stainless steel, etc.)</string>
-    <string name="can_14">ㆍ이물질이 섞이지 않도록 한 후 봉투에 넣거나 끈으로 묶어서 배출합니다.</string>
-    <string name="can_15">금속캔, 고철 수거함으로 배출해주세요.</string>
+    <string name="can_14">ㆍEnsure no other substances are mixed, then dispose by placing in bags or tying with string before disposal.</string>
+    <string name="can_15">Please dispose of metal cans and scrap metal in the metal collection bin.</string>
 
 
     <string name="glass_1">Beverage bottles, other types of bottles</string>
@@ -220,8 +219,8 @@ Recycled in many ways!
     <string name="glass_14">It\'s not glass bottles!</string>
     <string name="glass_15">Mirror</string>
     <string name="glass_16">Light bulb</string>
-    <string name="glass_17">깨진유리</string>
-    <string name="glass_18">도자기류</string>
+    <string name="glass_17">Broken Glass</string>
+    <string name="glass_18">Ceramics</string>
     <string name="glass_19">Heat-resistant cookware</string>
     <string name="glass_20">Crystal glassware</string>
     <string name="glass_21">Glass lid</string>
@@ -244,24 +243,26 @@ Recycled in many ways!
     <string name="pet_18">If the lid is made of the same material, compress and close the lid before disposal.</string>
     <string name="pet_20">Please separate plastic bags and dispose of them in the plastic collection bin.</string>
 
-    <string name="vinyl_00">비닐도 재활용품입니다.</string>
-    <string name="vinyl_1">비닐포장재, 1회용 비닐봉투</string>
-    <string name="vinyl_3">ㆍ내용물을 비우고 물로 행구는 등 이물질을 제거하여 배출합니다.</string>
-    <string name="vinyl_2">ㆍ흡날리지 않도록 봉투에 담아 배출합니다.</string>
-    <string name="vinyl_4">* 필름.시트형, 랩필름, 각 포장재의 표면적이 500m 미만, 내용물의 용량이 30m 또는 30g이하인 표장재 등 분리배출 표시를 할 수 없는 포장재 포함</string>
-    <string name="vinyl_5">비닐류 수거함으로 배출해주세요.</string>
-    <string name="vinyl_15">깨끗하게 이물질이 제거가 되지 않은 랩필름, 식탁보, 고무장갑, 장판, 돗자리, 섬유류 등(천막, 현수막, 의류, 침구류 등)은 종량제봉투, 특수규격 마대 또는 대형폐기물 처리 등 지자체 조례에 따라 배출 합니다.</string>
-    <string name="vinyl_16">뽁뽁이(버블랩)도 비닐로 버리시면 됩니다.</string>
+    <string name="vinyl_00">Vinyl is also recyclable.</string>
+    <string name="vinyl_1">Plastic packaging, single-use plastic bags</string>
+    <string name="vinyl_3">ㆍEmpty the contents and rinse with water to remove any substances and discharge them.</string>
+    <string name="vinyl_2">ㆍDrain in a bag to prevent sucking.</string>
+    <string name="vinyl_4">* Film, sheet-type, wrap film, packaging materials with a surface area of less than 500 square meters, and contents with a capacity of 30 meters or 30 grams or less, including packaging materials for which separation and disposal instructions cannot be indicated.</string>
+    <string name="vinyl_5">Please dispose of plastic materials in the plastic collection bin.</string>
+    <string name="vinyl_15">Items such as wrap film, tablecloths, rubber gloves, mats, carpets, and textiles (tents, banners, clothing, bedding, etc.) that cannot be cleaned thoroughly or have foreign substances removed should be disposed of according to local regulations, such as using designated waste bags, special-sized crates, or large waste disposal methods.</string>
+    <string name="vinyl_16">bubble wrap can also be disposed of in the plastic collection bin.</string>
+    <string name="vinyl_0">Plastic</string>
+    <string name="paper_21">Non-woven plastic synthetic paper</string>
 
-    <string name="styrofoam_0">음식물 찌꺼기는 꼭물로행군 후 버려주세요.</string>
-    <string name="styrofoam_1">스티로폼 완충재</string>
-    <string name="styrofoam_3">ㆍ내용물을 비우고 물로 행구는 등 이물질을 제거하여 배출합니다.</string>
-    <string name="styrofoam_2">ㆍ부착상표 등 스티로폼과 다른 재질은 제거한 후 배출합니다.</string>
-    <string name="styrofoam_4">ㆍ부착상표 등 스티로폼과 다른 재질은 제거한 후 배출합니다.</string>
-    <string name="styrofoam_5">ㆍTV 등 전자제품 구입 시 완충재로 사용되는 발포합성수지 포장재는 가급적 구입처로 반납합니다.</string>
-    <string name="styrofoam_6">ㆍ타재질과 코팅 또는 접착된 발포스티렌, 건축용 내.외장재 스티로폼, 음식물이 묻어있거나 이물질을 제거하기 어려운 경우 등은 종량제봉투, 특수규격 마대 또는 대형폐기물 처리 등 지자체 조례에 따라 배출</string>
-    <string name="styrofoam_16">플라스틱 용기류, 비닐류와 구분하여 별도로 마련된 수거함에 배출하도록 합니다.</string>
-    <string name="styrofoam_17">건축 자재용 스티로폼은 산업폐기물입니다.</string>
+    <string name="styrofoam_0">Please dispose of food scraps after marching to the water.</string>
+    <string name="styrofoam_1">Styrofoam cushioning</string>
+    <string name="styrofoam_3">ㆍEmpty the contents and rinse with water to remove any foreign substances and discharge them.</string>
+    <string name="styrofoam_2">ㆍRemove Styrofoam and other materials, such as labels, and dispose of them.</string>
+    <string name="styrofoam_4">ㆍRemove Styrofoam and other materials, such as labels, and dispose of them.</string>
+    <string name="styrofoam_5">ㆍWhen purchasing electronic products such as TVs, foam packaging materials used as cushioning materials should be returned to the place of purchase as much as possible.</string>
+    <string name="styrofoam_6">ㆍCoated or bonded with other materials, foam styrene, construction interior. Styrofoam as exterior material, food stains, or foreign substances that are difficult to remove should be disposed of in accordance with local government ordinances, such as pay-as-you-go bags, special-sized sacks, or large-sized waste disposal.</string>
+    <string name="styrofoam_16">Separate them from plastic containers and plastic items and dispose of them in a separate collection box.</string>
+    <string name="styrofoam_17">Styrofoam for building materials is an industrial waste.</string>
 
 
 
