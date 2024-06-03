@@ -5,14 +5,15 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.ScrollView
 import android.widget.Switch
 import androidx.appcompat.app.AppCompatActivity
 
 class DescriptionActivity : AppCompatActivity() {
     private lateinit var backButton: Button
-    private lateinit var descriptionBack: ImageView
+    private lateinit var descriptionBack: ScrollView
 
-    @SuppressLint("UseCompatLoadingForDrawables")
+    @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.description_screen)
@@ -22,14 +23,14 @@ class DescriptionActivity : AppCompatActivity() {
         val whatClicked = intent.getStringExtra("Description_KEY") ?: "paper"
         println(whatClicked)
 
-        when (whatClicked) {
-            "can" -> descriptionBack.setImageDrawable(getDrawable(R.drawable.description_can_back))
-            "glass" -> descriptionBack.setImageDrawable(getDrawable(R.drawable.description_glass_back))
-            "pet" -> descriptionBack.setImageDrawable(getDrawable(R.drawable.description_pet_back))
-            "vinyl" -> descriptionBack.setImageDrawable(getDrawable(R.drawable.description_vinyl_back))
-            "styro" -> descriptionBack.setImageDrawable(getDrawable(R.drawable.description_styroform_back))
-            else -> descriptionBack.setImageDrawable(getDrawable(R.drawable.description_paper_back))
-        }
+//        when (whatClicked) {
+//            "can" -> descriptionBack.set(R.layout.description_screen_paper)
+//            "glass" -> descriptionBack.setBackgroundResource(R.layout.description_screen_paper)
+//            "pet" -> descriptionBack.setBackgroundResource(R.layout.description_screen_paper)
+//            "vinyl" -> descriptionBack.setBackgroundResource(R.layout.description_screen_paper)
+//            "styro" -> descriptionBack.setBackgroundResource(R.layout.description_screen_paper)
+//            else -> descriptionBack.setBackgroundResource(R.layout.description_screen_paper)
+//        }
 
         backButton = findViewById(R.id.back_button)
 

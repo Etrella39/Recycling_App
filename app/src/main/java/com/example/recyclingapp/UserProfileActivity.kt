@@ -4,12 +4,12 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import android.util.Log
 
 class UserProfileActivity : AppCompatActivity() {
 
@@ -35,6 +35,10 @@ class UserProfileActivity : AppCompatActivity() {
     private lateinit var deleteAccount: TextView
     private lateinit var userName : TextView
     private lateinit var joinedDateTextView: TextView
+
+    private val REQUEST_CODE_SELECT_PHOTO = 1
+    private val REQUEST_CODE_DELETE_PHOTO = 2
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,7 +73,6 @@ class UserProfileActivity : AppCompatActivity() {
         customerText = findViewById(R.id.profile)
         customerText.setTextColor(Color.parseColor("#547E38"))
 
-        personPhoto.visibility = View.VISIBLE
 
         userMainPhoto.setOnClickListener {
             val intent = Intent(this@UserProfileActivity, PhotoActivity::class.java)
@@ -120,11 +123,7 @@ class UserProfileActivity : AppCompatActivity() {
         }
 
         if (userId != null) {
-            val userPhoto = dbHelper.getUserPhoto(userId)
-            if (userPhoto != 0) {
-                userMainPhoto.setImageResource(userPhoto)
-                personPhoto.visibility = View.INVISIBLE
-            }
+            isPhoto(userId)
         }
 
     }
@@ -133,21 +132,33 @@ class UserProfileActivity : AppCompatActivity() {
         return auto.getString("userId", null)
     }
 
-
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_CODE_SELECT_PHOTO && resultCode == RESULT_OK) {
-            val selectedImageResourceId = data?.getIntExtra("selectedImageResourceId", -1)
-            if (selectedImageResourceId != null && selectedImageResourceId != -1) {
-                userMainPhoto.setImageResource(selectedImageResourceId)
+            val selectedImageId = data?.getIntExtra("selectedImageId", -1)
+            val userID = data?.getStringExtra("userID")
+
+            if (userID != null) {
+                isPhoto(userID)
+            }
+
+            else if (selectedImageId != null && selectedImageId != -1) {
+                userMainPhoto.setImageResource(selectedImageId)
                 personPhoto.visibility = View.INVISIBLE
             }
         }
+
     }
 
-
-    companion object {
-        const val REQUEST_CODE_SELECT_PHOTO = 1001
+    private fun isPhoto(userId: String) {
+        val userPhoto = dbHelper.getUserPhoto(userId)
+        if (userPhoto != 0) {
+            userMainPhoto.setImageResource(userPhoto)
+            personPhoto.visibility = View.INVISIBLE
+        } else {
+            userMainPhoto.setImageResource(R.drawable.user_profile_main)
+            personPhoto.visibility = View.VISIBLE
+        }
     }
+
 }

@@ -38,12 +38,7 @@
             android:layout_centerVertical="true"
             android:layout_toEndOf="@id/user_main_photo_chose"
             android:background="@drawable/user_profile_right_line" />
-        <View
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignBottom="@id/user_main_photo_chose"
-            android:layout_alignEnd="@id/user_main_photo_chose"
-            android:background="@drawable/user_profile_camera_icon" />
+
     </RelativeLayout>
 
     <LinearLayout

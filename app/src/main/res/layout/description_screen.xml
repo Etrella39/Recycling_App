@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:id="@+id/settings_screen"
+    android:id="@+id/description_screen"
     tools:context=".SettingsActivity"
     >
 
@@ -13,19 +13,21 @@
         android:id="@+id/back_button_2"
         layout="@layout/top_bar_back" />
 
-    <ScrollView
+
+    <include
+        android:id="@+id/description_back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/back_button_2"
-        >
-
+        layout="@layout/description_screen_paper" />
+        <!--
         <ImageView
             android:id="@+id/description_back"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:src="@drawable/description_paper_back"/>
+            android:src="@drawable/description_paper_black"/>
+            -->
 
-    </ScrollView>
 
 </RelativeLayout>

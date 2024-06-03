@@ -58,6 +58,9 @@ class PhotoActivity : AppCompatActivity() {
                 val userPhoto = dbHelper.getUserPhoto(userId)
                 if (userPhoto != 0) {
                     dbHelper.deleteUserPhoto(userId)
+                    val intent = Intent()
+                    intent.putExtra("userID", userId)
+                    setResult(RESULT_OK, intent)
                     finish()
                 }
             }
@@ -67,9 +70,9 @@ class PhotoActivity : AppCompatActivity() {
 
     @SuppressLint("CommitPrefEdits")
     private fun onImageButtonClick(imageResourceId: Int) {
-        val resultIntent = Intent()
-        resultIntent.putExtra("selectedImageResourceId", imageResourceId)
-        setResult(RESULT_OK, resultIntent)
+        val intent = Intent()
+        intent.putExtra("selectedImageId", imageResourceId)
+        setResult(RESULT_OK, intent)
 
         val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
         val userId = auto.getString("userId", null)
