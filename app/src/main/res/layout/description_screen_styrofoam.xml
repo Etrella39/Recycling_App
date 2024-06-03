@@ -11,6 +11,7 @@
         android:padding="25dp"
         >
 
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -26,16 +27,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/vinyl_00"
+                android:text="@string/styrofoam_0"
                 android:textAppearance="@style/des_text_color"
                 />
         </LinearLayout>
 
+
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:text="@string/vinyl_1"
+            android:text="@string/styrofoam_1"
+            android:layout_marginTop="20dp"
             android:textAppearance="@style/des_title"
             />
 
@@ -44,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginStart="10dp"
-            android:text="@string/vinyl_3"
+            android:text="@string/styrofoam_3"
             android:textAppearance="@style/des_text"
             />
         <TextView
@@ -52,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
             android:layout_marginStart="10dp"
-            android:text="@string/vinyl_2"
+            android:text="@string/styrofoam_2"
             android:textAppearance="@style/des_text"
             />
         <TextView
@@ -60,26 +63,37 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
             android:layout_marginStart="10dp"
-            android:text="@string/vinyl_4"
+            android:text="@string/styrofoam_5"
             android:textAppearance="@style/des_text"
-            android:textSize="14sp"
-            android:textColor="#B80E0E"
             />
-
-
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/styrofoam_6"
+            android:textAppearance="@style/des_text"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="40dp"
+            android:padding="20dp"
             android:gravity="center"
-            android:text="@string/vinyl_5"
-            android:background="#78A55A"
-            android:textAppearance="@style/des_text_white"
-            />
-
-
-
-
+            android:background="#E0E0E0"
+            >
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/styrofoam_16"
+                android:textAppearance="@style/des_text"
+                />
+        </LinearLayout>
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -116,77 +130,23 @@
                     android:textAppearance="@style/des_text_white_2"
                     />
             </LinearLayout>
-
-        </LinearLayout>
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/vinyl_15"
-            android:gravity="center"
-            android:textAppearance="@style/des_text"
-            />
-
-
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="25dp"
-            android:background="#BCBCBC"
-            />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="15dp"
-            android:padding="20dp"
-            android:gravity="center"
-            android:background="#E0E0E0"
-            >
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                >
-                <View
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/description_error"
-                    android:layout_marginEnd="5dp"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/refer"
-                    android:textAppearance="@style/des_text_color"
-                    />
-            </LinearLayout>
             <TextView
-                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
+                android:layout_width="wrap_content"
                 android:layout_gravity="center"
-                android:gravity="center"
-                android:text="@string/vinyl_16"
-                android:textAppearance="@style/des_text"
-                android:textColor="#666666"
-                />
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/description_vinyl"
-                />
+                android:layout_marginTop="3dp"
+                android:text="@string/styrofoam_17"
+                android:textAppearance="@style/des_text_white_3"  />
         </LinearLayout>
 
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/description_styrofoam"
+            />
 
 
         <View

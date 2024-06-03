@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/back_button_2"
-        layout="@layout/description_screen_paper" />
+        layout="@layout/description_screen_can" />
         <!--
         <ImageView
             android:id="@+id/description_back"
