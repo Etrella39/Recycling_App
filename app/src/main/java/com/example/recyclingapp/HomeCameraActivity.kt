@@ -1,9 +1,11 @@
 package com.example.recyclingapp
 
+import KeyEventHelper
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.view.KeyEvent
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
@@ -26,10 +28,14 @@ class HomeCameraActivity : AppCompatActivity() {
     private lateinit var mainButton: RelativeLayout
     private lateinit var trashcanImage: ImageView
 
+    private lateinit var keyEventHelper: KeyEventHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home_screen)
         mainLayout = findViewById(R.id.home_screen_1)
+
+        keyEventHelper = KeyEventHelper(this)
 
         val reuse = ReuseButton()
         reuse.bottomNavBar(this, findViewById(R.id.navigation_bar), "home")
@@ -48,6 +54,7 @@ class HomeCameraActivity : AppCompatActivity() {
         tipsButton.setOnClickListener {
             val intent = Intent(this@HomeCameraActivity, HomeActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
     }
@@ -98,5 +105,8 @@ class HomeCameraActivity : AppCompatActivity() {
             val imageUri = data?.data
             // Handle the captured image
         }
+    }
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        return keyEventHelper.handleOnKeyDown(keyCode, event)
     }
 }

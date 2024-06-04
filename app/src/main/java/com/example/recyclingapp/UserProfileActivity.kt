@@ -1,10 +1,12 @@
 package com.example.recyclingapp
 
+import KeyEventHelper
 import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
+import android.view.KeyEvent
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
@@ -35,9 +37,13 @@ class UserProfileActivity : AppCompatActivity() {
     private val REQUEST_CODE_SELECT_PHOTO = 1
     private val REQUEST_CODE_DELETE_PHOTO = 2
 
+    private lateinit var keyEventHelper: KeyEventHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.user_profile)
+
+        keyEventHelper = KeyEventHelper(this)
 
         userLayout = findViewById(R.id.user_profile_1)
 
@@ -135,6 +141,9 @@ class UserProfileActivity : AppCompatActivity() {
             userMainPhoto.setImageResource(R.drawable.user_profile_main)
             personPhoto.visibility = View.VISIBLE
         }
+    }
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        return keyEventHelper.handleOnKeyDown(keyCode, event)
     }
 
 }

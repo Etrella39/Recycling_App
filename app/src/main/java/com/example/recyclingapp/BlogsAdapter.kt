@@ -34,4 +34,5 @@ class BlogsAdapter(private val blogs: List<Blog>) : RecyclerView.Adapter<BlogsAd
         val description: TextView = itemView.findViewById(R.id.blog_description)
         val readButton: Button = itemView.findViewById(R.id.read_more_button)
     }
+
 }

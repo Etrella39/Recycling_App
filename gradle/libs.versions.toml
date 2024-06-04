@@ -12,6 +12,7 @@ library = "3.2.0-alpha11"
 androidx-macro-benchmark = "1.2.2"
 my-library = "1.4"
 tedpermission = "2.3.0"
+animationCoreAndroid = "1.6.7"
 
 
 [libraries]
@@ -29,6 +30,7 @@ my-library = { group = "com.myapplication", name = "mylibrary", version.ref = "m
 mysql-connector-java = { group = "mysql", name = "mysql-connector-java", version = "5.1.49" }
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version = "1.6.4" }
 tedpermission = { group = "io.github.ParkSangGwon", name = "tedpermission", version.ref = "tedpermission" }
+androidx-animation-core-android = { group = "androidx.compose.animation", name = "animation-core-android", version.ref = "animationCoreAndroid" }
 
 
 [plugins]

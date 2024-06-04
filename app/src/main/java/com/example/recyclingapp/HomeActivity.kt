@@ -1,33 +1,25 @@
 package com.example.recyclingapp
 
+import KeyEventHelper
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.os.Bundle
-import android.util.Log
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
-import android.widget.Button
+import android.view.KeyEvent
+import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import com.example.yourapp.ReuseButton
+import android.os.Process
+import kotlin.system.exitProcess
 
 
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var homeLayout: LinearLayout
-
-    private lateinit var navigationBar: RelativeLayout
-    private lateinit var mainButton: RelativeLayout
-    private lateinit var profileButton: LinearLayout
-    private lateinit var blogButton: LinearLayout
-
-    private lateinit var trashcanImage: ImageView
 
     private lateinit var buttonPaper: RelativeLayout
     private lateinit var buttonCan: RelativeLayout
@@ -38,6 +30,9 @@ class HomeActivity : AppCompatActivity() {
 
     private lateinit var home_title : TextView
 
+    private lateinit var keyEventHelper: KeyEventHelper
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home_screen_2)
@@ -47,6 +42,8 @@ class HomeActivity : AppCompatActivity() {
         reuse.bottomNavBar(this, findViewById(R.id.navigation_bar), "home2")
         reuse.settingButton(this, findViewById(R.id.setting_button_2))
         AnimationFadeIn(this, homeLayout)
+
+        keyEventHelper = KeyEventHelper(this)
 
         reuse.changeImage(findViewById(R.id.main_button))
 
@@ -84,6 +81,9 @@ class HomeActivity : AppCompatActivity() {
             setDescription("styro")
         }
 
+    }
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        return keyEventHelper.handleOnKeyDown(keyCode, event)
     }
     private fun setDescription(key: String) {
         val intent = Intent(this@HomeActivity, DescriptionActivity::class.java)

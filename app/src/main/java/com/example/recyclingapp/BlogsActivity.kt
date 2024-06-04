@@ -1,8 +1,10 @@
 package com.example.recyclingapp
 
+import KeyEventHelper
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Button
@@ -17,8 +19,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.yourapp.ReuseButton
 
 class BlogsActivity : AppCompatActivity() {
-
-
     private lateinit var mainButton: RelativeLayout
     private lateinit var profileButton: LinearLayout
     private lateinit var blogButton: LinearLayout
@@ -35,10 +35,14 @@ class BlogsActivity : AppCompatActivity() {
     private lateinit var fadeIn: Animation
     private lateinit var fadeOut: Animation
 
+    private lateinit var keyEventHelper: KeyEventHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.blogs_screen)
         blogsScreen = findViewById(R.id.blogs_screen_1)
+
+        keyEventHelper = KeyEventHelper(this)
 
         val reuse = ReuseButton()
         reuse.bottomNavBar(this, findViewById(R.id.navigation_bar), "blog")
@@ -80,7 +84,12 @@ class BlogsActivity : AppCompatActivity() {
         return blogs
 
     }
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        return keyEventHelper.handleOnKeyDown(keyCode, event)
+    }
 }
+
+
 data class Blog (
     val title: String,
     val description: String,
