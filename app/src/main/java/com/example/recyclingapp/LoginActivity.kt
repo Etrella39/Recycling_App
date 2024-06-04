@@ -77,7 +77,7 @@ class LoginActivity : AppCompatActivity() {
                     // Save user ID to SharedPreferences
                     saveUserId(user, pass, this)
                     Toast.makeText(this@LoginActivity, R.string.login_success, Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, HomeActivity::class.java)
+                    val intent = Intent(this, HomeCameraActivity::class.java)
                     startActivity(intent)
                     finish()
                 } else {

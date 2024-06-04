@@ -84,9 +84,22 @@
 
     </LinearLayout>
 
-    <include
+    <RelativeLayout
         android:id="@+id/main_button"
-        layout="@layout/main_button"/>
+        android:layout_width="98dp"
+        android:layout_height="98dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/main_button"
+        >
+
+        <ImageView
+            android:id="@+id/trashcan_image"
+            android:layout_width="56.98dp"
+            android:layout_height="56.98dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/main_icon_trashcan"
+            />
+    </RelativeLayout>
 
 
 </RelativeLayout>

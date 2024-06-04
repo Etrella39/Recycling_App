@@ -8,7 +8,9 @@
     android:background="@color/white"
     >
 
-    <include layout="@layout/top_bar_back"/>
+    <include
+        android:id="@+id/back_button_3"
+        layout="@layout/top_bar_back" />
 
     <LinearLayout
         android:layout_width="match_parent"

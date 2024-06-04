@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.yourapp.ReuseButton
 
 class BlogsActivity : AppCompatActivity() {
 
@@ -37,23 +38,19 @@ class BlogsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.blogs_screen)
-
-        mainButton = findViewById(R.id.main_button)
-        profileButton = findViewById(R.id.profile_button)
-        blogButton = findViewById(R.id.blogs_button)
-        settings = findViewById(R.id.setting_button)
         blogsScreen = findViewById(R.id.blogs_screen_1)
+
+        val reuse = ReuseButton()
+        reuse.bottomNavBar(this, findViewById(R.id.navigation_bar), "blog")
+        reuse.settingButton(this, findViewById(R.id.setting_button_2))
+        AnimationFadeIn(this, blogsScreen)
+
+        settings = findViewById(R.id.setting_button)
 
         webImage = findViewById(R.id.web_design)
         webImage.setBackgroundResource(R.drawable.main_icon_web_press)
         webText = findViewById(R.id.blogs)
         webText.setTextColor(Color.parseColor("#547E38"))
-
-        fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
-        fadeOut = AnimationUtils.loadAnimation(this, R.anim.fade_out)
-
-        overridePendingTransition(0, 0) // non animation
-        blogsScreen.startAnimation(fadeIn)
 
         // Initialize RecyclerView
         recyclerViewBlogs = findViewById(R.id.recycler_view_blogs)
@@ -62,28 +59,6 @@ class BlogsActivity : AppCompatActivity() {
         // Initialize and set adapter
         blogsAdapter = BlogsAdapter(getSampleBlogs()) // Replace with your data source
         recyclerViewBlogs.adapter = blogsAdapter
-
-
-
-        profileButton.setOnClickListener {
-            val intent = Intent(this@BlogsActivity, UserProfileActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-        mainButton.setOnClickListener {
-            val intent = Intent(this@BlogsActivity, HomeActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-        settings.setOnClickListener() {
-            val intent = Intent(this@BlogsActivity, SettingsActivity::class.java)
-            startActivity(intent)
-            overridePendingTransition(0, 0); // non animation
-        }
-
-
 
 
     }

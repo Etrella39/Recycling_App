@@ -144,10 +144,14 @@
                 />
         </LinearLayout>
 
-        <include layout="@layout/top_bar_setting"/>
+        <include
+            android:id="@+id/setting_button_2"
+            layout="@layout/top_bar_setting" />
     </RelativeLayout>
 
-    <include layout="@layout/navigation_bar"/>
+    <include
+        android:id="@+id/navigation_bar"
+        layout="@layout/navigation_bar"/>
 
 
 </RelativeLayout>

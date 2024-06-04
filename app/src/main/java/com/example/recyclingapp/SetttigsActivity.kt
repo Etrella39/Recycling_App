@@ -16,6 +16,7 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import com.example.yourapp.ReuseButton
 import java.util.Locale
 
 
@@ -26,8 +27,6 @@ class SettingsActivity : AppCompatActivity() {
 
     private var isClickModeToggle = false
     private var isClickLgToggle = false
-
-    private lateinit var backButton: Button
 
     private lateinit var modeToggleList: RelativeLayout
     private lateinit var languageToggleList: RelativeLayout
@@ -56,15 +55,15 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings_screen)
 
+        val reuse = ReuseButton()
+        reuse.backButton(this, findViewById(R.id.back_button_3))
+
         slideIn = AnimationUtils.loadAnimation(this, R.anim.slide_in)
         slideOut = AnimationUtils.loadAnimation(this, R.anim.slide_out)
         toggleOpen = AnimationUtils.loadAnimation(this, R.anim.toggle_open)
 
         settingLayout = findViewById(R.id.settings_screen)
         settingLayout.startAnimation(slideIn)
-
-
-        backButton = findViewById(R.id.back_button)
 
         screenModeButton = findViewById(R.id.spinner_mode)
         languageButton = findViewById(R.id.spinner_language)
@@ -135,13 +134,6 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
 
-
-
-
-        backButton.setOnClickListener {
-            settingLayout.startAnimation(slideOut)
-            finish()
-        }
 
     }
 

@@ -1,33 +1,55 @@
 package com.example.recyclingapp
 
 import android.Manifest
-import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.os.Build
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.yourapp.ReuseButton
 
 class HomeCameraActivity : AppCompatActivity() {
 
+    private lateinit var mainLayout: LinearLayout
+
     private lateinit var startButton: TextView
+    private lateinit var tipsButton: TextView
+
     private val CAMERA_REQUEST_CODE = 100
+
+    private lateinit var mainButton: RelativeLayout
+    private lateinit var trashcanImage: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home_screen)
+        mainLayout = findViewById(R.id.home_screen_1)
+
+        val reuse = ReuseButton()
+        reuse.bottomNavBar(this, findViewById(R.id.navigation_bar), "home")
+        reuse.settingButton(this, findViewById(R.id.setting_button_2))
+        AnimationFadeIn(this, mainLayout)
+        reuse.changeImage(findViewById(R.id.main_button))
 
         startButton = findViewById(R.id.start_button)
+        tipsButton = findViewById(R.id.home_screen2_button)
+
         startButton.setOnClickListener {
             if (checkAndRequestPermissions()) {
                 dispatchTakePictureIntent()
             }
         }
+        tipsButton.setOnClickListener {
+            val intent = Intent(this@HomeCameraActivity, HomeActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun checkAndRequestPermissions(): Boolean {

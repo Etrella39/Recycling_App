@@ -9,7 +9,9 @@
     >
 
     <!-- Top Bar Back -->
-    <include layout="@layout/top_bar_back" />
+    <include
+        android:id="@+id/back_button_3"
+        layout="@layout/top_bar_back" />
 
     <!-- Settings Title -->
     <TextView

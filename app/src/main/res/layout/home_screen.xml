@@ -9,7 +9,9 @@
     android:background="@color/white"
     >
 
-    <include layout="@layout/top_bar_setting"/>
+    <include
+        android:id="@+id/setting_button_2"
+        layout="@layout/top_bar_setting"/>
 
     <LinearLayout
         android:id="@+id/home_screen_1"
@@ -70,6 +72,7 @@
         layout="@layout/navigation_bar"/>
 
     <TextView
+        android:id="@+id/home_screen2_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -81,7 +84,8 @@
         android:textAppearance="@style/label_2"
         android:text="@string/label_2"
         android:background="@drawable/find_password_findbutton"
-
         />
+
+
 
 </RelativeLayout>

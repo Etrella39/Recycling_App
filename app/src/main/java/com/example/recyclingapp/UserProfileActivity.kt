@@ -10,17 +10,15 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.yourapp.ReuseButton
 
 class UserProfileActivity : AppCompatActivity() {
 
     private lateinit var userLayout: RelativeLayout
     private lateinit var userMainPhoto: ImageView
     private lateinit var personPhoto: View
-    private lateinit var navigationBar: RelativeLayout
 
-    private lateinit var mainButton: RelativeLayout
     private lateinit var profileButton: LinearLayout
-    private lateinit var blogButton: LinearLayout
 
     private lateinit var customerImage: ImageView
     private lateinit var customerText: TextView
@@ -28,8 +26,6 @@ class UserProfileActivity : AppCompatActivity() {
     private lateinit var settingButton: Button
 
     private lateinit var logout: TextView
-    private lateinit var fadeIn: Animation
-    private lateinit var fadeOut: Animation
 
     private lateinit var dbHelper: DBHelper
     private lateinit var deleteAccount: TextView
@@ -39,20 +35,20 @@ class UserProfileActivity : AppCompatActivity() {
     private val REQUEST_CODE_SELECT_PHOTO = 1
     private val REQUEST_CODE_DELETE_PHOTO = 2
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.user_profile)
 
+        userLayout = findViewById(R.id.user_profile_1)
+
+        val reuse = ReuseButton()
+        reuse.bottomNavBar(this, findViewById(R.id.navigation_bar), "user")
+        reuse.settingButton(this, findViewById(R.id.setting_button_2))
+        AnimationFadeIn(this, userLayout)
+
         val auto = getSharedPreferences("autoLogin", MODE_PRIVATE)
 
         dbHelper = DBHelper(this)
-        fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
-        fadeOut = AnimationUtils.loadAnimation(this, R.anim.fade_out)
-
-        userLayout = findViewById(R.id.user_profile_1)
-        overridePendingTransition(0, 0) // non animation
-        userLayout.startAnimation(fadeIn)
 
         userMainPhoto = findViewById(R.id.profile_photo)
         personPhoto = findViewById(R.id.person_photo)
@@ -63,10 +59,7 @@ class UserProfileActivity : AppCompatActivity() {
         joinedDateTextView = findViewById(R.id.joined_date)
 
 
-        mainButton = findViewById(R.id.main_button)
         profileButton = findViewById(R.id.profile_button)
-
-        blogButton = findViewById(R.id.blogs_button)
         customerImage = findViewById(R.id.customer)
 
         customerImage.setBackgroundResource(R.drawable.main_icon_customer_press)
@@ -77,12 +70,6 @@ class UserProfileActivity : AppCompatActivity() {
         userMainPhoto.setOnClickListener {
             val intent = Intent(this@UserProfileActivity, PhotoActivity::class.java)
             startActivityForResult(intent, REQUEST_CODE_SELECT_PHOTO)
-        }
-
-        settingButton.setOnClickListener {
-            val intent = Intent(this@UserProfileActivity, SettingsActivity::class.java)
-            startActivity(intent)
-            overridePendingTransition(0, 0); // non animation
         }
 
         logout.setOnClickListener {
@@ -97,17 +84,6 @@ class UserProfileActivity : AppCompatActivity() {
             val intent = Intent(this, DeleteDialog::class.java)
             intent.putExtra("USER_ID", userId)
             startActivity(intent)
-        }
-
-        mainButton.setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-        blogButton.setOnClickListener {
-            val intent = Intent(this@UserProfileActivity, BlogsActivity::class.java)
-            startActivity(intent)
-            finish()
         }
 
 

@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.yourapp.ReuseButton
 import java.util.regex.Pattern
 
 
@@ -30,12 +31,13 @@ class SignUpActivity : AppCompatActivity() {
     private var isPasswordVisible = false
     private var isPasswordVisible2 = false
 
-    private lateinit var backButton: Button
-
     @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signup_screen)
+
+        val reuse = ReuseButton()
+        reuse.backButton(this, findViewById(R.id.back_button_3))
 
         DB = DBHelper(this)
         idEdit = findViewById(R.id.id_edit)
@@ -49,8 +51,6 @@ class SignUpActivity : AppCompatActivity() {
 
         pwShowButton = findViewById(R.id.password_icon)
         pwShowButton2 = confirmPassword.findViewById(R.id.password_icon)
-
-        backButton = findViewById(R.id.back_button)
 
         val filter = InputFilter { source, start, end, dest, dstart, dend ->
             val pattern = Regex("[^a-zA-Z0-9!@#$%^&*()_+\\-=\\[\\]{};:\"\\\\|,.<>/?]")
@@ -93,7 +93,7 @@ class SignUpActivity : AppCompatActivity() {
                                 if (insert == true) {
                                     loginActivity.saveUserId(user, pass, this)
                                     Toast.makeText(this@SignUpActivity, R.string.register, Toast.LENGTH_SHORT).show()
-                                    val intent = Intent(this, HomeActivity::class.java)
+                                    val intent = Intent(this, HomeCameraActivity::class.java)
                                     startActivity(intent)
 
                                     val returnIntent = Intent()
@@ -125,10 +125,6 @@ class SignUpActivity : AppCompatActivity() {
         pwShowButton2.setOnClickListener {
             isPasswordVisible2 = !isPasswordVisible2
             loginActivity.ShowPassword(confirmPasswordView, isPasswordVisible2, this)
-        }
-
-        backButton.setOnClickListener {
-            finish()
         }
 
     }
